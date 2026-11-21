@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pousada Les Roches · Itaipava</title>
+<meta name="description" content="Pousada Les Roches, no Vale do Cuiabá, em Itaipava: chalés com lareira e varanda com rede, cercados por 90.000 m² de Mata Atlântica. Reserve direto pelo WhatsApp.">
+<meta name="theme-color" content="#F6F2EA">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Pousada Les Roches · Itaipava">
+<meta property="og:description" content="Requinte e descontração para os amantes da natureza, lazer e gastronomia.">
+<meta property="og:image" content="https://gabrielbernardeschagas-cmd.github.io/esbocos-virtus/les-roches/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" as="image" href="img/hero-m.webp" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero.webp" media="(min-width: 761px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Esboço Virtus (21/11/2026). Regras da casa: copy do cliente enxuta, mobile first, cor chapada (sem degradê),
+   uma família de fonte, fio de 1 px no lugar de cartão com sombra, um só rótulo de botão,
+   movimento só em transform/opacity e tudo legível sem JS ou com prefers-reduced-motion. */
+:root {
+  --creme: #F6F2EA;
+  --areia: #ECE5D8;
+  --tinta: #1F231E;
+  --apoio: #55594F;      /* 6,6:1 sobre o creme */
+  --mata: #1E2C24;
+  --mata-apoio: #C9D2C8; /* 9,6:1 sobre a mata */
+  --vinho: #7B1113;      /* vinho da logo; branco sobre ele: 11:1 */
+  --fio: rgba(31, 35, 30, .16);
+  --fio-claro: rgba(255, 255, 255, .22);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--creme); color: var(--tinta);
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px; line-height: 1.55; overflow-x: clip; -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+h1, h2, h3, p, ul, ol, figure, blockquote { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+a { color: inherit; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -.03em; line-height: 1.06; text-wrap: balance; }
+h1 { font-size: clamp(40px, 11.5vw, 68px); }
+h2 { font-size: clamp(30px, 8.4vw, 46px); }
+section { padding: 84px 0; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+.largo { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.p { margin-top: 16px; color: var(--apoio); max-width: 34em; }
+.micro { font-size: 14.5px; color: var(--apoio); }
+:focus-visible { outline: 3px solid var(--vinho); outline-offset: 3px; }
+
+/* botão: um só rótulo na página inteira */
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; max-width: 380px; min-height: 56px; padding: 0 22px;
+  background: var(--vinho); color: #fff; font-size: 17.5px; font-weight: 600; text-decoration: none; border-radius: 16px;
+  transition: transform .15s ease;
+}
+.btn:active { transform: scale(.98); }
+.btn svg { width: 22px; height: 22px; flex: none; fill: currentColor; }
+.btn:focus-visible { outline-color: #fff; box-shadow: 0 0 0 6px var(--vinho); }
+
+/* primeira dobra: a foto em tela cheia, véu chapado para o texto ler */
+.hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; color: #fff; background: #20281f; overflow: hidden; }
+.hero picture, .hero picture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero picture img { object-position: 42% 50%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(18, 24, 18, .5); }
+.hero > * { position: relative; z-index: 1; }
+.hero picture { position: absolute; z-index: 0; }
+.hero .logo { width: 74px; margin: 22px 0 0 20px; }
+.hero-t { margin-top: auto; padding: 0 20px 40px; max-width: 760px; }
+.hero h1 { color: #fff; }
+.hero .lead { margin-top: 14px; font-size: 19px; line-height: 1.4; max-width: 24em; }
+.hero .btn { margin-top: 26px; }
+.nota { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; margin-top: 16px; font-size: 15.5px; font-weight: 500; }
+.nota svg { width: 17px; height: 17px; fill: #fff; }
+.nota b { font-weight: 700; }
+
+/* frase da casa */
+.frase { padding: 96px 0 40px; }
+.frase p { font-size: clamp(25px, 6.8vw, 36px); font-weight: 600; letter-spacing: -.025em; line-height: 1.2; text-wrap: balance; }
+
+/* o passeio: sem JS ou com movimento reduzido, fica uma lista empilhada e legível */
+.passeio { padding: 20px 0 60px; }
+.passeio .pin { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+.passeio li { margin-top: 44px; }
+.passeio li img { width: 100%; max-width: 440px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 26px; background: var(--areia); }
+.passeio .leg { margin-top: 18px; }
+.passeio .leg b { display: block; font-size: clamp(26px, 7.4vw, 34px); font-weight: 700; letter-spacing: -.03em; line-height: 1.08; text-wrap: balance; }
+.passeio .leg span { display: block; margin-top: 8px; color: var(--apoio); }
+.passeio .barra { display: none; }
+
+/* com JS: a seção fica alta, a tela gruda e --t (0 a 6) troca as fotos */
+.passeio.anim { --t: 0; --h: min(52vh, (100vw - 40px) * 1.25, 540px); padding: 0; height: 560vh; }
+@supports (height: 1svh) { .passeio.anim { --h: min(52svh, (100vw - 40px) * 1.25, 540px); height: 560svh; } }
+.passeio.anim .pin { position: sticky; top: 0; height: 100vh; height: 100svh; max-width: none; padding: 0 20px 92px; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.passeio.anim ol { position: relative; width: 100%; max-width: 440px; height: calc(var(--h) + 150px); }
+.passeio.anim li { position: absolute; inset: 0; margin: 0; display: flex; flex-direction: column; align-items: center; text-align: center; pointer-events: none; }
+.passeio.anim .foto { width: calc(var(--h) * .8); height: var(--h); border-radius: 26px; overflow: hidden; flex: none;
+  opacity: clamp(0, (var(--t) - var(--i)) * 4 + .5, 1); }
+.passeio.anim li:first-child .foto { opacity: 1; }
+.passeio.anim li img { width: 100%; height: 100%; max-width: none; border-radius: 0;
+  transform: scale(calc(1.14 - clamp(0, var(--t) - var(--i) + .5, 1.5) * .09)); will-change: transform; }
+.passeio.anim .leg { opacity: clamp(0, min((var(--t) - var(--i)) * 4 + .5, (var(--i) + 1 - var(--t)) * 4 - .5), 1);
+  transform: translateY(calc(clamp(-1, (var(--i) + .5 - var(--t)) * 2, 1) * 14px)); }
+.passeio.anim li:first-child .leg { opacity: clamp(0, (1 - var(--t)) * 4 - .5, 1); }
+.passeio.anim li:last-child .leg { opacity: clamp(0, (var(--t) - var(--i)) * 4 + .5, 1); }
+.passeio.anim .barra { display: flex; gap: 5px; width: 132px; margin-top: 18px; }
+.passeio.anim .barra i { flex: 1; height: 3px; border-radius: 2px; background: var(--fio); overflow: hidden; }
+.passeio.anim .barra i::after { content: ""; display: block; height: 100%; background: var(--tinta); transform-origin: left;
+  transform: scaleX(clamp(0, var(--t) - var(--i), 1)); }
+
+/* acomodações: carrossel nativo */
+.acom { background: var(--areia); }
+.trilho { display: flex; gap: 14px; margin-top: 30px; padding: 0 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 20px;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.trilho::-webkit-scrollbar { display: none; }
+.trilho::after { content: ""; flex: 0 0 6px; }
+.trilho article { flex: 0 0 82%; max-width: 380px; scroll-snap-align: start; }
+.trilho img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px; background: var(--creme); }
+.trilho h3 { margin-top: 16px; font-size: 23px; letter-spacing: -.025em; line-height: 1.15; }
+.trilho p { margin-top: 6px; color: var(--apoio); font-size: 16px; line-height: 1.45; }
+.pontos { display: flex; align-items: center; gap: 6px; margin-top: 22px; }
+.pontos i { width: 6px; height: 6px; border-radius: 3px; background: rgba(31, 35, 30, .28); transition: width .25s ease, background .25s ease; }
+.pontos i.on { width: 22px; background: var(--tinta); }
+.pontos span { margin-left: 8px; font-size: 14.5px; color: var(--apoio); font-variant-numeric: tabular-nums; }
+.todas { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--fio); color: var(--apoio); font-size: 16px; }
+.todas + .micro { margin-top: 10px; }
+@media (min-width: 900px) {
+  .trilho { max-width: 1000px; margin-left: auto; margin-right: auto; }
+  .trilho article { flex-basis: 340px; }
+}
+
+/* gastronomia e lazer: foto grande e duas menores, sem moldura nem sombra */
+.fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 30px; }
+.fotos img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; background: var(--areia); }
+.fotos .g { grid-column: 1 / -1; aspect-ratio: 3 / 2; border-radius: 22px; }
+.fotos .q { aspect-ratio: 1; }
+.lazer ul { margin-top: 22px; font-size: clamp(20px, 5.4vw, 25px); font-weight: 600; letter-spacing: -.02em; line-height: 1.35; }
+.lazer li { display: inline; }
+.lazer li:not(:last-child)::after { content: " · "; color: #8B8F84; font-weight: 400; }
+.bicho { display: grid; gap: 22px; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--fio); align-items: center; }
+.bicho img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; }
+.bicho p { color: var(--apoio); }
+@media (min-width: 760px) { .bicho { grid-template-columns: 1fr 1fr; gap: 36px; } }
+
+/* prova */
+.prova { background: var(--mata); color: #fff; }
+.prova h2 { color: #fff; }
+.num { display: flex; align-items: baseline; gap: 14px; }
+.num b { font-size: clamp(92px, 30vw, 150px); font-weight: 700; letter-spacing: -.055em; line-height: .86; }
+.num span { font-size: 18px; line-height: 1.3; color: var(--mata-apoio); }
+.num span strong { display: block; color: #fff; font-weight: 600; }
+.prova blockquote { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--fio-claro); }
+.prova blockquote + blockquote { margin-top: 26px; }
+.prova blockquote p { font-size: clamp(21px, 5.6vw, 26px); font-weight: 500; letter-spacing: -.02em; line-height: 1.3; text-wrap: pretty; }
+.prova cite { display: block; margin-top: 12px; font-style: normal; font-size: 15.5px; color: var(--mata-apoio); }
+.anos { margin-top: 56px; }
+.anos li { display: grid; grid-template-columns: 62px 1fr; gap: 12px; padding: 15px 0; border-top: 1px solid var(--fio-claro); }
+.anos li:last-child { border-bottom: 1px solid var(--fio-claro); }
+.anos b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.anos span { color: var(--mata-apoio); }
+.selos { display: flex; align-items: center; gap: 34px; margin-top: 34px; }
+.selos img:first-child { width: 190px; }
+.selos img:last-child { width: 74px; filter: invert(1); }
+
+/* como chegar */
+.onde address { margin-top: 16px; font-style: normal; color: var(--apoio); }
+.mapa { margin-top: 26px; padding: 14px; background: #fff; border: 1px solid var(--fio); border-radius: 22px; }
+.mapa img { width: 100%; }
+.link { display: inline-block; margin-top: 18px; padding: 8px 0; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* fecho e rodapé */
+.fecho { padding-top: 20px; }
+.fecho .btn { margin-top: 26px; }
+.fecho .micro { margin-top: 16px; }
+footer { padding: 40px 0 104px; border-top: 1px solid var(--fio); font-size: 15px; color: var(--apoio); }
+footer img { width: 64px; }
+footer p { margin-top: 14px; }
+footer .cred { margin-top: 26px; font-size: 13.5px; }
+@media (min-width: 761px) { footer { padding-bottom: 48px; } }
+
+/* barra fixa do celular: aparece quando o botão do topo sai da tela */
+.fixa { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: var(--creme); border-top: 1px solid var(--fio); transform: translateY(105%); visibility: hidden;
+  transition: transform .28s ease, visibility 0s linear .28s; }
+.fixa.on { transform: none; visibility: visible; transition: transform .28s ease, visibility 0s; }
+.fixa .btn { max-width: none; min-height: 52px; }
+@media (min-width: 761px) { .fixa { display: none; } }
+
+@media (min-width: 761px) {
+  section { padding: 110px 0; }
+  .hero-t { padding: 0 48px 64px; }
+  .hero .logo { margin: 32px 0 0 48px; width: 88px; }
+  .hero picture img { object-position: 50% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+
+<header class="hero">
+  <picture>
+    <source media="(max-width: 760px)" srcset="img/hero-m.webp" width="960" height="1440">
+    <img src="img/hero.webp" width="1600" height="900" alt="Chalé de madeira da Pousada Les Roches no meio da Mata Atlântica" fetchpriority="high" decoding="async">
+  </picture>
+  <img class="logo" src="img/logo.png" width="202" height="184" alt="Logo da Pousada Les Roches">
+  <div class="hero-t">
+    <h1>Pousada Les Roches</h1>
+    <p class="lead">Requinte e descontração para os amantes da natureza, lazer e gastronomia.</p>
+    <a class="btn" id="btn-topo" href="https://wa.me/5524999679091?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20da%20disponibilidade%20para%20" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+      Reservar pelo WhatsApp
+    </a>
+    <p class="nota">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6-5.900-3.300-5.900 3.300 1.300-6.600-4.900-4.600 6.600-.8z"/></svg>
+      <span><b>4,6 no Google</b>, 154 avaliações</span>
+    </p>
+  </div>
+</header>
+
+<main>
+
+<section class="frase">
+  <div class="wrap">
+    <p>Se você procura um refúgio encantador e intimista, aliado a um serviço excepcional, a Pousada Les Roches é o lugar perfeito para você.</p>
+  </div>
+</section>
+
+<section class="passeio" id="passeio" aria-label="A pousada em seis fotos">
+  <div class="pin">
+    <ol>
+      <li style="--i:0">
+        <div class="foto"><img src="img/seq-mata.webp" width="614" height="768" loading="lazy" decoding="async" alt="Árvores da reserva de Mata Atlântica da pousada, com um pássaro em voo"></div>
+        <p class="leg"><b>90.000 m² de Mata Atlântica</b><span>No lindo Vale do Cuiabá, em Itaipava.</span></p>
+      </li>
+      <li style="--i:1">
+        <div class="foto"><img src="img/seq-chale.webp" width="614" height="768" loading="lazy" decoding="async" alt="Chalé com telhado de barro cercado de jardim"></div>
+        <p class="leg"><b>10 chalés com vista para as montanhas</b><span>E 4 quartos na sede principal.</span></p>
+      </li>
+      <li style="--i:2">
+        <div class="foto"><img src="img/seq-rede.webp" width="614" height="768" loading="lazy" decoding="async" alt="Rede vinho na varanda de um chalé"></div>
+        <p class="leg"><b>Varanda com rede</b><span>Em todos os chalés.</span></p>
+      </li>
+      <li style="--i:3">
+        <div class="foto"><img src="img/seq-lareira.webp" width="614" height="768" loading="lazy" decoding="async" alt="Lareira acesa dentro do chalé, ao lado da cama"></div>
+        <p class="leg"><b>Lareira</b><span>Também em todos os chalés.</span></p>
+      </li>
+      <li style="--i:4">
+        <div class="foto"><img src="img/seq-fondue.webp" width="614" height="768" loading="lazy" decoding="async" alt="Fondue servido em frente à lareira"></div>
+        <p class="leg"><b>Fondue de carne, queijo, tomate e chocolate</b><span>Com vinhos dos principais países produtores.</span></p>
+      </li>
+      <li style="--i:5">
+        <div class="foto"><img src="img/seq-hidro.webp" width="614" height="768" loading="lazy" decoding="async" alt="Piscina de hidromassagem aquecida em um deque coberto"></div>
+        <p class="leg"><b>Hidromassagem com água aquecida</b><span>Para até 7 pessoas, com sauna seca e ducha circular.</span></p>
+      </li>
+    </ol>
+    <div class="barra" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i></div>
+  </div>
+</section>
+
+<section class="acom">
+  <div class="wrap">
+    <h2>Acomodações</h2>
+  </div>
+  <div class="trilho" id="trilho" tabindex="0" role="group" aria-label="Acomodações, deslize para o lado">
+    <article>
+      <img src="img/q-premium.webp" width="900" height="675" loading="lazy" decoding="async" alt="Chalé Premium com cama de dossel e janelas para a mata">
+      <h3>Chalé Premium com Hidromassagem</h3>
+      <p>Cama king size, lareira, varanda com rede e banheira com hidromassagem.</p>
+    </article>
+    <article>
+      <img src="img/q-familia.webp" width="900" height="675" loading="lazy" decoding="async" alt="Quarto do Chalé Família com a varanda ao fundo">
+      <h3>Chalé Família</h3>
+      <p>Dois quartos: um com cama de casal, outro com duas camas de solteiro. Hidromassagem em um dos banheiros.</p>
+    </article>
+    <article>
+      <img src="img/q-master.webp" width="900" height="675" loading="lazy" decoding="async" alt="Chalé Master com lareira acesa">
+      <h3>Chalé Master</h3>
+      <p>Cama king size, lareira, varanda com rede e máquina de café Nespresso.</p>
+    </article>
+    <article>
+      <img src="img/q-chale.webp" width="900" height="675" loading="lazy" decoding="async" alt="Chalé com parede verde e porta aberta para a varanda">
+      <h3>Chalé</h3>
+      <p>Cama king size, lareira e varanda com rede.</p>
+    </article>
+    <article>
+      <img src="img/q-suite-master.webp" width="900" height="675" loading="lazy" decoding="async" alt="Suíte Master com cama queen e mesa de apoio">
+      <h3>Suíte Master</h3>
+      <p>Cama queen size e máquina de café Nespresso. Quarto maior, apropriado para cama extra.</p>
+    </article>
+    <article>
+      <img src="img/q-suite.webp" width="900" height="675" loading="lazy" decoding="async" alt="Suíte com cama queen e colcha xadrez">
+      <h3>Suíte</h3>
+      <p>Cama queen size, frigobar e TV Smart 32″.</p>
+    </article>
+  </div>
+  <div class="wrap">
+    <div class="pontos" id="pontos" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><span>1 de 6</span></div>
+    <p class="todas">Todas com ar condicionado quente e frio, roupa de cama e banho Trousseau e Buddemeyer, roupão, Netflix e internet sem custo.</p>
+    <p class="micro">Fotos meramente ilustrativas da categoria de acomodações.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>O restaurante é uma atração à parte.</h2>
+    <p class="p">Ambiente aconchegante, voltado para o jardim, com carnes nobres, massas, risotos e frutos do mar, abastecido com verduras da nossa horta orgânica. No lounge, drinks com vista para os jardins iluminados.</p>
+  </div>
+  <div class="largo">
+    <div class="fotos">
+      <img class="g" src="img/g-restaurante.webp" width="1152" height="768" loading="lazy" decoding="async" alt="Salão do restaurante com mesas postas e vista para o jardim">
+      <img class="q" src="img/g-cafe.webp" width="700" height="700" loading="lazy" decoding="async" alt="Mesa de café da manhã com frutas, pães e sucos">
+      <img class="q" src="img/g-bar.webp" width="700" height="700" loading="lazy" decoding="async" alt="Bar e adega da pousada">
+    </div>
+  </div>
+</section>
+
+<section class="lazer" style="padding-top:0">
+  <div class="wrap">
+    <h2>Opções de lazer</h2>
+    <ul>
+      <li>Piscina e bar da piscina</li>
+      <li>Hidromassagem</li>
+      <li>Sauna seca com ducha circular</li>
+      <li>Massagem</li>
+      <li>Quadra de tênis de saibro</li>
+      <li>Beach tennis</li>
+      <li>Golfe com 6 buracos par 3</li>
+      <li>Mini golfe</li>
+      <li>Bicicletas</li>
+      <li>Sala de musculação</li>
+      <li>Salão de jogos</li>
+    </ul>
+  </div>
+  <div class="largo">
+    <div class="fotos">
+      <img class="g" src="img/l-piscina.webp" width="1152" height="768" loading="lazy" decoding="async" alt="Piscina da pousada com espreguiçadeiras e ombrelone">
+      <img class="q" src="img/l-tenis.webp" width="700" height="700" loading="lazy" decoding="async" alt="Quadra de tênis de saibro cercada de árvores">
+      <img class="q" src="img/l-golfe.webp" width="700" height="700" loading="lazy" decoding="async" alt="Campo de golfe da pousada com um jogador ao fundo">
+    </div>
+    <div class="bicho">
+      <img src="img/m-passaro.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Pássaro no gramado da pousada">
+      <p>Em nosso pomar temos várias árvores frutíferas que alimentam os pássaros e pequenos animais que nos visitam, como jacu, maritaca, saguis, esquilos, quatis, corujas e tucanos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prova">
+  <div class="wrap">
+    <h2 class="num"><b>4,6</b><span><strong>no Google</strong>154 avaliações</span></h2>
+    <blockquote>
+      <p>“Pedimos que acendessem nossa lareira, nos levassem taças e tudo foi feito com muita rapidez e simpatia!”</p>
+      <cite>Raquel, no Booking</cite>
+    </blockquote>
+    <blockquote>
+      <p>“Muita paz e silêncio, excelente para um descanso e para resgatar as energias.”</p>
+      <cite>Mauro, no TripAdvisor</cite>
+    </blockquote>
+    <ul class="anos">
+      <li><b>2006</b><span>Guia 4 Rodas: um dos 5 Melhores Lançamentos da Hotelaria</span></li>
+      <li><b>2011</b><span>National Geographic Traveller: um dos 19 hotéis favoritos no Brasil</span></li>
+      <li><b>2015</b><span>Award Winner da Booking.com</span></li>
+      <li><b>2020</b><span>Traveller’s Choice do TripAdvisor</span></li>
+    </ul>
+    <div class="selos">
+      <img src="img/roteiros-de-charme.png" width="640" height="222" loading="lazy" decoding="async" alt="Roteiros de Charme">
+      <img src="img/travellers-choice-2020.png" width="240" height="287" loading="lazy" decoding="async" alt="Selo Travellers’ Choice 2020 do TripAdvisor">
+    </div>
+    <p class="micro" style="color:var(--mata-apoio);margin-top:16px">Desde 2006 na associação de hotéis Roteiros de Charme.</p>
+  </div>
+</section>
+
+<section class="onde">
+  <div class="wrap">
+    <h2>No lindo Vale do Cuiabá, em Itaipava.</h2>
+    <address>Estrada Ministro Salgado Filho, 5301<br>Petrópolis, Rio de Janeiro · 25745-690</address>
+    <div class="mapa"><img src="img/mapa.png" width="1326" height="798" loading="lazy" decoding="async" alt="Mapa de acesso: pela BR 040, saídas 58 ou 62, seguindo por Itaipava e pela Estrada União Indústria até a pousada"></div>
+    <a class="link" href="https://www.google.com/maps/search/?api=1&query=Pousada%20Les%20Roches%2C%20Estrada%20Ministro%20Salgado%20Filho%2C%205301%2C%20Petr%C3%B3polis" target="_blank" rel="noopener">Abrir no Google Maps</a>
+  </div>
+</section>
+
+<section class="fecho">
+  <div class="wrap">
+    <h2>Venha descobrir o encanto da Pousada Les Roches.</h2>
+    <a class="btn" id="btn-fim" href="https://wa.me/5524999679091?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20da%20disponibilidade%20para%20" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+      Reservar pelo WhatsApp
+    </a>
+    <p class="micro">Telefone e WhatsApp: (24) 99967-9091</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" width="202" height="184" loading="lazy" alt="Pousada Les Roches">
+    <p>Estrada Ministro Salgado Filho, 5301, Petrópolis, RJ<br>
+    <a href="mailto:reservas@pousadalesroches.com.br">reservas@pousadalesroches.com.br</a> · <a href="https://www.instagram.com/pousadalesroches/" target="_blank" rel="noopener">Instagram</a></p>
+    <p>Por razões estruturais não aceitamos hospedagens com animais de estimação, mas podemos sugerir locais que recebem os pets durante a sua hospedagem.</p>
+    <p class="cred">Esboço feito pela <a href="https://virtusmarketing.com.br" target="_blank" rel="noopener">Virtus Marketing</a></p>
+  </div>
+</footer>
+
+<div class="fixa" id="fixa">
+  <a class="btn" href="https://wa.me/5524999679091?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20da%20disponibilidade%20para%20" target="_blank" rel="noopener" tabindex="-1">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+    Reservar pelo WhatsApp
+  </a>
+</div>
+
+<script>
+(function () {
+  var semMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // passeio: a seção gruda e --t (0 a 6) troca as fotos conforme o scroll
+  var sec = document.getElementById('passeio');
+  if (sec && !semMovimento && window.CSS && CSS.supports('opacity', 'clamp(0, 1, 1)')) {
+    var n = sec.querySelectorAll('li').length, raf = 0;
+    sec.classList.add('anim');
+    // as fotos do passeio ficam empilhadas: carregar todas assim que a seção se aproxima
+    var imgs = sec.querySelectorAll('img');
+    var carregar = function () { for (var i = 0; i < imgs.length; i++) imgs[i].loading = 'eager'; };
+    if ('IntersectionObserver' in window) {
+      var ioP = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { carregar(); ioP.disconnect(); } }, { rootMargin: '600px 0px' });
+      ioP.observe(sec);
+    } else carregar();
+    var upd = function () {
+      raf = 0;
+      var r = sec.getBoundingClientRect(), curso = r.height - window.innerHeight;
+      var p = curso > 0 ? Math.min(1, Math.max(0, -r.top / curso)) : 0;
+      sec.style.setProperty('--t', (p * (n - .001)).toFixed(3));
+    };
+    var pede = function () { if (!raf) raf = requestAnimationFrame(upd); };
+    window.addEventListener('scroll', pede, { passive: true });
+    window.addEventListener('resize', pede);
+    upd();
+  }
+
+  // carrossel: pontos e "N de 6"
+  var trilho = document.getElementById('trilho'), pontos = document.getElementById('pontos');
+  if (trilho && pontos) {
+    var cards = trilho.querySelectorAll('article'), is = pontos.querySelectorAll('i'), rot = pontos.querySelector('span'), rafC = 0, atual = 0;
+    trilho.addEventListener('scroll', function () {
+      if (rafC) return;
+      rafC = requestAnimationFrame(function () {
+        rafC = 0;
+        var passo = cards[1].offsetLeft - cards[0].offsetLeft;
+        var fim = trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 4;
+        var k = fim ? cards.length - 1 : Math.min(cards.length - 1, Math.round(trilho.scrollLeft / passo));
+        if (k === atual) return;
+        atual = k;
+        for (var i = 0; i < is.length; i++) is[i].className = i === k ? 'on' : '';
+        rot.textContent = (k + 1) + ' de ' + cards.length;
+      });
+    }, { passive: true });
+  }
+
+  // barra fixa: aparece quando o botão do topo sai da tela e some quando o botão do fim aparece
+  var fixa = document.getElementById('fixa'), topo = document.getElementById('btn-topo'), fim = document.getElementById('btn-fim');
+  if (fixa && topo && fim && 'IntersectionObserver' in window) {
+    var vTopo = true, vFim = false, link = fixa.querySelector('a');
+    var aplica = function () {
+      var on = !vTopo && !vFim;
+      fixa.classList.toggle('on', on);
+      if (on) link.removeAttribute('tabindex'); else link.setAttribute('tabindex', '-1');
+    };
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.target === topo) vTopo = e.isIntersecting; else vFim = e.isIntersecting; });
+      aplica();
+    });
+    io.observe(topo); io.observe(fim);
+  }
+})();
+</script>
+</body>
+</html>
