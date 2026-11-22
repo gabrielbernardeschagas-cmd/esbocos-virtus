@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casas de temporada em Secretário e Itaipava · Caminho do Ouro Imóveis</title>
+<meta name="description" content="Casas de temporada em Secretário e Itaipava, Petrópolis, da Caminho do Ouro Imóveis. Veja as fotos e peça a reserva direto pelo WhatsApp.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Casas de temporada em Secretário e Itaipava · Caminho do Ouro Imóveis">
+<meta property="og:description" content="Veja as fotos e peça a reserva direto pelo WhatsApp.">
+<meta property="og:image" content="https://gabrielbernardeschagas-cmd.github.io/esbocos-virtus/caminho-do-ouro/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Esboço Virtus (22/11/2026). Regras da casa: copy do cliente enxuta, branco, mobile first, cor chapada (sem degradê),
+   uma família de fonte, fio de 1 px no lugar de cartão com sombra, um só rótulo de botão,
+   movimento só em transform/opacity e tudo legível sem JS ou com prefers-reduced-motion. */
+:root {
+  --papel: #FFFFFF;
+  --areia: #F7F3EC;
+  --tinta: #1D1B19;
+  --apoio: #5E5952;        /* 6,9:1 sobre o branco */
+  --cobre: #8F4725;        /* cobre da marca, escurecido; branco sobre ele: 6,9:1 */
+  --terra: #2A1A12;
+  --terra-apoio: #D9CBBE;  /* 10:1 sobre a terra */
+  --creme: #FDECCA;        /* creme da logo */
+  --fio: rgba(29, 27, 25, .14);
+  --fio-claro: rgba(255, 255, 255, .2);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--papel); color: var(--tinta);
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px; line-height: 1.55; overflow-x: clip; -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+h1, h2, h3, p, ul, ol, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+a { color: inherit; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -.03em; line-height: 1.06; text-wrap: balance; }
+h1 { font-size: clamp(38px, 10.6vw, 64px); }
+h2 { font-size: clamp(30px, 8.4vw, 46px); }
+section { padding: 76px 0; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+.largo { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.micro { font-size: 14.5px; color: var(--apoio); }
+:focus-visible { outline: 3px solid var(--cobre); outline-offset: 3px; }
+
+/* botão: um só rótulo na página inteira */
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; max-width: 380px; min-height: 56px; padding: 0 22px;
+  background: var(--cobre); color: #fff; font-size: 17.5px; font-weight: 600; text-decoration: none; border-radius: 16px;
+  transition: transform .15s ease;
+}
+.btn:active { transform: scale(.98); }
+.btn svg { width: 22px; height: 22px; flex: none; fill: currentColor; }
+
+/* primeira dobra: marca, título, botão e a foto logo abaixo */
+.topo { padding: 18px 0 0; }
+.marca { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 16px; letter-spacing: -.01em; }
+.marca img { width: 40px; height: 40px; border-radius: 10px; }
+.hero { padding: 34px 0 0; }
+.hero .lead { margin-top: 14px; font-size: 19px; line-height: 1.4; color: var(--apoio); max-width: 26em; }
+.hero .btn { margin-top: 24px; }
+.nota { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; margin-top: 14px; font-size: 15.5px; font-weight: 500; }
+.nota svg { width: 17px; height: 17px; fill: var(--cobre); }
+.nota b { font-weight: 700; }
+.hero figure { margin-top: 30px; }
+.hero figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 26px; background: var(--areia); }
+.hero figcaption { margin-top: 10px; }
+@media (min-width: 900px) {
+  .hero { padding-top: 56px; }
+  .hero .largo { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .hero figure { margin-top: 0; }
+}
+
+/* frase da casa */
+.frase { padding: 84px 0 30px; }
+.frase p { font-size: clamp(25px, 6.8vw, 36px); font-weight: 600; letter-spacing: -.025em; line-height: 1.2; text-wrap: balance; }
+
+/* o passeio: sem JS ou com movimento reduzido, fica uma lista empilhada e legível */
+.passeio { padding: 20px 0 50px; }
+.passeio .pin { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+.passeio li { margin-top: 40px; }
+.passeio li img { width: 100%; max-width: 440px; aspect-ratio: 1; object-fit: cover; border-radius: 26px; background: var(--areia); }
+.passeio .leg { margin-top: 18px; }
+.passeio .leg b { display: block; font-size: clamp(26px, 7.4vw, 34px); font-weight: 700; letter-spacing: -.03em; line-height: 1.08; text-wrap: balance; }
+.passeio .leg span { display: block; margin-top: 8px; color: var(--apoio); }
+.passeio .barra { display: none; }
+
+/* com JS: a seção fica alta, a tela gruda e --t (0 a 6) troca as fotos */
+.passeio.anim { --t: 0; --h: min(48vh, 100vw - 40px, 460px); padding: 0; height: 520vh; }
+@supports (height: 1svh) { .passeio.anim { --h: min(48svh, 100vw - 40px, 460px); height: 520svh; } }
+.passeio.anim .pin { position: sticky; top: 0; height: 100vh; height: 100svh; max-width: none; padding: 0 20px 92px; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.passeio.anim ol { position: relative; width: 100%; max-width: 460px; height: calc(var(--h) + 150px); }
+.passeio.anim li { position: absolute; inset: 0; margin: 0; display: flex; flex-direction: column; align-items: center; text-align: center; pointer-events: none; }
+.passeio.anim .foto { width: var(--h); height: var(--h); border-radius: 26px; overflow: hidden; flex: none; background: var(--areia);
+  opacity: clamp(0, (var(--t) - var(--i)) * 4 + .5, 1); }
+.passeio.anim li:first-child .foto { opacity: 1; }
+.passeio.anim li img { width: 100%; height: 100%; max-width: none; border-radius: 0;
+  transform: scale(calc(1.14 - clamp(0, var(--t) - var(--i) + .5, 1.5) * .09)); will-change: transform; }
+.passeio.anim .leg { opacity: clamp(0, min((var(--t) - var(--i)) * 4 + .5, (var(--i) + 1 - var(--t)) * 4 - .5), 1);
+  transform: translateY(calc(clamp(-1, (var(--i) + .5 - var(--t)) * 2, 1) * 14px)); }
+.passeio.anim li:first-child .leg { opacity: clamp(0, (1 - var(--t)) * 4 - .5, 1); }
+.passeio.anim li:last-child .leg { opacity: clamp(0, (var(--t) - var(--i)) * 4 + .5, 1); }
+.passeio.anim .barra { display: flex; gap: 5px; width: 132px; margin-top: 18px; }
+.passeio.anim .barra i { flex: 1; height: 3px; border-radius: 2px; background: var(--fio); overflow: hidden; }
+.passeio.anim .barra i::after { content: ""; display: block; height: 100%; background: var(--tinta); transform-origin: left;
+  transform: scaleX(clamp(0, var(--t) - var(--i), 1)); }
+
+/* as casas: tira de fotos na proporção original, texto curto e o botão de cada uma */
+.casas { background: var(--areia); }
+.casas .sub { margin-top: 12px; color: var(--apoio); }
+.casa { padding: 40px 0 44px; border-top: 1px solid var(--fio); scroll-margin-top: 12px; }
+.casa:first-of-type { margin-top: 34px; }
+.casa:last-of-type { padding-bottom: 0; }
+.tira { display: flex; gap: 8px; height: clamp(220px, 62vw, 320px); margin: 0 -20px; padding: 0 20px; overflow-x: auto;
+  scroll-snap-type: x mandatory; scroll-padding-left: 20px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.tira::-webkit-scrollbar { display: none; }
+.tira::after { content: ""; flex: 0 0 12px; }
+.tira img { flex: none; width: auto; height: 100%; max-width: none; border-radius: 18px; scroll-snap-align: start; background: #EAE3D8; }
+.casa h3 { margin-top: 22px; font-size: clamp(25px, 6.8vw, 30px); letter-spacing: -.028em; line-height: 1.1; }
+.ficha { margin-top: 8px; font-weight: 600; font-size: 16px; }
+.txt { margin-top: 10px; color: var(--apoio); max-width: 34em; }
+.tem { margin-top: 12px; color: var(--tinta); font-size: 16px; line-height: 1.5; max-width: 36em; }
+.tem li { display: inline; }
+.tem li:not(:last-child)::after { content: " · "; color: #8A8177; }
+.casa .btn { margin-top: 22px; }
+.cod { margin-top: 10px; font-size: 13.5px; color: var(--apoio); font-variant-numeric: tabular-nums; }
+@media (min-width: 900px) {
+  .grade { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; margin-top: 34px; }
+  .grade .casa { min-width: 0; }
+  .grade .casa:first-of-type { margin-top: 0; }
+  .grade .casa:last-of-type { padding-bottom: 44px; }
+  .tira { margin: 0; padding: 0; scroll-padding-left: 0; height: 300px; }
+}
+
+/* pedido de reserva: monta a mensagem do WhatsApp com casa, datas e pessoas */
+.pedido .sub { margin-top: 12px; color: var(--apoio); }
+.campos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; margin-top: 28px; }
+.campos label { display: block; font-size: 14.5px; font-weight: 600; min-width: 0; }
+.campos .inteiro { grid-column: 1 / -1; }
+.campos select, .campos input {
+  display: block; width: 100%; min-width: 0; height: 54px; margin-top: 6px; padding: 0 14px; font: inherit; font-size: 16px; font-weight: 400; color: var(--tinta);
+  background: #fff; border: 1px solid rgba(29, 27, 25, .32); border-radius: 14px; -webkit-appearance: none; appearance: none;
+}
+.campos select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231D1B19' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; background-size: 12px 8px; padding-right: 36px; text-overflow: ellipsis; }
+.campos input::-webkit-date-and-time-value { text-align: left; }
+.pedido .btn { margin-top: 22px; }
+.pedido .micro { margin-top: 14px; }
+
+/* prova */
+.prova { background: var(--terra); color: #fff; }
+.prova .logo { width: 104px; }
+.num { display: flex; align-items: baseline; gap: 14px; margin-top: 40px; }
+.num b { font-size: clamp(92px, 30vw, 150px); font-weight: 700; letter-spacing: -.055em; line-height: .86; color: var(--creme); }
+.num span { font-size: 18px; line-height: 1.3; color: var(--terra-apoio); font-weight: 400; letter-spacing: 0; }
+.num span strong { display: block; color: #fff; font-weight: 600; }
+.prova .quem { margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--fio-claro); font-size: clamp(21px, 5.6vw, 26px); font-weight: 500; letter-spacing: -.02em; line-height: 1.3; text-wrap: pretty; }
+.prova address { margin-top: 14px; font-style: normal; color: var(--terra-apoio); }
+.prova :focus-visible { outline-color: var(--creme); }
+
+/* fecho e rodapé */
+.fecho .btn { margin-top: 26px; }
+.fecho .micro { margin-top: 16px; }
+footer { padding: 36px 0 124px; border-top: 1px solid var(--fio); font-size: 15px; color: var(--apoio); }
+footer p + p { margin-top: 12px; }
+footer .cred { margin-top: 26px; font-size: 13.5px; }
+@media (min-width: 761px) { footer { padding-bottom: 48px; } }
+
+/* barra fixa do celular: aparece quando o botão do topo sai da tela */
+.fixa { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 8px 16px calc(10px + env(safe-area-inset-bottom));
+  background: var(--papel); border-top: 1px solid var(--fio); transform: translateY(105%); visibility: hidden;
+  transition: transform .28s ease, visibility 0s linear .28s; }
+.fixa.on { transform: none; visibility: visible; transition: transform .28s ease, visibility 0s; }
+.fixa .qual { display: block; margin-bottom: 6px; font-size: 13.5px; font-weight: 600; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fixa .qual:empty { display: none; }
+.fixa .btn { max-width: none; min-height: 52px; }
+@media (min-width: 761px) { .fixa { display: none; } }
+
+@media (min-width: 761px) {
+  section { padding: 104px 0; }
+  .frase { padding: 120px 0 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+
+<header>
+  <div class="topo">
+    <div class="largo">
+      <p class="marca"><img src="img/marca.webp" width="192" height="192" alt="">Caminho do Ouro Imóveis</p>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="largo">
+      <div>
+        <h1>Casas de temporada em Secretário e Itaipava</h1>
+        <p class="lead">Dias de descanso e lazer em meio ao verde, com conforto para reunir a família e os amigos.</p>
+        <a class="btn" id="btn-topo" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20de%20uma%20casa%20para%20temporada." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+        <p class="nota">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6-5.9-3.3-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+          <span><b>5,0 no Google</b>, 44 avaliações</span>
+        </p>
+      </div>
+      <figure>
+        <img src="img/hero.webp" width="800" height="524" alt="Casa de temporada em Itaipava com piscina, jardim e primavera florida" fetchpriority="high" decoding="async">
+        <figcaption class="micro">Casa de 5 quartos em Itaipava</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="frase">
+  <div class="wrap">
+    <p>Um verdadeiro paraíso para relaxar, reunir a família e viver momentos inesquecíveis em meio à natureza.</p>
+  </div>
+</section>
+
+<section class="passeio" id="passeio" aria-label="As casas em seis fotos">
+  <div class="pin">
+    <ol>
+      <li style="--i:0">
+        <div class="foto"><img src="img/itaipava-2.webp" width="720" height="481" loading="lazy" decoding="async" alt="Piscina da casa de Itaipava vista de cima"></div>
+        <p class="leg"><b>Piscina e SPA aquecido</b><span>Casa de 5 quartos em Itaipava</span></p>
+      </li>
+      <li style="--i:1">
+        <div class="foto"><img src="img/sitio-2.webp" width="479" height="639" loading="lazy" decoding="async" alt="Cachoeira entre pedras, dentro do sítio"></div>
+        <p class="leg"><b>Cachoeira dentro da propriedade</b><span>Sítio com duas casas em Secretário</span></p>
+      </li>
+      <li style="--i:2">
+        <div class="foto"><img src="img/casa4-2.webp" width="720" height="540" loading="lazy" decoding="async" alt="Sala com lareira de pedra"></div>
+        <p class="leg"><b>Sala de estar com lareira</b><span>Casa de 4 quartos em Secretário</span></p>
+      </li>
+      <li style="--i:3">
+        <div class="foto"><img src="img/chale-1.webp" width="720" height="546" loading="lazy" decoding="async" alt="Piscina do chalé com vista para as montanhas"></div>
+        <p class="leg"><b>Piscina com 13 metros de comprimento</b><span>Chalé de 2 quartos em Secretário</span></p>
+      </li>
+      <li style="--i:4">
+        <div class="foto"><img src="img/casa2-3.webp" width="539" height="638" loading="lazy" decoding="async" alt="Varanda coberta com poltronas e rede"></div>
+        <p class="leg"><b>Rede na varanda, ao som dos pássaros</b><span>Casa de 2 quartos em Secretário</span></p>
+      </li>
+      <li style="--i:5">
+        <div class="foto"><img src="img/casa3-2.webp" width="639" height="639" loading="lazy" decoding="async" alt="Piscina com cascata e vista para as montanhas"></div>
+        <p class="leg"><b>Piscina com cascata</b><span>Casa de 3 quartos em Secretário</span></p>
+      </li>
+    </ol>
+    <div class="barra" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i></div>
+  </div>
+</section>
+
+<section class="casas" id="casas">
+  <div class="largo">
+    <h2>As casas</h2>
+    <p class="sub">Locação de temporada em Petrópolis. Deslize as fotos de cada casa.</p>
+    <div class="grade">
+    <article class="casa" id="itaipava" data-nome="Casa de 5 quartos em Itaipava" data-cod="CMCA50009">
+      <div class="tira" tabindex="0" role="group" aria-label="Fotos: Casa de 5 quartos em Itaipava. Deslize para o lado.">
+        <img src="img/itaipava-1.webp" width="720" height="481" loading="lazy" decoding="async" alt="Vista aérea da casa de Itaipava com a piscina e o jardim">
+        <img src="img/itaipava-2.webp" width="720" height="481" loading="lazy" decoding="async" alt="Piscina da casa de Itaipava vista de cima, com o espaço gourmet ao lado">
+        <img src="img/itaipava-3.webp" width="720" height="475" loading="lazy" decoding="async" alt="Living da casa com sofás e pé-direito alto">
+        <img src="img/itaipava-4.webp" width="720" height="530" loading="lazy" decoding="async" alt="Suíte com cama de casal e lareira">
+        <img src="img/itaipava-5.webp" width="720" height="543" loading="lazy" decoding="async" alt="SPA aquecido em sala envidraçada">
+        <img src="img/itaipava-6.webp" width="720" height="529" loading="lazy" decoding="async" alt="Campo de futebol society gramado">
+      </div>
+      <h3>Casa de 5 quartos em Itaipava</h3>
+      <p class="ficha">5 quartos, 4 suítes · 7 banheiros · 830 m²</p>
+      <p class="txt">Ambientes amplos, decoração leve e sofisticada e uma estrutura completa para reunir família e amigos.</p>
+      <ul class="tem"><li>Casa de hóspedes anexa</li><li>Piscina</li><li>SPA aquecido</li><li>Sauna úmida</li><li>Espaço gourmet integrado</li><li>Home theater</li><li>Campo de futebol society</li></ul>
+      <a class="btn" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20para%20temporada%3A%20Casa%20de%205%20quartos%20em%20Itaipava%20(c%C3%B3d.%20CMCA50009)." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp: Casa de 5 quartos em Itaipava"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+      <p class="cod">Cód. CMCA50009</p>
+    </article>
+    <article class="casa" id="casa4" data-nome="Casa de 4 quartos em Secretário" data-cod="CMCA40007">
+      <div class="tira" tabindex="0" role="group" aria-label="Fotos: Casa de 4 quartos em Secretário. Deslize para o lado.">
+        <img src="img/casa4-1.webp" width="720" height="540" loading="lazy" decoding="async" alt="Casa amarela no alto do gramado, entre árvores">
+        <img src="img/casa4-2.webp" width="720" height="540" loading="lazy" decoding="async" alt="Sala de estar com lareira de pedra e teto de madeira">
+        <img src="img/casa4-3.webp" width="720" height="540" loading="lazy" decoding="async" alt="Espaço gourmet com bancada e banquetas">
+        <img src="img/casa4-4.webp" width="720" height="540" loading="lazy" decoding="async" alt="Quarto com cama de casal e janela para o verde">
+        <img src="img/casa4-5.webp" width="720" height="540" loading="lazy" decoding="async" alt="Gramado em frente à casa com vista para as montanhas">
+      </div>
+      <h3>Casa de 4 quartos em Secretário</h3>
+      <p class="ficha">4 quartos, 3 suítes · 5 banheiros · 300 m²</p>
+      <p class="txt">Dias de descanso e lazer em meio ao verde, com conforto para reunir a família e os amigos.</p>
+      <ul class="tem"><li>Sala de estar com lareira</li><li>Espaço gourmet com cozinha completa</li><li>Churrasqueira</li><li>Forno de pizza e forno a lenha</li><li>Sauna com vista para o verde</li></ul>
+      <a class="btn" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20para%20temporada%3A%20Casa%20de%204%20quartos%20em%20Secret%C3%A1rio%20(c%C3%B3d.%20CMCA40007)." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp: Casa de 4 quartos em Secretário"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+      <p class="cod">Cód. CMCA40007</p>
+    </article>
+    <article class="casa" id="sitio" data-nome="Sítio com duas casas em Secretário" data-cod="CMCN40016">
+      <div class="tira" tabindex="0" role="group" aria-label="Fotos: Sítio com duas casas em Secretário. Deslize para o lado.">
+        <img src="img/sitio-1.webp" width="479" height="639" loading="lazy" decoding="async" alt="Caminho de pedras no jardim do sítio, com as casas ao fundo">
+        <img src="img/sitio-2.webp" width="479" height="639" loading="lazy" decoding="async" alt="Cachoeira entre pedras dentro da propriedade">
+        <img src="img/sitio-3.webp" width="479" height="639" loading="lazy" decoding="async" alt="Sala com lareira e sofás">
+        <img src="img/sitio-4.webp" width="479" height="639" loading="lazy" decoding="async" alt="Área gourmet coberta com churrasqueira">
+        <img src="img/sitio-5.webp" width="479" height="639" loading="lazy" decoding="async" alt="Quarto com cama de casal">
+      </div>
+      <h3>Sítio com duas casas em Secretário</h3>
+      <p class="ficha">4 quartos, 4 suítes · 6 banheiros</p>
+      <p class="txt">São 2 casas completas, cada uma com 2 suítes, cozinha americana, sala com lareira e varanda com rede.</p>
+      <ul class="tem"><li>Cachoeira dentro da propriedade</li><li>Sauna e spa em frente à cachoeira</li><li>Quadra poliesportiva de grama</li><li>Área gourmet com churrasqueira e forno a lenha</li><li>Pomar</li><li>Lareira externa</li><li>Gerador de energia</li></ul>
+      <a class="btn" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20para%20temporada%3A%20S%C3%ADtio%20com%20duas%20casas%20em%20Secret%C3%A1rio%20(c%C3%B3d.%20CMCN40016)." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp: Sítio com duas casas em Secretário"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+      <p class="cod">Cód. CMCN40016</p>
+    </article>
+    <article class="casa" id="casa3" data-nome="Casa de 3 quartos em Secretário" data-cod="CMCN30027">
+      <div class="tira" tabindex="0" role="group" aria-label="Fotos: Casa de 3 quartos em Secretário. Deslize para o lado.">
+        <img src="img/casa3-1.webp" width="720" height="540" loading="lazy" decoding="async" alt="Varanda da casa com rede e gramado">
+        <img src="img/casa3-2.webp" width="639" height="639" loading="lazy" decoding="async" alt="Piscina com cascata e vista para as montanhas">
+        <img src="img/casa3-3.webp" width="720" height="540" loading="lazy" decoding="async" alt="Sala com sofá e TV">
+        <img src="img/casa3-4.webp" width="720" height="539" loading="lazy" decoding="async" alt="Quarto com cama de casal">
+        <img src="img/casa3-5.webp" width="479" height="639" loading="lazy" decoding="async" alt="Área da churrasqueira com mesa">
+      </div>
+      <h3>Casa de 3 quartos em Secretário</h3>
+      <p class="ficha">3 quartos · 1 banheiro · 2 vagas</p>
+      <p class="txt">Para famílias ou grupos de amigos, com a sala integrada à cozinha.</p>
+      <ul class="tem"><li>Piscina com cascata</li><li>Churrasqueira</li><li>Forno de lenha</li><li>Garagem para 2 carros</li></ul>
+      <a class="btn" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20para%20temporada%3A%20Casa%20de%203%20quartos%20em%20Secret%C3%A1rio%20(c%C3%B3d.%20CMCN30027)." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp: Casa de 3 quartos em Secretário"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+      <p class="cod">Cód. CMCN30027</p>
+    </article>
+    <article class="casa" id="chale" data-nome="Chalé de 2 quartos em Secretário" data-cod="CMCA20006">
+      <div class="tira" tabindex="0" role="group" aria-label="Fotos: Chalé de 2 quartos em Secretário. Deslize para o lado.">
+        <img src="img/chale-1.webp" width="720" height="546" loading="lazy" decoding="async" alt="Piscina do chalé com vista para as montanhas">
+        <img src="img/chale-2.webp" width="391" height="639" loading="lazy" decoding="async" alt="Fachada do chalé de madeira em formato de A">
+        <img src="img/chale-3.webp" width="720" height="546" loading="lazy" decoding="async" alt="Sala do chalé com sofá e teto de madeira">
+        <img src="img/chale-4.webp" width="720" height="541" loading="lazy" decoding="async" alt="Quarto com duas camas">
+        <img src="img/chale-5.webp" width="720" height="535" loading="lazy" decoding="async" alt="Redes no jardim, com o chalé e a piscina ao fundo">
+      </div>
+      <h3>Chalé de 2 quartos em Secretário</h3>
+      <p class="ficha">2 quartos · 2 banheiros · 92 m²</p>
+      <p class="txt">Lindo chalezinho no coração de Secretário, com 2 quartos e um mezanino com sofá-cama.</p>
+      <ul class="tem"><li>Piscina com 13 metros e parte rasa para as crianças</li><li>Churrasqueira e espaço gourmet</li><li>Campinho de futebol</li><li>Mesa de ping pong</li><li>Cozinha americana equipada</li><li>Estacionamento coberto</li></ul>
+      <a class="btn" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20para%20temporada%3A%20Chal%C3%A9%20de%202%20quartos%20em%20Secret%C3%A1rio%20(c%C3%B3d.%20CMCA20006)." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp: Chalé de 2 quartos em Secretário"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+      <p class="cod">Cód. CMCA20006</p>
+    </article>
+    <article class="casa" id="casa2" data-nome="Casa de 2 quartos com piscina privativa em Secretário" data-cod="CMCA20012">
+      <div class="tira" tabindex="0" role="group" aria-label="Fotos: Casa de 2 quartos com piscina privativa em Secretário. Deslize para o lado.">
+        <img src="img/casa2-1.webp" width="535" height="639" loading="lazy" decoding="async" alt="Casa azul com varanda, gramado e piscina">
+        <img src="img/casa2-2.webp" width="479" height="639" loading="lazy" decoding="async" alt="Piscina privativa com guarda-sol no gramado">
+        <img src="img/casa2-3.webp" width="539" height="638" loading="lazy" decoding="async" alt="Varanda coberta com poltronas e rede">
+        <img src="img/casa2-4.webp" width="720" height="540" loading="lazy" decoding="async" alt="Sala com sofá e mesa de jantar">
+        <img src="img/casa2-5.webp" width="720" height="540" loading="lazy" decoding="async" alt="Quarto com cama de casal e armário">
+      </div>
+      <h3>Casa de 2 quartos com piscina privativa em Secretário</h3>
+      <p class="ficha">2 quartos · 2 banheiros</p>
+      <p class="txt">Cercada por muito verde e montanhas, combina o charme rústico com o conforto para dias de descanso com a família e os amigos.</p>
+      <ul class="tem"><li>Piscina privativa</li><li>Varanda com rede</li><li>Quartos com ar-condicionado</li><li>Cozinha completa</li><li>Wi-Fi de alta velocidade</li><li>Estacionamento privativo</li></ul>
+      <a class="btn" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20para%20temporada%3A%20Casa%20de%202%20quartos%20com%20piscina%20privativa%20em%20Secret%C3%A1rio%20(c%C3%B3d.%20CMCA20012)." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp: Casa de 2 quartos com piscina privativa em Secretário"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+      <p class="cod">Cód. CMCA20012</p>
+    </article>
+    </div>
+  </div>
+</section>
+
+<section class="pedido" id="pedido">
+  <div class="wrap">
+    <h2>Consulte valores e disponibilidade das datas.</h2>
+    <p class="sub">Escolha a casa e o período. O pedido chega pronto no nosso WhatsApp.</p>
+    <div class="campos">
+      <label class="inteiro">Casa
+        <select id="f-casa"><option value="">Ainda não escolhi</option><option value="itaipava">Casa de 5 quartos em Itaipava</option><option value="casa4">Casa de 4 quartos em Secretário</option><option value="sitio">Sítio com duas casas em Secretário</option><option value="casa3">Casa de 3 quartos em Secretário</option><option value="chale">Chalé de 2 quartos em Secretário</option><option value="casa2">Casa de 2 quartos com piscina privativa em Secretário</option></select>
+      </label>
+      <label>Chegada
+        <input type="date" id="f-in">
+      </label>
+      <label>Saída
+        <input type="date" id="f-out">
+      </label>
+      <label class="inteiro">Pessoas
+        <input type="number" id="f-n" min="1" max="40" inputmode="numeric" placeholder="Quantas pessoas">
+      </label>
+    </div>
+    <a class="btn" id="btn-pedido" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20de%20uma%20casa%20para%20temporada." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+    <p class="micro">A reserva é confirmada pela imobiliária na conversa.</p>
+  </div>
+</section>
+
+<section class="prova">
+  <div class="wrap">
+    <img class="logo" src="img/logo.webp" width="300" height="344" loading="lazy" decoding="async" alt="Caminho do Ouro">
+    <h2 class="num"><b>5,0</b><span><strong>no Google</strong>44 avaliações</span></h2>
+    <p class="quem">Caminho do Ouro Imóveis. Imobiliária em Secretário, Itaipava, Araras e região, Petrópolis.</p>
+    <address>Rua Doutor Barros Franco, Nº 274, Secretário<br>Petrópolis, RJ · 25750-290</address>
+  </div>
+</section>
+
+<section class="fecho">
+  <div class="wrap">
+    <h2>Entre em contato para consultar a disponibilidade e valores e garantir sua reserva.</h2>
+    <a class="btn" id="btn-fim" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20de%20uma%20casa%20para%20temporada." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+    <p class="micro">Telefone e WhatsApp: (24) 99251-7483</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Caminho do Ouro Imóveis Ltda<br>Rua Doutor Barros Franco, Nº 274, Secretário, Petrópolis, RJ</p>
+    <p><a href="mailto:imoveiscaminhodoouro@gmail.com">imoveiscaminhodoouro@gmail.com</a> · <a href="https://www.caminhodoouroimoveis.com.br/" target="_blank" rel="noopener">caminhodoouroimoveis.com.br</a></p>
+    <p class="cred">Esboço feito pela <a href="https://virtusmarketing.com.br" target="_blank" rel="noopener">Virtus Marketing</a></p>
+  </div>
+</footer>
+
+<div class="fixa" id="fixa">
+  <span class="qual" id="fixa-qual"></span>
+  <a class="btn" id="fixa-btn" href="https://wa.me/5524992517483?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20a%20disponibilidade%20de%20uma%20casa%20para%20temporada." target="_blank" rel="noopener" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+</div>
+
+<script>
+(function () {
+  var semMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FONE = '5524992517483', CASAS = {"itaipava": {"nome": "Casa de 5 quartos em Itaipava", "cod": "CMCA50009"}, "casa4": {"nome": "Casa de 4 quartos em Secretário", "cod": "CMCA40007"}, "sitio": {"nome": "Sítio com duas casas em Secretário", "cod": "CMCN40016"}, "casa3": {"nome": "Casa de 3 quartos em Secretário", "cod": "CMCN30027"}, "chale": {"nome": "Chalé de 2 quartos em Secretário", "cod": "CMCA20006"}, "casa2": {"nome": "Casa de 2 quartos com piscina privativa em Secretário", "cod": "CMCA20012"}};
+  var GERAL = 'Olá! Vi o site e queria saber a disponibilidade de uma casa para temporada.';
+  var link = function (msg) { return 'https://wa.me/' + FONE + '?text=' + encodeURIComponent(msg); };
+  var deCasa = function (c) { return 'Olá! Vi o site e queria saber a disponibilidade para temporada: ' + c.nome + ' (cód. ' + c.cod + ').'; };
+
+  // passeio: a seção gruda e --t (0 a 6) troca as fotos conforme o scroll
+  var sec = document.getElementById('passeio');
+  if (sec && !semMovimento && window.CSS && CSS.supports('opacity', 'clamp(0, 1, 1)')) {
+    var n = sec.querySelectorAll('li').length, raf = 0;
+    sec.classList.add('anim');
+    // as fotos do passeio ficam empilhadas: carregar todas assim que a seção se aproxima
+    var imgs = sec.querySelectorAll('img');
+    var carregar = function () { for (var i = 0; i < imgs.length; i++) imgs[i].loading = 'eager'; };
+    if ('IntersectionObserver' in window) {
+      var ioP = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { carregar(); ioP.disconnect(); } }, { rootMargin: '600px 0px' });
+      ioP.observe(sec);
+    } else carregar();
+    var upd = function () {
+      raf = 0;
+      var r = sec.getBoundingClientRect(), curso = r.height - window.innerHeight;
+      var p = curso > 0 ? Math.min(1, Math.max(0, -r.top / curso)) : 0;
+      sec.style.setProperty('--t', (p * (n - .001)).toFixed(3));
+    };
+    var pede = function () { if (!raf) raf = requestAnimationFrame(upd); };
+    window.addEventListener('scroll', pede, { passive: true });
+    window.addEventListener('resize', pede);
+    upd();
+  }
+
+  // pedido de reserva: casa, datas e pessoas entram na mensagem
+  var fCasa = document.getElementById('f-casa'), fIn = document.getElementById('f-in'), fOut = document.getElementById('f-out'),
+      fN = document.getElementById('f-n'), bPedido = document.getElementById('btn-pedido');
+  if (fCasa && fIn && fOut && fN && bPedido) {
+    var br = function (v) { var p = v.split('-'); return p.length === 3 ? p[2] + '/' + p[1] + '/' + p[0] : ''; };
+    var iso = function (d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); };
+    var hoje = new Date(); fIn.min = iso(hoje); fOut.min = iso(hoje);
+    var monta = function () {
+      if (fIn.value) {
+        var d = new Date(fIn.value + 'T12:00:00'); d.setDate(d.getDate() + 1); fOut.min = iso(d);
+        if (fOut.value && fOut.value <= fIn.value) fOut.value = '';
+      }
+      var c = CASAS[fCasa.value], m = 'Olá! Vi o site e queria saber a disponibilidade para temporada';
+      m += c ? ': ' + c.nome + ' (cód. ' + c.cod + ')' : ' de uma casa';
+      if (fIn.value && fOut.value) m += ', de ' + br(fIn.value) + ' a ' + br(fOut.value);
+      else if (fIn.value) m += ', chegada em ' + br(fIn.value);
+      var q = parseInt(fN.value, 10);
+      if (q > 0) m += ', para ' + q + (q === 1 ? ' pessoa' : ' pessoas');
+      bPedido.href = link(m + '.');
+    };
+    [fCasa, fIn, fOut, fN].forEach(function (el) { el.addEventListener('input', monta); el.addEventListener('change', monta); });
+    monta();
+  }
+
+  // barra fixa: aparece depois do botão do topo, some perto do pedido e do fim; leva a casa que está na tela
+  var fixa = document.getElementById('fixa'), topo = document.getElementById('btn-topo'), fim = document.getElementById('btn-fim'),
+      qual = document.getElementById('fixa-qual'), fBtn = document.getElementById('fixa-btn');
+  if (fixa && topo && fim && fBtn && 'IntersectionObserver' in window) {
+    var vis = { topo: true, fim: false, pedido: false };
+    var aplica = function () {
+      var on = !vis.topo && !vis.fim && !vis.pedido;
+      fixa.classList.toggle('on', on);
+      if (on) fBtn.removeAttribute('tabindex'); else fBtn.setAttribute('tabindex', '-1');
+    };
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.target === topo) vis.topo = e.isIntersecting; else if (e.target === fim) vis.fim = e.isIntersecting; else vis.pedido = e.isIntersecting;
+      });
+      aplica();
+    });
+    io.observe(topo); io.observe(fim);
+    if (bPedido) io.observe(bPedido);
+
+    var naTela = {}, casas = document.querySelectorAll('.casa');
+    var ioC = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { naTela[e.target.id] = e.isIntersecting; });
+      var c = null;
+      for (var i = 0; i < casas.length; i++) if (naTela[casas[i].id]) { c = CASAS[casas[i].id]; break; }
+      qual.textContent = c ? c.nome : '';
+      fBtn.href = link(c ? deCasa(c) : GERAL);
+      if (c) fBtn.setAttribute('aria-label', 'Reservar pelo WhatsApp: ' + c.nome); else fBtn.removeAttribute('aria-label');
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    for (var k = 0; k < casas.length; k++) ioC.observe(casas[k]);
+  }
+})();
+</script>
+</body>
+</html>
