@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Villa Zarandi · Petrópolis</title>
+<meta name="description" content="Villa Zarandi, no Vale do Bonfim, em Petrópolis: hospedagem exclusiva para casais, com piscina privativa aquecida, jacuzzi com vista panorâmica e fogo de chão. Reserve direto pelo WhatsApp.">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Villa Zarandi · Petrópolis">
+<meta property="og:description" content="Hospedagem exclusiva para casais em meio às montanhas do Vale do Bonfim.">
+<meta property="og:image" content="https://gabrielbernardeschagas-cmd.github.io/esbocos-virtus/villa-zarandi/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" as="image" href="img/hero-m.webp" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero.webp" media="(min-width: 761px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Esboço Virtus (23/11/2026). Copy do cliente enxuta, mobile first, branco, cor chapada (sem degradê),
+   uma família de fonte, fio de 1 px no lugar de cartão, um só rótulo de botão,
+   movimento só em transform/opacity/clip-path e tudo legível sem JS ou com prefers-reduced-motion. */
+:root {
+  --branco: #fff;
+  --nevoa: #F3F4EF;      /* bloco de respiro, verde bem claro */
+  --tinta: #1B1E19;
+  --apoio: #575C52;      /* 6,7:1 sobre o branco */
+  --oliva: #2F3728;      /* botão; branco sobre ele: 12:1 */
+  --folha: #6A725B;      /* verde da marca, só em detalhe */
+  --fio: rgba(27, 30, 25, .14);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--branco); color: var(--tinta);
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px; line-height: 1.55; overflow-x: clip; -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+a { color: inherit; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -.032em; line-height: 1.06; text-wrap: balance; }
+h1 { font-size: clamp(38px, 11vw, 66px); }
+h2 { font-size: clamp(30px, 8.4vw, 46px); }
+section { padding: 84px 0; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+.largo { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.p { margin-top: 16px; color: var(--apoio); max-width: 34em; }
+.micro { font-size: 14.5px; color: var(--apoio); }
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 3px; }
+
+/* botão: um só rótulo na página inteira */
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; max-width: 380px; min-height: 56px; padding: 0 22px;
+  background: var(--oliva); color: #fff; font-size: 17.5px; font-weight: 600; text-decoration: none; border-radius: 28px;
+  transition: transform .15s ease;
+}
+.btn:active { transform: scale(.98); }
+.btn svg { width: 22px; height: 22px; flex: none; fill: currentColor; }
+
+/* primeira dobra: a foto em tela cheia, véu chapado para o texto ler */
+.hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; color: #fff; background: #2a3324; overflow: hidden; }
+.hero picture { position: absolute; inset: 0; z-index: 0; }
+.hero picture img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(16, 20, 13, .5); }
+.hero > .logo, .hero > .hero-t { position: relative; z-index: 1; }
+.hero .logo { width: 168px; margin: 24px 0 0 20px; }
+.hero-t { margin-top: auto; padding: 0 20px 40px; max-width: 780px; }
+.hero h1 { color: #fff; }
+.hero .lead { margin-top: 14px; font-size: 19px; line-height: 1.4; max-width: 24em; }
+.hero .btn { margin-top: 26px; background: #fff; color: var(--tinta); }
+.hero .btn:focus-visible { outline-color: #fff; }
+.nota { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; margin-top: 16px; font-size: 15.5px; font-weight: 500; }
+.nota svg { width: 17px; height: 17px; fill: #fff; }
+.nota b { font-weight: 700; }
+
+/* frase da casa */
+.frase { padding: 96px 0 40px; }
+.frase p { font-size: clamp(25px, 6.8vw, 36px); font-weight: 600; letter-spacing: -.025em; line-height: 1.2; text-wrap: balance; }
+
+/* o passeio: sem JS ou com movimento reduzido, fica uma lista empilhada e legível */
+.passeio { padding: 20px 0 60px; }
+.passeio .pin { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+.passeio li { margin-top: 44px; }
+.passeio li img { width: 100%; max-width: 440px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 28px; background: var(--nevoa); }
+.passeio .leg { margin-top: 18px; }
+.passeio .leg b { display: block; font-size: clamp(26px, 7.2vw, 34px); font-weight: 700; letter-spacing: -.03em; line-height: 1.08; text-wrap: balance; }
+.passeio .leg span { display: block; margin-top: 8px; color: var(--apoio); }
+.passeio .barra { display: none; }
+
+/* com JS: a seção fica alta, a tela gruda e --t (0 a 5,6) faz cada foto subir por cima da anterior.
+   --r é o avanço da entrada da foto i: começa em t = i - 0,4 e termina em t = i. */
+.passeio.anim { --t: 0; --h: min(54vh, (100vw - 40px) * 1.25, 560px); padding: 0; height: 540vh; }
+@supports (height: 1svh) { .passeio.anim { --h: min(54svh, (100vw - 40px) * 1.25, 560px); height: 540svh; } }
+.passeio.anim .pin { position: sticky; top: 0; height: 100vh; height: 100svh; max-width: none; padding: 0 20px 84px; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.passeio.anim ol { position: relative; width: 100%; max-width: 440px; height: calc(var(--h) + 176px); }
+.passeio.anim li { --r: clamp(0, (var(--t) - var(--i) + .4) * 2.5, 1);
+  position: absolute; inset: 0; margin: 0; display: flex; flex-direction: column; align-items: center; text-align: center; pointer-events: none; }
+.passeio.anim li:first-child { --r: 1; }
+.passeio.anim .foto { width: calc(var(--h) * .8); height: var(--h); border-radius: 28px; overflow: hidden; flex: none;
+  clip-path: inset(calc((1 - var(--r)) * 100%) 0 0 0 round 28px); will-change: clip-path; }
+.passeio.anim li img { width: 100%; height: 100%; max-width: none; border-radius: 0;
+  transform: scale(calc(1.16 - var(--r) * .1 - clamp(0, var(--t) - var(--i), 1) * .06)); will-change: transform; }
+.passeio.anim .leg { opacity: clamp(0, min((var(--t) - var(--i) + .2) * 6.6, (var(--i) + .8 - var(--t)) * 6.6), 1);
+  transform: translateY(calc((1 - clamp(0, (var(--t) - var(--i) + .2) * 6.6, 1)) * 12px)); }
+.passeio.anim li:first-child .leg { opacity: clamp(0, (.8 - var(--t)) * 6.6, 1); transform: none; }
+.passeio.anim li:last-child .leg { opacity: clamp(0, (var(--t) - var(--i) + .2) * 6.6, 1); }
+.passeio.anim .barra { display: flex; gap: 5px; width: 132px; margin-top: 16px; }
+.passeio.anim .barra i { flex: 1; height: 3px; border-radius: 2px; background: var(--fio); overflow: hidden; }
+.passeio.anim .barra i::after { content: ""; display: block; height: 100%; background: var(--tinta); transform-origin: left;
+  transform: scaleX(clamp(0, (var(--t) - var(--i) + .4) * 2.5, 1)); }
+.passeio.anim .barra i:first-child::after { transform: none; }
+@media (min-width: 900px) {
+  .passeio.anim ol { max-width: 920px; height: var(--h); }
+  .passeio.anim li { flex-direction: row; justify-content: center; gap: 64px; text-align: left; }
+  .passeio.anim .leg { margin-top: 0; max-width: 380px; }
+  .passeio.anim .leg b { font-size: 44px; }
+  .passeio.anim .leg span { font-size: 19px; }
+  .passeio.anim { --h: min(68vh, 620px); }
+}
+
+/* a cabana: carrossel nativo */
+.cabana { background: var(--nevoa); }
+.trilho { display: flex; gap: 14px; margin-top: 30px; padding: 0 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 20px;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.trilho::-webkit-scrollbar { display: none; }
+.trilho::after { content: ""; flex: 0 0 6px; }
+.trilho article { flex: 0 0 82%; max-width: 380px; scroll-snap-align: start; }
+.trilho img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px; background: #fff; }
+.trilho h3 { margin-top: 16px; font-size: 22px; letter-spacing: -.025em; line-height: 1.15; }
+.trilho p { margin-top: 6px; color: var(--apoio); font-size: 16px; line-height: 1.45; }
+.pontos { display: flex; align-items: center; gap: 6px; margin-top: 22px; }
+.pontos i { width: 6px; height: 6px; border-radius: 3px; background: rgba(27, 30, 25, .26); transition: width .25s ease, background .25s ease; }
+.pontos i.on { width: 22px; background: var(--tinta); }
+.pontos span { margin-left: 8px; font-size: 14.5px; color: var(--apoio); font-variant-numeric: tabular-nums; }
+.tem { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--fio); font-size: clamp(19px, 5.2vw, 23px); font-weight: 600; letter-spacing: -.02em; line-height: 1.38; }
+.tem li { display: inline; }
+.tem li:not(:last-child)::after { content: " · "; color: #8A8F82; font-weight: 400; }
+@media (min-width: 900px) {
+  .trilho { max-width: 1000px; margin-left: auto; margin-right: auto; }
+  .trilho article { flex-basis: 340px; }
+}
+
+/* cesta de café e área externa */
+.foto-g { margin-top: 30px; }
+.foto-g img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 22px; background: var(--nevoa); }
+.fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 30px; }
+.fotos img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; background: var(--nevoa); }
+.fotos .g { grid-column: 1 / -1; aspect-ratio: 3 / 2; border-radius: 22px; }
+.fotos .q { aspect-ratio: 1; }
+
+/* nota e horários */
+.prova { background: var(--nevoa); }
+.num { display: flex; align-items: baseline; gap: 14px; }
+.num b { font-size: clamp(96px, 31vw, 156px); font-weight: 700; letter-spacing: -.055em; line-height: .86; }
+.num span { font-size: 18px; font-weight: 400; letter-spacing: 0; line-height: 1.3; color: var(--apoio); }
+.num span strong { display: block; color: var(--tinta); font-weight: 600; }
+.prova .dito { margin-top: 40px; font-size: clamp(21px, 5.6vw, 26px); font-weight: 500; letter-spacing: -.02em; line-height: 1.3; text-wrap: pretty; }
+.horas { margin-top: 40px; }
+.horas div { display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-top: 1px solid var(--fio); }
+.horas div:last-child { border-bottom: 1px solid var(--fio); }
+.horas dt { color: var(--apoio); }
+.horas dd { font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+
+/* onde fica */
+.onde address { margin-top: 16px; font-style: normal; color: var(--apoio); }
+.link { display: inline-block; margin-top: 14px; padding: 10px 0; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* fecho e rodapé */
+.fecho { padding-top: 20px; }
+.fecho .btn { margin-top: 26px; }
+.fecho .micro { margin-top: 16px; }
+footer { padding: 40px 0 104px; border-top: 1px solid var(--fio); font-size: 15px; color: var(--apoio); }
+footer img { width: 150px; }
+footer p { margin-top: 14px; }
+footer .cred { margin-top: 26px; font-size: 13.5px; }
+@media (min-width: 761px) { footer { padding-bottom: 48px; } }
+
+/* barra fixa do celular: aparece quando o botão do topo sai da tela */
+.fixa { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: #fff; border-top: 1px solid var(--fio); transform: translateY(105%); visibility: hidden;
+  transition: transform .28s ease, visibility 0s linear .28s; }
+.fixa.on { transform: none; visibility: visible; transition: transform .28s ease, visibility 0s; }
+.fixa .btn { max-width: none; min-height: 52px; }
+@media (min-width: 761px) { .fixa { display: none; } }
+
+@media (min-width: 761px) {
+  section { padding: 110px 0; }
+  .hero-t { padding: 0 48px 64px; }
+  .hero .logo { margin: 32px 0 0 48px; width: 200px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+
+<header class="hero">
+  <picture>
+    <source media="(max-width: 760px)" srcset="img/hero-m.webp" width="720" height="1080">
+    <img src="img/hero.webp" width="1600" height="900" alt="Cabana da Villa Zarandi com a piscina privativa e as montanhas do Vale do Bonfim ao fundo" fetchpriority="high" decoding="async">
+  </picture>
+  <img class="logo" src="img/logo-branca.png" width="560" height="96" alt="Villa Zarandi">
+  <div class="hero-t">
+    <h1>A vista mais bela do Vale do Bonfim</h1>
+    <p class="lead">Hospedagem exclusiva em Petrópolis, pensada para casais que buscam paz, conforto e conexão com a natureza.</p>
+    <a class="btn" id="btn-topo" href="https://wa.me/552422213359?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Villa%20Zarandi%20e%20queria%20consultar%20disponibilidade." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+      Reservar pelo WhatsApp
+    </a>
+    <p class="nota">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6-5.9-3.3-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+      <span><b>5,0 no Google</b>, 25 avaliações</span>
+    </p>
+  </div>
+</header>
+
+<main>
+
+<section class="frase">
+  <div class="wrap">
+    <p>Privacidade, sofisticação e um ambiente acolhedor, ideal para celebrações românticas, aniversários ou simplesmente para desacelerar da rotina.</p>
+  </div>
+</section>
+
+<section class="passeio" id="passeio" aria-label="A Villa Zarandi em seis fotos">
+  <div class="pin">
+    <ol>
+      <li style="--i:0">
+        <div class="foto"><img src="img/seq-vista.webp" width="720" height="900" loading="lazy" decoding="async" alt="Montanhas de pedra e mata vistas da Villa Zarandi"></div>
+        <p class="leg"><b>Em meio às montanhas do Vale do Bonfim</b><span>O verde das montanhas, o canto dos pássaros e o silêncio da natureza preservada.</span></p>
+      </li>
+      <li style="--i:1">
+        <div class="foto"><img src="img/seq-piscina.webp" width="720" height="900" loading="lazy" decoding="async" alt="Piscina de borda de granito com o vale ao fundo"></div>
+        <p class="leg"><b>Piscina privativa aquecida</b><span>Convida ao banho a qualquer hora do dia, mesmo nos meses mais frios.</span></p>
+      </li>
+      <li style="--i:2">
+        <div class="foto"><img src="img/seq-jacuzzi.webp" width="720" height="900" loading="lazy" decoding="async" alt="Jacuzzi ao lado de uma janela de canto com vista para as montanhas"></div>
+        <p class="leg"><b>Jacuzzi interna com vista panorâmica</b><span>Para o casal relaxar enquanto aprecia o verde das montanhas.</span></p>
+      </li>
+      <li style="--i:3">
+        <div class="foto"><img src="img/seq-fogo.webp" width="720" height="900" loading="lazy" decoding="async" alt="Fogo de chão aceso no jardim, entre duas poltronas"></div>
+        <p class="leg"><b>Fogo de chão</b><span>Um vinho, uma tábua de frios e bons momentos sob o céu estrelado.</span></p>
+      </li>
+      <li style="--i:4">
+        <div class="foto"><img src="img/seq-cama.webp" width="720" height="900" loading="lazy" decoding="async" alt="Cama king size com roupa de cama branca e parede de tijolos"></div>
+        <p class="leg"><b>Cama king size com enxoval premium</b><span>Aquecimento elétrico e roupões felpudos.</span></p>
+      </li>
+      <li style="--i:5">
+        <div class="foto"><img src="img/seq-noite.webp" width="720" height="900" loading="lazy" decoding="async" alt="Piscina iluminada à noite, com a silhueta das montanhas"></div>
+        <p class="leg"><b>Ambiente 100% privativo</b><span>Um refúgio para o casal, com check-in autônomo.</span></p>
+      </li>
+    </ol>
+    <div class="barra" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i></div>
+  </div>
+</section>
+
+<section class="cabana">
+  <div class="wrap">
+    <h2>Cabana Master</h2>
+    <p class="p">O interior do chalé revela ainda mais charme. Tudo foi planejado para oferecer conforto em cada detalhe.</p>
+  </div>
+  <div class="trilho" id="trilho" tabindex="0" role="group" aria-label="Fotos da Cabana Master, deslize para o lado">
+    <article>
+      <img src="img/c-cama.webp" width="900" height="675" loading="lazy" decoding="async" alt="Cama king size com poltronas de palhinha ao pé da cama">
+      <h3>Cama king size</h3>
+      <p>Enxoval de alto padrão 300 fios.</p>
+    </article>
+    <article>
+      <img src="img/c-jacuzzi.webp" width="900" height="675" loading="lazy" decoding="async" alt="Poltrona clara ao lado da banheira de hidromassagem">
+      <h3>Banheira com hidromassagem</h3>
+      <p>Roupões, toalhas e amenities de banho.</p>
+    </article>
+    <article>
+      <img src="img/c-cozinha.webp" width="900" height="675" loading="lazy" decoding="async" alt="Cozinha com bancada de ladrilho e mesa redonda">
+      <h3>Cozinha completa com utensílios</h3>
+      <p>Fogão, geladeira e itens básicos.</p>
+    </article>
+    <article>
+      <img src="img/c-chuveiro.webp" width="900" height="675" loading="lazy" decoding="async" alt="Box de vidro com nicho iluminado">
+      <h3>Chuveiro duplo com aquecimento a gás</h3>
+      <p>Banheiro espaçoso, com torneiras aquecidas.</p>
+    </article>
+    <article>
+      <img src="img/c-tv.webp" width="900" height="675" loading="lazy" decoding="async" alt="Vista da cama para a sala, com a TV no alto e o telhado de madeira aparente">
+      <h3>Smart TV 4k</h3>
+      <p>Wi-fi e ar condicionado.</p>
+    </article>
+    <article>
+      <img src="img/c-vista.webp" width="900" height="675" loading="lazy" decoding="async" alt="Mesa alta com duas banquetas no deque, de frente para a mata">
+      <h3>Vista panorâmica da natureza e jardins</h3>
+      <p>Arquitetura charmosa e design de interiores refinado.</p>
+    </article>
+  </div>
+  <div class="wrap">
+    <div class="pontos" id="pontos" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><span>1 de 6</span></div>
+    <ul class="tem">
+      <li>Estacionamento privativo</li>
+      <li>Carregador de veículo elétrico</li>
+      <li>Frigobar abastecido</li>
+      <li>Internet de alta velocidade</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Cesta de café da manhã personalizada.</h2>
+    <p class="p">Desde a chegada, o hóspede é acolhido com uma cesta de café da manhã personalizada e tem à disposição uma seleção de produtos locais à venda, como vinhos, chocolates e delícias artesanais.</p>
+  </div>
+  <div class="largo">
+    <div class="foto-g"><img src="img/cafe.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Bancada da cabana com cesta de vime, cápsulas de café e cafeteira"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Um verdadeiro luxo em meio ao campo.</h2>
+  </div>
+  <div class="largo">
+    <div class="fotos">
+      <img class="g" src="img/ext-cabana.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A cabana, o jardim com as poltronas e a piscina em primeiro plano">
+      <img class="q" src="img/ext-poltronas.webp" width="700" height="700" loading="lazy" decoding="async" alt="Poltronas de madeira com almofadas brancas no jardim">
+      <img class="q" src="img/ext-deck.webp" width="700" height="700" loading="lazy" decoding="async" alt="Deque de madeira com vista para o vale">
+    </div>
+  </div>
+</section>
+
+<section class="prova">
+  <div class="wrap">
+    <h2 class="num"><b>5,0</b><span><strong>no Google</strong>25 avaliações</span></h2>
+    <p class="dito">Uma experiência sensorial e emocional que começa no cuidado com a recepção e se estende até o último momento da estadia.</p>
+    <dl class="horas">
+      <div><dt>Check-in</dt><dd>16:00</dd></div>
+      <div><dt>Check-out</dt><dd>11:00</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="onde">
+  <div class="wrap">
+    <h2>No Vale do Bonfim, em Petrópolis.</h2>
+    <address>Rua João Christ, 600, Correas<br>Petrópolis, Rio de Janeiro · 25730-050</address>
+    <a class="link" href="https://www.google.com/maps/search/?api=1&query=Villa%20Zarandi%2C%20Rua%20Jo%C3%A3o%20Christ%2C%20600%2C%20Petr%C3%B3polis" target="_blank" rel="noopener">Abrir no Google Maps</a>
+  </div>
+  <div class="largo">
+    <div class="foto-g" style="margin-top:20px"><img src="img/onde.webp" width="1200" height="800" loading="lazy" decoding="async" alt="O Vale do Bonfim visto do mirante de madeira da Villa Zarandi, com nuvens sobre as montanhas"></div>
+  </div>
+</section>
+
+<section class="fecho">
+  <div class="wrap">
+    <h2>Um convite ao relaxamento e ao romance.</h2>
+    <a class="btn" id="btn-fim" href="https://wa.me/552422213359?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Villa%20Zarandi%20e%20queria%20consultar%20disponibilidade." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+      Reservar pelo WhatsApp
+    </a>
+    <p class="micro">WhatsApp da recepção: (24) 2221-3359</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" width="560" height="96" loading="lazy" alt="Villa Zarandi">
+    <p>Rua João Christ, 600, Correas, Petrópolis, RJ<br>
+    <a href="mailto:contato@villazarandi.com.br">contato@villazarandi.com.br</a> · <a href="https://www.instagram.com/villazarandi/" target="_blank" rel="noopener">Instagram</a></p>
+    <p class="cred">Esboço feito pela <a href="https://virtusmarketing.com.br" target="_blank" rel="noopener">Virtus Marketing</a></p>
+  </div>
+</footer>
+
+<div class="fixa" id="fixa">
+  <a class="btn" href="https://wa.me/552422213359?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Villa%20Zarandi%20e%20queria%20consultar%20disponibilidade." target="_blank" rel="noopener" tabindex="-1">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+    Reservar pelo WhatsApp
+  </a>
+</div>
+
+<script>
+(function () {
+  var semMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // passeio: a seção gruda e --t (0 a n - 0,4) faz cada foto subir por cima da anterior conforme o scroll
+  var sec = document.getElementById('passeio');
+  if (sec && !semMovimento && window.CSS && CSS.supports('clip-path', 'inset(calc((1 - clamp(0, 1, 1)) * 100%) 0 0 0 round 28px)')) {
+    var n = sec.querySelectorAll('li').length, raf = 0;
+    sec.classList.add('anim');
+    // as fotos do passeio ficam empilhadas: carregar todas assim que a seção se aproxima
+    var imgs = sec.querySelectorAll('img');
+    var carregar = function () { for (var i = 0; i < imgs.length; i++) imgs[i].loading = 'eager'; };
+    if ('IntersectionObserver' in window) {
+      var ioP = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { carregar(); ioP.disconnect(); } }, { rootMargin: '600px 0px' });
+      ioP.observe(sec);
+    } else carregar();
+    var upd = function () {
+      raf = 0;
+      var r = sec.getBoundingClientRect(), curso = r.height - window.innerHeight;
+      var p = curso > 0 ? Math.min(1, Math.max(0, -r.top / curso)) : 0;
+      sec.style.setProperty('--t', (p * (n - .4)).toFixed(3));
+    };
+    var pede = function () { if (!raf) raf = requestAnimationFrame(upd); };
+    window.addEventListener('scroll', pede, { passive: true });
+    window.addEventListener('resize', pede);
+    upd();
+  }
+
+  // carrossel: pontos e "N de 6"
+  var trilho = document.getElementById('trilho'), pontos = document.getElementById('pontos');
+  if (trilho && pontos) {
+    var cards = trilho.querySelectorAll('article'), is = pontos.querySelectorAll('i'), rot = pontos.querySelector('span'), rafC = 0, atual = 0;
+    trilho.addEventListener('scroll', function () {
+      if (rafC) return;
+      rafC = requestAnimationFrame(function () {
+        rafC = 0;
+        var passo = cards[1].offsetLeft - cards[0].offsetLeft;
+        var fim = trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 4;
+        var k = fim ? cards.length - 1 : Math.min(cards.length - 1, Math.round(trilho.scrollLeft / passo));
+        if (k === atual) return;
+        atual = k;
+        for (var i = 0; i < is.length; i++) is[i].className = i === k ? 'on' : '';
+        rot.textContent = (k + 1) + ' de ' + cards.length;
+      });
+    }, { passive: true });
+  }
+
+  // barra fixa: aparece quando o botão do topo sai da tela e some quando o botão do fim aparece
+  var fixa = document.getElementById('fixa'), topo = document.getElementById('btn-topo'), fim = document.getElementById('btn-fim');
+  if (fixa && topo && fim && 'IntersectionObserver' in window) {
+    var vTopo = true, vFim = false, link = fixa.querySelector('a');
+    var aplica = function () {
+      var on = !vTopo && !vFim;
+      fixa.classList.toggle('on', on);
+      if (on) link.removeAttribute('tabindex'); else link.setAttribute('tabindex', '-1');
+    };
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.target === topo) vTopo = e.isIntersecting; else vFim = e.isIntersecting; });
+      aplica();
+    });
+    io.observe(topo); io.observe(fim);
+  }
+})();
+</script>
+</body>
+</html>
