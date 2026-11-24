@@ -11,7 +11,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Pousada Les Roches · Itaipava">
 <meta property="og:description" content="Requinte e descontração para os amantes da natureza, lazer e gastronomia.">
-<meta property="og:image" content="https://gabrielbernardeschagas-cmd.github.io/esbocos-virtus/les-roches/img/og.jpg">
+<meta property="og:image" content="img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <link rel="icon" type="image/png" href="img/favicon.png">
@@ -35,9 +35,13 @@
   --vinho: #7B1113;      /* vinho da logo; branco sobre ele: 11:1 */
   --fio: rgba(31, 35, 30, .16);
   --fio-claro: rgba(255, 255, 255, .22);
+  --zap: #25D366;        /* verde do WhatsApp; texto escuro sobre ele: 9:1 */
+  --zap-tinta: #06240F;
+  --ouro: #FBBC04;
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+[id] { scroll-margin-top: 84px; }
 body {
   margin: 0; background: var(--creme); color: var(--tinta);
   font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -49,7 +53,7 @@ h1, h2, h3, p, ul, ol, figure, blockquote { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
 a { color: inherit; }
 h1, h2, h3 { font-weight: 700; letter-spacing: -.03em; line-height: 1.06; text-wrap: balance; }
-h1 { font-size: clamp(40px, 11.5vw, 68px); }
+h1 { font-size: clamp(46px, 13vw, 72px); }
 h2 { font-size: clamp(30px, 8.4vw, 46px); }
 section { padding: 84px 0; }
 .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
@@ -61,27 +65,33 @@ section { padding: 84px 0; }
 /* botão: um só rótulo na página inteira */
 .btn {
   display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; max-width: 380px; min-height: 56px; padding: 0 22px;
-  background: var(--vinho); color: #fff; font-size: 17.5px; font-weight: 600; text-decoration: none; border-radius: 16px;
+  background: var(--zap); color: var(--zap-tinta); font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 16px;
   transition: transform .15s ease;
 }
+.btn.sm { max-width: none; white-space: nowrap; min-height: 50px; padding: 0 16px; font-size: 16px; border-radius: 14px; }
+.btn.sm svg { width: 19px; height: 19px; }
 .btn:active { transform: scale(.98); }
 .btn svg { width: 22px; height: 22px; flex: none; fill: currentColor; }
-.btn:focus-visible { outline-color: #fff; box-shadow: 0 0 0 6px var(--vinho); }
+.btn:focus-visible { outline-color: #fff; box-shadow: 0 0 0 6px var(--zap-tinta); }
 
 /* primeira dobra: a foto em tela cheia, véu chapado para o texto ler */
 .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; color: #fff; background: #20281f; overflow: hidden; }
 .hero picture, .hero picture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero picture img { object-position: 42% 50%; }
-.hero::after { content: ""; position: absolute; inset: 0; background: rgba(18, 24, 18, .5); }
+/* sombra preta pedida pelo Gabriel (24/11): mais forte embaixo, onde ficam nome e botão */
+.hero::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(8,12,8,.62) 0%, rgba(8,12,8,.18) 26%, rgba(8,12,8,.5) 52%, rgba(8,12,8,.94) 100%); }
 .hero > * { position: relative; z-index: 1; }
 .hero picture { position: absolute; z-index: 0; }
-.hero .logo { width: 74px; margin: 22px 0 0 20px; }
+.topo { display: flex; align-items: center; justify-content: space-between; padding: 22px 20px 0; }
+.hero .logo { width: 74px; }
+.menu { display: none; }
 .hero-t { margin-top: auto; padding: 0 20px 40px; max-width: 760px; }
-.hero h1 { color: #fff; }
-.hero .lead { margin-top: 14px; font-size: 19px; line-height: 1.4; max-width: 24em; }
-.hero .btn { margin-top: 26px; }
+.hero h1 { color: #fff; text-shadow: 0 2px 28px rgba(0, 0, 0, .5); }
+.hero .lead { margin-top: 14px; font-size: 19px; font-weight: 500; line-height: 1.4; max-width: 24em; text-shadow: 0 1px 14px rgba(0, 0, 0, .55); }
+.hero .btn { margin-top: 26px; min-height: 62px; font-size: 19px; box-shadow: 0 14px 34px rgba(0, 0, 0, .45); }
 .nota { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; margin-top: 16px; font-size: 15.5px; font-weight: 500; }
-.nota svg { width: 17px; height: 17px; fill: #fff; }
+.nota svg { width: 18px; height: 18px; fill: var(--ouro); }
 .nota b { font-weight: 700; }
 
 /* frase da casa */
@@ -125,29 +135,26 @@ section { padding: 84px 0; }
   -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .trilho::-webkit-scrollbar { display: none; }
 .trilho::after { content: ""; flex: 0 0 6px; }
-.trilho article { flex: 0 0 82%; max-width: 380px; scroll-snap-align: start; }
+.trilho article { flex: 0 0 82%; max-width: 380px; scroll-snap-align: start; display: flex; flex-direction: column; }
+.trilho .btn { margin-top: auto; }
 .trilho img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px; background: var(--creme); }
 .trilho h3 { margin-top: 16px; font-size: 23px; letter-spacing: -.025em; line-height: 1.15; }
-.trilho p { margin-top: 6px; color: var(--apoio); font-size: 16px; line-height: 1.45; }
+.trilho p { margin: 6px 0 16px; color: var(--apoio); font-size: 16px; line-height: 1.45; }
 .pontos { display: flex; align-items: center; gap: 6px; margin-top: 22px; }
 .pontos i { width: 6px; height: 6px; border-radius: 3px; background: rgba(31, 35, 30, .28); transition: width .25s ease, background .25s ease; }
 .pontos i.on { width: 22px; background: var(--tinta); }
 .pontos span { margin-left: 8px; font-size: 14.5px; color: var(--apoio); font-variant-numeric: tabular-nums; }
 .todas { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--fio); color: var(--apoio); font-size: 16px; }
 .todas + .micro { margin-top: 10px; }
-@media (min-width: 900px) {
-  .trilho { max-width: 1000px; margin-left: auto; margin-right: auto; }
-  .trilho article { flex-basis: 340px; }
-}
 
 /* gastronomia e lazer: foto grande e duas menores, sem moldura nem sombra */
 .fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 30px; }
 .fotos img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; background: var(--areia); }
 .fotos .g { grid-column: 1 / -1; aspect-ratio: 3 / 2; border-radius: 22px; }
 .fotos .q { aspect-ratio: 1; }
-.lazer ul { margin-top: 22px; font-size: clamp(20px, 5.4vw, 25px); font-weight: 600; letter-spacing: -.02em; line-height: 1.35; }
-.lazer li { display: inline; }
-.lazer li:not(:last-child)::after { content: " · "; color: #8B8F84; font-weight: 400; }
+.lazer ul { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; margin-top: 24px; font-size: 16.5px; font-weight: 500; line-height: 1.3; }
+.lazer li { position: relative; padding-left: 18px; }
+.lazer li::before { content: ""; position: absolute; left: 0; top: .5em; width: 7px; height: 7px; border-radius: 50%; background: var(--vinho); }
 .bicho { display: grid; gap: 22px; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--fio); align-items: center; }
 .bicho img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; }
 .bicho p { color: var(--apoio); }
@@ -156,12 +163,19 @@ section { padding: 84px 0; }
 /* prova */
 .prova { background: var(--mata); color: #fff; }
 .prova h2 { color: #fff; }
-.num { display: flex; align-items: baseline; gap: 14px; }
-.num b { font-size: clamp(92px, 30vw, 150px); font-weight: 700; letter-spacing: -.055em; line-height: .86; }
-.num span { font-size: 18px; line-height: 1.3; color: var(--mata-apoio); }
-.num span strong { display: block; color: #fff; font-weight: 600; }
-.prova blockquote { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--fio-claro); }
-.prova blockquote + blockquote { margin-top: 26px; }
+/* nota do Google: logo, número grande e estrelas */
+.gnota { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 6px 18px; font-weight: 400; letter-spacing: 0; }
+.gnota .g { grid-row: 1 / 3; display: grid; place-items: center; width: 72px; height: 72px; border-radius: 20px; background: #fff; }
+.gnota .g svg { width: 40px; height: 40px; }
+.gnota .linha { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 14px; }
+.gnota b { font-size: clamp(64px, 19vw, 92px); font-weight: 700; letter-spacing: -.05em; line-height: .9; }
+.estrelas { --p: calc(var(--nota) / 5 * 100%); font-size: clamp(27px, 7.6vw, 36px); line-height: 1; letter-spacing: 2px; color: transparent;
+  background: linear-gradient(90deg, var(--ouro) var(--p), rgba(255, 255, 255, .28) var(--p)); -webkit-background-clip: text; background-clip: text; }
+.estrelas::before { content: "★★★★★"; }
+.gnota small { font-size: 17px; line-height: 1.3; color: var(--mata-apoio); }
+.gnota small strong { color: #fff; font-weight: 600; }
+.depo { display: grid; gap: 14px; margin-top: 40px; }
+.prova blockquote { padding: 24px 22px; border-radius: 22px; background: rgba(255, 255, 255, .07); }
 .prova blockquote p { font-size: clamp(21px, 5.6vw, 26px); font-weight: 500; letter-spacing: -.02em; line-height: 1.3; text-wrap: pretty; }
 .prova cite { display: block; margin-top: 12px; font-style: normal; font-size: 15.5px; color: var(--mata-apoio); }
 .anos { margin-top: 56px; }
@@ -175,7 +189,7 @@ section { padding: 84px 0; }
 
 /* como chegar */
 .onde address { margin-top: 16px; font-style: normal; color: var(--apoio); }
-.mapa { margin-top: 26px; padding: 14px; background: #fff; border: 1px solid var(--fio); border-radius: 22px; }
+.mapa { margin-top: 22px; padding: 14px; background: #fff; border: 1px solid var(--fio); border-radius: 22px; }
 .mapa img { width: 100%; }
 .link { display: inline-block; margin-top: 18px; padding: 8px 0; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 
@@ -187,22 +201,102 @@ footer { padding: 40px 0 104px; border-top: 1px solid var(--fio); font-size: 15p
 footer img { width: 64px; }
 footer p { margin-top: 14px; }
 footer .cred { margin-top: 26px; font-size: 13.5px; }
-@media (min-width: 761px) { footer { padding-bottom: 48px; } }
+@media (min-width: 900px) { footer { padding-bottom: 48px; } }
 
 /* barra fixa do celular: aparece quando o botão do topo sai da tela */
 .fixa { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
   background: var(--creme); border-top: 1px solid var(--fio); transform: translateY(105%); visibility: hidden;
   transition: transform .28s ease, visibility 0s linear .28s; }
+.fixa .marca, .fixa nav { display: none; }
 .fixa.on { transform: none; visibility: visible; transition: transform .28s ease, visibility 0s; }
 .fixa .btn { max-width: none; min-height: 52px; }
-@media (min-width: 761px) { .fixa { display: none; } }
 
 @media (min-width: 761px) {
-  section { padding: 110px 0; }
-  .hero-t { padding: 0 48px 64px; }
-  .hero .logo { margin: 32px 0 0 48px; width: 88px; }
   .hero picture img { object-position: 50% 50%; }
 }
+
+/* ===== DESKTOP (>= 900 px): página com cara de site, não o celular esticado ===== */
+@media (min-width: 900px) {
+  body { font-size: 18px; }
+  section { padding: 120px 0; }
+  .wrap, .largo { max-width: 1180px; padding: 0 48px; }
+  h1 { font-size: clamp(76px, 7.4vw, 112px); }
+  h2 { font-size: clamp(44px, 4vw, 58px); }
+
+  /* topo com menu */
+  .topo { padding: 28px 48px 0; max-width: 1180px; width: 100%; margin: 0 auto; }
+  .hero .logo { width: 92px; }
+  .menu { display: flex; align-items: center; gap: 34px; font-size: 16.5px; font-weight: 600; }
+  .menu a { text-decoration: none; padding: 8px 0; text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }
+  .menu a:hover { text-decoration: underline; text-underline-offset: 6px; }
+  .hero-t { width: 100%; max-width: 1180px; margin: auto auto 0; padding: 0 48px 92px; }
+  .hero .lead { font-size: 25px; max-width: 26em; margin-top: 20px; }
+  .hero .btn { margin-top: 34px; max-width: 420px; min-height: 68px; font-size: 21px; border-radius: 18px; }
+  .hero .btn svg { width: 26px; height: 26px; }
+  .btn:hover { transform: translateY(-2px); }
+  .nota { margin-top: 20px; font-size: 17px; }
+
+  /* barra fixa vira menu no topo */
+  .fixa { top: 0; bottom: auto; display: flex; align-items: center; gap: 36px; padding: 12px max(48px, (100vw - 1084px) / 2);
+    border-top: 0; border-bottom: 1px solid var(--fio); transform: translateY(-105%); box-shadow: 0 6px 24px rgba(31, 35, 30, .08); }
+  .fixa .marca { display: block; margin-right: auto; font-size: 19px; font-weight: 700; letter-spacing: -.02em; text-decoration: none; }
+  .fixa nav { display: flex; gap: 28px; font-size: 15.5px; font-weight: 600; }
+  .fixa nav a { text-decoration: none; }
+  .fixa nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+  .fixa .btn { width: auto; min-height: 46px; padding: 0 20px; font-size: 16px; border-radius: 13px; }
+
+  .frase { padding: 130px 0 50px; }
+  .frase p { font-size: clamp(38px, 3.6vw, 50px); max-width: 21em; }
+
+  /* fotos: fila lateral que nunca acaba */
+  .passeio { padding: 30px 0 110px; overflow: hidden; }
+  .passeio .pin { max-width: none; padding: 0; }
+  .passeio ol { display: flex; gap: 22px; padding: 0 48px; overflow-x: auto; scrollbar-width: none; }
+  .passeio li { flex: 0 0 360px; margin: 0; }
+  .passeio li img { max-width: none; }
+  .passeio .leg b { font-size: 25px; }
+  .passeio .leg span { font-size: 16.5px; }
+  .passeio.rolo ol { width: max-content; padding: 0; overflow: visible; animation: rolo 80s linear infinite; }
+  .passeio.rolo:hover ol, .passeio.rolo:focus-within ol { animation-play-state: paused; }
+
+  /* acomodações em grade de 3, cada uma com o seu botão */
+  .trilho { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 26px; max-width: 1180px; margin: 44px auto 0; padding: 0 48px; overflow: visible; }
+  .trilho::after { display: none; }
+  .trilho article { max-width: none; }
+  .trilho h3 { font-size: 25px; }
+  .pontos { display: none; }
+  .todas { margin-top: 48px; max-width: 46em; font-size: 17px; }
+
+  /* texto de um lado, fotos do outro */
+  .split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 72px; align-items: center; max-width: 1180px; margin: 0 auto; padding-left: 48px; padding-right: 48px; }
+  .split > .wrap, .split > .largo { max-width: none; padding: 0; margin: 0; }
+  .split.inv > .largo:not(.cheio) { order: -1; }
+  .split > .cheio { grid-column: 1 / -1; }
+  .split .fotos { margin-top: 0; }
+  .split .p { font-size: 19px; }
+  .lazer ul { font-size: 18px; gap: 14px 22px; margin-top: 30px; }
+  .bicho { margin-top: 28px; }
+
+  /* avaliações: nota à esquerda, depoimentos à direita */
+  .prova-g { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 0 72px; align-items: start; }
+  .prova-g .depo { grid-column: 2; grid-row: 1 / 3; margin-top: 0; gap: 18px; }
+  .prova blockquote { padding: 34px 32px; }
+  .gnota .g { width: 92px; height: 92px; border-radius: 24px; }
+  .gnota .g svg { width: 52px; height: 52px; }
+  .gnota b { font-size: 112px; }
+  .estrelas { font-size: 42px; }
+  .gnota small { font-size: 19px; }
+
+  .onde-g { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 72px; align-items: center; }
+  .onde-g .mapa { margin-top: 0; }
+  .onde address { font-size: 19px; }
+
+  .fecho { padding: 40px 0 130px; }
+  .fecho .wrap { text-align: center; }
+  .fecho h2 { max-width: 16em; margin: 0 auto; }
+  .fecho .btn { margin: 34px auto 0; max-width: 420px; min-height: 68px; font-size: 21px; }
+}
+@keyframes rolo { to { transform: translateX(calc(-50% - 11px)); } }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
@@ -211,12 +305,21 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
 
-<header class="hero">
+<header class="hero" id="topo">
   <picture>
     <source media="(max-width: 760px)" srcset="img/hero-m.webp" width="960" height="1440">
     <img src="img/hero.webp" width="1600" height="900" alt="Chalé de madeira da Pousada Les Roches no meio da Mata Atlântica" fetchpriority="high" decoding="async">
   </picture>
-  <img class="logo" src="img/logo.png" width="202" height="184" alt="Logo da Pousada Les Roches">
+  <div class="topo">
+    <img class="logo" src="img/logo.png" width="202" height="184" alt="Logo da Pousada Les Roches">
+    <nav class="menu" aria-label="Seções da página">
+      <a href="#acomodacoes">Acomodações</a>
+      <a href="#restaurante">Restaurante</a>
+      <a href="#lazer">Lazer</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#como-chegar">Como chegar</a>
+    </nav>
+  </div>
   <div class="hero-t">
     <h1>Pousada Les Roches</h1>
     <p class="lead">Requinte e descontração para os amantes da natureza, lazer e gastronomia.</p>
@@ -271,7 +374,7 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
   </div>
 </section>
 
-<section class="acom">
+<section class="acom" id="acomodacoes">
   <div class="wrap">
     <h2>Acomodações</h2>
   </div>
@@ -280,31 +383,55 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
       <img src="img/q-premium.webp" width="900" height="675" loading="lazy" decoding="async" alt="Chalé Premium com cama de dossel e janelas para a mata">
       <h3>Chalé Premium com Hidromassagem</h3>
       <p>Cama king size, lareira, varanda com rede e banheira com hidromassagem.</p>
+      <a class="btn sm" href="https://wa.me/5524999679091?text=Ol%C3%A1%21%20Vi%20o%20site%20e%20quero%20reservar%20a%20acomoda%C3%A7%C3%A3o%20Chal%C3%A9%20Premium%20com%20Hidromassagem.%20Tem%20disponibilidade%20para%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+        Reservar esta acomodação
+      </a>
     </article>
     <article>
       <img src="img/q-familia.webp" width="900" height="675" loading="lazy" decoding="async" alt="Quarto do Chalé Família com a varanda ao fundo">
       <h3>Chalé Família</h3>
       <p>Dois quartos: um com cama de casal, outro com duas camas de solteiro. Hidromassagem em um dos banheiros.</p>
+      <a class="btn sm" href="https://wa.me/5524999679091?text=Ol%C3%A1%21%20Vi%20o%20site%20e%20quero%20reservar%20a%20acomoda%C3%A7%C3%A3o%20Chal%C3%A9%20Fam%C3%ADlia.%20Tem%20disponibilidade%20para%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+        Reservar esta acomodação
+      </a>
     </article>
     <article>
       <img src="img/q-master.webp" width="900" height="675" loading="lazy" decoding="async" alt="Chalé Master com lareira acesa">
       <h3>Chalé Master</h3>
       <p>Cama king size, lareira, varanda com rede e máquina de café Nespresso.</p>
+      <a class="btn sm" href="https://wa.me/5524999679091?text=Ol%C3%A1%21%20Vi%20o%20site%20e%20quero%20reservar%20a%20acomoda%C3%A7%C3%A3o%20Chal%C3%A9%20Master.%20Tem%20disponibilidade%20para%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+        Reservar esta acomodação
+      </a>
     </article>
     <article>
       <img src="img/q-chale.webp" width="900" height="675" loading="lazy" decoding="async" alt="Chalé com parede verde e porta aberta para a varanda">
       <h3>Chalé</h3>
       <p>Cama king size, lareira e varanda com rede.</p>
+      <a class="btn sm" href="https://wa.me/5524999679091?text=Ol%C3%A1%21%20Vi%20o%20site%20e%20quero%20reservar%20a%20acomoda%C3%A7%C3%A3o%20Chal%C3%A9.%20Tem%20disponibilidade%20para%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+        Reservar esta acomodação
+      </a>
     </article>
     <article>
       <img src="img/q-suite-master.webp" width="900" height="675" loading="lazy" decoding="async" alt="Suíte Master com cama queen e mesa de apoio">
       <h3>Suíte Master</h3>
       <p>Cama queen size e máquina de café Nespresso. Quarto maior, apropriado para cama extra.</p>
+      <a class="btn sm" href="https://wa.me/5524999679091?text=Ol%C3%A1%21%20Vi%20o%20site%20e%20quero%20reservar%20a%20acomoda%C3%A7%C3%A3o%20Su%C3%ADte%20Master.%20Tem%20disponibilidade%20para%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+        Reservar esta acomodação
+      </a>
     </article>
     <article>
       <img src="img/q-suite.webp" width="900" height="675" loading="lazy" decoding="async" alt="Suíte com cama queen e colcha xadrez">
       <h3>Suíte</h3>
       <p>Cama queen size, frigobar e TV Smart 32″.</p>
+      <a class="btn sm" href="https://wa.me/5524999679091?text=Ol%C3%A1%21%20Vi%20o%20site%20e%20quero%20reservar%20a%20acomoda%C3%A7%C3%A3o%20Su%C3%ADte.%20Tem%20disponibilidade%20para%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
+        Reservar esta acomodação
+      </a>
     </article>
   </div>
   <div class="wrap">
@@ -314,7 +441,7 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
   </div>
 </section>
 
-<section>
+<section class="split" id="restaurante">
   <div class="wrap">
     <h2>O restaurante é uma atração à parte.</h2>
     <p class="p">Ambiente aconchegante, voltado para o jardim, com carnes nobres, massas, risotos e frutos do mar, abastecido com verduras da nossa horta orgânica. No lounge, drinks com vista para os jardins iluminados.</p>
@@ -328,7 +455,7 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
   </div>
 </section>
 
-<section class="lazer" style="padding-top:0">
+<section class="lazer split inv" id="lazer" style="padding-top:0">
   <div class="wrap">
     <h2>Opções de lazer</h2>
     <ul>
@@ -351,6 +478,8 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
       <img class="q" src="img/l-tenis.webp" width="700" height="700" loading="lazy" decoding="async" alt="Quadra de tênis de saibro cercada de árvores">
       <img class="q" src="img/l-golfe.webp" width="700" height="700" loading="lazy" decoding="async" alt="Campo de golfe da pousada com um jogador ao fundo">
     </div>
+  </div>
+  <div class="largo cheio">
     <div class="bicho">
       <img src="img/m-passaro.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Pássaro no gramado da pousada">
       <p>Em nosso pomar temos várias árvores frutíferas que alimentam os pássaros e pequenos animais que nos visitam, como jacu, maritaca, saguis, esquilos, quatis, corujas e tucanos.</p>
@@ -358,9 +487,14 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
   </div>
 </section>
 
-<section class="prova">
-  <div class="wrap">
-    <h2 class="num"><b>4,6</b><span><strong>no Google</strong>154 avaliações</span></h2>
+<section class="prova" id="avaliacoes">
+  <div class="wrap prova-g">
+    <h2 class="gnota">
+      <span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+      <span class="linha"><b>4,6</b><span class="estrelas" style="--nota:4.6" role="img" aria-label="4,6 de 5 estrelas"></span></span>
+      <small><strong>154 avaliações</strong> no Google</small>
+    </h2>
+    <div class="depo">
     <blockquote>
       <p>“Pedimos que acendessem nossa lareira, nos levassem taças e tudo foi feito com muita rapidez e simpatia!”</p>
       <cite>Raquel, no Booking</cite>
@@ -369,6 +503,8 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
       <p>“Muita paz e silêncio, excelente para um descanso e para resgatar as energias.”</p>
       <cite>Mauro, no TripAdvisor</cite>
     </blockquote>
+    </div>
+    <div class="premios">
     <ul class="anos">
       <li><b>2006</b><span>Guia 4 Rodas: um dos 5 Melhores Lançamentos da Hotelaria</span></li>
       <li><b>2011</b><span>National Geographic Traveller: um dos 19 hotéis favoritos no Brasil</span></li>
@@ -380,15 +516,18 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
       <img src="img/travellers-choice-2020.png" width="240" height="287" loading="lazy" decoding="async" alt="Selo Travellers’ Choice 2020 do TripAdvisor">
     </div>
     <p class="micro" style="color:var(--mata-apoio);margin-top:16px">Desde 2006 na associação de hotéis Roteiros de Charme.</p>
+    </div>
   </div>
 </section>
 
-<section class="onde">
-  <div class="wrap">
+<section class="onde" id="como-chegar">
+  <div class="wrap onde-g">
+    <div>
     <h2>No lindo Vale do Cuiabá, em Itaipava.</h2>
     <address>Estrada Ministro Salgado Filho, 5301<br>Petrópolis, Rio de Janeiro · 25745-690</address>
-    <div class="mapa"><img src="img/mapa.png" width="1326" height="798" loading="lazy" decoding="async" alt="Mapa de acesso: pela BR 040, saídas 58 ou 62, seguindo por Itaipava e pela Estrada União Indústria até a pousada"></div>
     <a class="link" href="https://www.google.com/maps/search/?api=1&query=Pousada%20Les%20Roches%2C%20Estrada%20Ministro%20Salgado%20Filho%2C%205301%2C%20Petr%C3%B3polis" target="_blank" rel="noopener">Abrir no Google Maps</a>
+    </div>
+    <div class="mapa"><img src="img/mapa.png" width="1326" height="798" loading="lazy" decoding="async" alt="Mapa de acesso: pela BR 040, saídas 58 ou 62, seguindo por Itaipava e pela Estrada União Indústria até a pousada"></div>
   </div>
 </section>
 
@@ -416,6 +555,14 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
 </footer>
 
 <div class="fixa" id="fixa">
+  <a class="marca" href="#topo" tabindex="-1">Pousada Les Roches</a>
+  <nav aria-label="Seções da página">
+    <a href="#acomodacoes" tabindex="-1">Acomodações</a>
+    <a href="#restaurante" tabindex="-1">Restaurante</a>
+    <a href="#lazer" tabindex="-1">Lazer</a>
+    <a href="#avaliacoes" tabindex="-1">Avaliações</a>
+    <a href="#como-chegar" tabindex="-1">Como chegar</a>
+  </nav>
   <a class="btn" href="https://wa.me/5524999679091?text=Ol%C3%A1!%20Vi%20o%20site%20e%20queria%20saber%20da%20disponibilidade%20para%20" target="_blank" rel="noopener" tabindex="-1">
     <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>
     Reservar pelo WhatsApp
@@ -428,18 +575,32 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
 
   // passeio: a seção gruda e --t (0 a 6) troca as fotos conforme o scroll
   var sec = document.getElementById('passeio');
-  if (sec && !semMovimento && window.CSS && CSS.supports('opacity', 'clamp(0, 1, 1)')) {
-    var n = sec.querySelectorAll('li').length, raf = 0;
-    sec.classList.add('anim');
-    // as fotos do passeio ficam empilhadas: carregar todas assim que a seção se aproxima
+  if (sec) {
+    var lista = sec.querySelector('ol'), itens = sec.querySelectorAll('li'), n = itens.length, raf = 0;
+    var podeAnim = !semMovimento && window.CSS && CSS.supports('opacity', 'clamp(0, 1, 1)');
+    var mq = window.matchMedia('(min-width: 900px)');
     var imgs = sec.querySelectorAll('img');
     var carregar = function () { for (var i = 0; i < imgs.length; i++) imgs[i].loading = 'eager'; };
     if ('IntersectionObserver' in window) {
       var ioP = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { carregar(); ioP.disconnect(); } }, { rootMargin: '600px 0px' });
       ioP.observe(sec);
     } else carregar();
+    // celular: a seção gruda e --t troca as fotos. Desktop: fila lateral que nunca acaba (lista duplicada)
+    var modo = function () {
+      var desk = mq.matches, clones = sec.querySelectorAll('li.clone'), i;
+      sec.classList.toggle('anim', !desk && podeAnim);
+      sec.classList.toggle('rolo', desk && !semMovimento);
+      if (desk && !semMovimento && !clones.length) {
+        for (i = 0; i < n; i++) { var c = itens[i].cloneNode(true); c.className = 'clone'; c.setAttribute('aria-hidden', 'true'); lista.appendChild(c); }
+      } else if ((!desk || semMovimento) && clones.length) {
+        for (i = 0; i < clones.length; i++) lista.removeChild(clones[i]);
+      }
+    };
+    if (mq.addEventListener) mq.addEventListener('change', modo); else if (mq.addListener) mq.addListener(modo);
+    modo();
     var upd = function () {
       raf = 0;
+      if (!sec.classList.contains('anim')) return;
       var r = sec.getBoundingClientRect(), curso = r.height - window.innerHeight;
       var p = curso > 0 ? Math.min(1, Math.max(0, -r.top / curso)) : 0;
       sec.style.setProperty('--t', (p * (n - .001)).toFixed(3));
@@ -472,11 +633,11 @@ footer .cred { margin-top: 26px; font-size: 13.5px; }
   // barra fixa: aparece quando o botão do topo sai da tela e some quando o botão do fim aparece
   var fixa = document.getElementById('fixa'), topo = document.getElementById('btn-topo'), fim = document.getElementById('btn-fim');
   if (fixa && topo && fim && 'IntersectionObserver' in window) {
-    var vTopo = true, vFim = false, link = fixa.querySelector('a');
+    var vTopo = true, vFim = false, links = fixa.querySelectorAll('a'), desk = window.matchMedia('(min-width: 900px)');
     var aplica = function () {
-      var on = !vTopo && !vFim;
+      var on = !vTopo && (!vFim || desk.matches);
       fixa.classList.toggle('on', on);
-      if (on) link.removeAttribute('tabindex'); else link.setAttribute('tabindex', '-1');
+      for (var i = 0; i < links.length; i++) { if (on) links[i].removeAttribute('tabindex'); else links[i].setAttribute('tabindex', '-1'); }
     };
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.target === topo) vTopo = e.isIntersecting; else vFim = e.isIntersecting; });
