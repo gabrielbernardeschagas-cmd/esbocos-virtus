@@ -1,238 +1,209 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<!-- Kit do Dr. Rogerio Ribeiro Penna, modelo v3 (26/11/2026): landing por busca com desenho esquemático movido por scroll. Fontes em _fonte/NOTAS.md. -->
+<!-- Kit do Dr. Rogerio Ribeiro Penna, modelo v4 (26/11/2026): landing por busca, mobile e Google Ads. Fontes em _fonte/NOTAS.md. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Cirurgia de ombro no Recreio | Dr. Rogerio Ribeiro Penna</title>
 <meta name="description" content="Cirurgia de ombro no Recreio dos Bandeirantes: manguito rotador, luxação e artroscopia. Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229. Unimed, AMS Petrobras, CAURJ e particular.">
-<meta name="theme-color" content="#EDF2F2">
+<link rel="canonical" href="https://gabrielbernardeschagas-cmd.github.io/esbocos-virtus/medicos-rogerio-penna/cirurgia-de-ombro/">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#EDF2F2">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Cirurgia de ombro no Recreio | Dr. Rogerio Ribeiro Penna">
 <meta property="og:description" content="Cirurgia de ombro no Recreio dos Bandeirantes: manguito rotador, luxação e artroscopia. Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229. Unimed, AMS Petrobras, CAURJ e particular.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%230B2933%27%2F%3E%3Ctext%20x%3D%2732%27%20y%3D%2742%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2726%27%20font-weight%3D%27700%27%20fill%3D%27%23fff%27%20text-anchor%3D%27middle%27%3ERP%3C%2Ftext%3E%3C%2Fsvg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- GOOGLE-ADS / GTM: PONTO ÚNICO DE INSTALAÇÃO. Colar AQUI o snippet do Google Tag Manager (ou a tag do Google Ads, gtag.js)
+     quando a conta existir. Nada mais precisa mudar: a página já empurra para window.dataLayer os eventos
+     "whatsapp_click" e "phone_click" (com landing e origem) e "map_open". No GTM: gatilho de evento personalizado com esses
+     nomes -> conversão do Google Ads. gclid, gbraid, wbraid e utm_* da chegada seguem nos links internos. -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..700&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..700&amp;display=swap"></noscript>
 <style>
-/* v3 (26/11/2026). Regras da casa: uma família (Archivo, largura variável: título estreito de sinalização),
-   cor chapada, fio de 1 px no lugar de cartão com sombra, UM momento "uau" (o desenho que o scroll destaca),
-   UM rótulo de botão na página inteira, tudo legível sem JS e com movimento reduzido. */
+/* v4 (26/11/2026): página de destino de Google Ads, pensada a 360 x 640 primeiro. Uma coluna no celular, tamanhos contidos.
+   Uma família (Archivo, largura variável) carregada sem bloquear o render; substitutas com métricas ajustadas (sem salto de layout).
+   Cor chapada, fio de 1 px, UM rótulo de botão, UM bloco animado (o desenho). Tudo legível sem JS e com movimento reduzido. */
+@font-face{font-family:'Archivo sub';src:local('Arial');size-adjust:101%;ascent-override:88%;descent-override:21%;line-gap-override:0%}
+@font-face{font-family:'Archivo sub t';src:local('Arial Narrow'),local('Arial');size-adjust:96%;ascent-override:92%;descent-override:22%;line-gap-override:0%}
 :root{
-  --papel:#FFFFFF; --nevoa:#EDF2F2; --tinta:#0F2129; --apoio:#4A5B63;
+  --papel:#FFFFFF; --nevoa:#EDF2F2; --tinta:#0F2129; --apoio:#44555D;
   --escuro:#0B2933; --osso:#12343F; --marca:#0F5C6E; --foco:#F6B95C;
   --fio:rgba(15,33,41,.16); --zap:#25D366; --zap-tinta:#04301B;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--papel);color:var(--tinta);font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:'Archivo','Archivo sub',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
 ::selection{background:var(--foco);color:var(--tinta)}
 h1,h2,h3,p,ul,ol,dl,dd,figure,address{margin:0;padding:0;font-style:normal}
 ul,ol{list-style:none}
 a{color:inherit;text-underline-offset:3px}
 img,svg,iframe{display:block;max-width:100%}
 svg{flex:none}
-h1,h2{font-weight:700;font-stretch:78%;letter-spacing:-.018em;line-height:.95;text-wrap:balance}
-h1{font-size:clamp(56px,16.6vw,132px)}
-h1.longo{font-stretch:64%;font-size:clamp(42px,12.4vw,132px)}
-h1.medio{font-size:clamp(48px,14.2vw,132px)}
-h2{font-size:clamp(36px,10vw,68px)}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-section{padding:72px 0}
+button{font:inherit;color:inherit}
+h1,h2{font-family:'Archivo','Archivo sub t',-apple-system,BlinkMacSystemFont,Arial,sans-serif;font-weight:700;font-stretch:80%;letter-spacing:-.015em;line-height:1.02}
+h1{font-size:clamp(33px,9.4vw,84px)}
+h1.longo{font-stretch:68%}
+h2{font-size:clamp(25px,6.8vw,44px)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:44px 0}
 :focus-visible{outline:3px solid var(--marca);outline-offset:3px}
-[id]{scroll-margin-top:20px}
+[id]{scroll-margin-top:16px}
 
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 12px;background:var(--zap);color:var(--zap-tinta);font-size:clamp(15px,4.35vw,17px);white-space:nowrap;font-weight:700;letter-spacing:-.005em;text-decoration:none;border-radius:14px;transition:transform .15s ease}
-.btn:active{transform:scale(.98)}
-.btn .zp{width:23px;height:23px}
-.btn2{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 20px;border:1.5px solid var(--tinta);border-radius:12px;font-weight:650;text-decoration:none}
+.btn{display:flex;align-items:center;justify-content:center;gap:9px;min-height:56px;padding:0 10px;background:var(--zap);color:var(--zap-tinta);font-size:clamp(15px,4.3vw,17px);font-weight:700;white-space:nowrap;text-decoration:none;border-radius:14px}
+.btn .zp{width:22px;height:22px}
+.btn2{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border:1.5px solid var(--tinta);border-radius:12px;background:none;font-weight:600;text-decoration:none;cursor:pointer}
 .st{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* primeira dobra: tipografia de sinalização, três fatos e o botão. Sem foto. */
-.hero{background:var(--nevoa);padding:0 0 30px}
-.id{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;font-size:13px;line-height:1.35;color:var(--apoio)}
+/* primeira dobra: título, três fatos (um por linha) e o botão cabem em 360 x 640. Sem foto. */
+.hero{background:var(--nevoa);padding:0 0 24px}
+.id{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;font-size:13.5px;line-height:1.35;color:var(--apoio)}
 .id a{text-decoration:none}
-.id b{display:block;color:var(--tinta);font-size:15px;font-weight:650}
+.id b{display:block;color:var(--tinta);font-size:15px;font-weight:600}
 .id .lig{display:none}
-.hero h1{margin-top:clamp(24px,6.6vw,64px)}
+.hero h1{margin-top:18px}
 .hero h1 .l{display:block}
-.info{display:grid;gap:18px;margin-top:16px}
-.lead{max-width:27em;color:var(--apoio);line-height:1.42}
-.fatos{display:grid;grid-template-columns:1.25fr .9fr 1fr;border-top:1px solid var(--fio)}
-.fatos li{padding:13px 10px 0 0;min-width:0}
-.fatos li+li{padding-left:12px;border-left:1px solid var(--fio)}
-.fatos svg{width:25px;height:25px;fill:none;stroke:var(--marca);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.fatos b{display:block;margin-top:7px;font-size:15.5px;font-weight:700;font-stretch:88%;line-height:1.2}
-.fatos span{display:block;margin-top:2px;font-size:13px;line-height:1.3;color:var(--apoio)}
+.lead{margin-top:10px;max-width:30em;color:var(--apoio);font-size:16px;line-height:1.4}
+.fatos{margin-top:14px;border-top:1px solid var(--fio)}
+.fatos li{display:grid;grid-template-columns:22px 94px minmax(0,1fr);align-items:center;gap:10px;min-height:44px;padding:6px 0;border-bottom:1px solid var(--fio);font-size:15px;line-height:1.3}
+.fatos svg{width:22px;height:22px;fill:none;stroke:var(--marca);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.fatos b{font-weight:700}
+.fatos span{color:var(--apoio)}
+.hero .btn{margin-top:16px}
 
-/* momento uau: o desenho fica parado e o scroll destaca cada parte.
-   Sem JS ou com movimento reduzido: desenho inteiro + lista, tudo empilhado. */
-.palco{--n:4;--d:1;background:var(--escuro);color:#fff}
-.palco .pin{max-width:1180px;margin:0 auto;padding:0 20px}
-.palco h2{font-size:clamp(24px,6.4vw,56px);max-width:11em;line-height:1}
-.palco .ilus{width:min(100%,400px);margin:26px auto 0}
-.palco .dica,.palco .tic{display:none}
-.rot li{margin-top:22px}
-.rot b{display:block;font-size:clamp(30px,8.4vw,48px);font-weight:700;font-stretch:78%;letter-spacing:-.015em;line-height:1}
-.rot span{display:block;margin-top:7px;color:rgba(255,255,255,.74);line-height:1.35}
-.ilus .f{opacity:0;transition:opacity .45s ease}
-.palco:not(.anim) .ilus .f{opacity:1}
-.palco:not(.anim) .ilus .f2,.palco:not(.anim) .ilus .liq.forte,.palco:not(.anim) .ilus .gasto{opacity:0}
+/* convênios: bloco pequeno e discreto */
+.conv{padding:28px 0}
+.conv h2{font-size:19px;font-stretch:88%;letter-spacing:-.005em;line-height:1.2}
+.planos{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.planos li{padding:8px 14px;border:1px solid var(--fio);border-radius:999px;font-size:15.5px;font-weight:600;line-height:1.3}
+.planos .part{border-color:var(--marca);background:var(--marca);color:#fff}
+.nota{margin-top:10px;max-width:34em;color:var(--apoio);font-size:15px}
 
-.palco.anim{padding:0;height:calc(100vh + var(--n) * 62vh);height:calc(100svh + var(--n) * 62svh)}
-.palco.anim .pin{position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:26px 20px calc(88px + env(safe-area-inset-bottom,0px))}
-.palco.anim .ilus{width:100%;height:100%;margin:0;padding:10px 0}
-.palco.anim .base{position:relative;height:122px}
-.palco.anim .rot li,.palco.anim .dica{position:absolute;left:0;right:0;top:20px;margin:0;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
-.palco.anim .dica{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.74)}
-.palco.anim .dica svg{width:22px;height:22px;fill:none;stroke:var(--foco);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;animation:desce 1.8s ease-in-out infinite}
-@keyframes desce{50%{transform:translateY(5px)}}
-.palco.anim[data-on="0"] .dica,.palco.anim .rot li.on{opacity:1;transform:none}
-.palco.anim .tic{display:flex;gap:6px}
-.tic i{width:18px;height:3px;border-radius:2px;background:rgba(255,255,255,.26);transition:background .3s ease,width .3s ease}
-.tic i.on{width:34px;background:var(--foco)}
-.palco.anim .ilus .o,.palco.anim .ilus .b,.palco.anim .ilus .c{stroke-dasharray:1;stroke-dashoffset:calc(1 - clamp(0,(var(--d) - var(--k,0)) * 2.4,1));fill-opacity:clamp(0,(var(--d) - .45) * 3,1)}
-.palco.anim .ilus .t,.palco.anim .ilus .p{opacity:clamp(0,(var(--d) - .7) * 4,1)}
-.palco.anim .ilus .fd{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s cubic-bezier(.3,.7,.2,1)}
-.palco.anim[data-on="1"] .f1,.palco.anim[data-on="2"] .f2,.palco.anim[data-on="3"] .f3,.palco.anim[data-on="4"] .f4,.palco.anim[data-on="5"] .f5{opacity:1}
-.palco.anim[data-on="1"] .f1 .fd,.palco.anim[data-on="2"] .f2 .fd,.palco.anim[data-on="3"] .f3 .fd,.palco.anim[data-on="4"] .f4 .fd,.palco.anim[data-on="5"] .f5 .fd{stroke-dashoffset:0}
-.palco.anim:not([data-on="0"]) .ilus .o,.palco.anim:not([data-on="0"]) .ilus .b{stroke-opacity:.5}
-.palco.anim[data-on="2"] .ilus-ombro .umero{transform:translate(-20px,26px)}
-.depois{padding:34px 0 0}
-.depois p{max-width:34em;color:var(--apoio)}
+/* o desenho: um bloco de no máximo uma tela. Toque no nome troca o destaque; troca sozinho enquanto está na tela.
+   Sem JS: desenho inteiro e a lista completa embaixo. */
+.palco{background:var(--escuro);color:#fff}
+.palco h2{max-width:13em}
+.palco .ilus{width:auto;height:min(36vh,320px);height:min(36svh,320px);min-height:190px;margin:12px auto 0}
+.chips{display:none}
+.rot li{margin-top:16px}
+.rot b{display:block;font-size:20px;font-weight:700;font-stretch:84%;line-height:1.15}
+.rot span{display:block;margin-top:2px;color:rgba(255,255,255,.78);font-size:16px;line-height:1.35}
+.cfm{margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.78);font-size:14.5px;line-height:1.4}
+.ilus .f{opacity:0;transition:opacity .4s ease}
+.palco:not(.js) .ilus .f{opacity:1}
+.palco:not(.js) .ilus .f2,.palco:not(.js) .ilus .liq.forte,.palco:not(.js) .ilus .gasto{opacity:0}
+.palco.js .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{min-height:48px;padding:0 15px;border:1px solid rgba(255,255,255,.34);border-radius:999px;background:none;color:#fff;font-size:15.5px;font-weight:600;line-height:1.2;cursor:pointer;transition:background-color .25s ease,color .25s ease,border-color .25s ease;-webkit-tap-highlight-color:transparent}
+.chip[aria-pressed="true"]{background:var(--foco);border-color:var(--foco);color:var(--tinta)}
+.palco.js .rot{display:grid;margin-top:12px}
+.palco.js .rot li{grid-area:1/1;margin:0;opacity:0;visibility:hidden;transition:opacity .3s ease}
+.palco.js .rot li.on{opacity:1;visibility:visible}
+.palco.js .rot b{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.palco.js .ilus .o,.palco.js .ilus .b,.palco.js .ilus .c{stroke-dasharray:1;stroke-dashoffset:1;fill-opacity:0;transition:stroke-dashoffset 1.1s cubic-bezier(.3,.7,.2,1) calc(var(--k,0) * 1.4s),fill-opacity .6s ease .7s,stroke-opacity .4s ease}
+.palco.js .ilus .t,.palco.js .ilus .p{opacity:0;transition:opacity .6s ease 1s}
+.palco.js.in .ilus .o,.palco.js.in .ilus .b,.palco.js.in .ilus .c{stroke-dashoffset:0;fill-opacity:1}
+.palco.js.in .ilus .t,.palco.js.in .ilus .p{opacity:1}
+.palco.js .ilus .fd{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .8s cubic-bezier(.3,.7,.2,1)}
+.palco.js[data-on="1"] .f1,.palco.js[data-on="2"] .f2,.palco.js[data-on="3"] .f3,.palco.js[data-on="4"] .f4,.palco.js[data-on="5"] .f5{opacity:1}
+.palco.js[data-on="1"] .f1 .fd,.palco.js[data-on="2"] .f2 .fd,.palco.js[data-on="3"] .f3 .fd,.palco.js[data-on="4"] .f4 .fd,.palco.js[data-on="5"] .f5 .fd{stroke-dashoffset:0}
+.palco.js.in .ilus .o,.palco.js.in .ilus .b{stroke-opacity:.55}
+.palco.js[data-on="2"] .ilus-ombro .umero{transform:translate(-20px,26px)}
 
-/* três passos em linha */
-.passos h2{margin-bottom:30px}
-.trilho{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;padding:0 20px;margin:0 -20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.trilho::-webkit-scrollbar{display:none}
-.trilho li{position:relative;flex:0 0 68%;max-width:300px;scroll-snap-align:start;padding:0 22px 4px 0}
-.trilho li::before{content:"";position:absolute;left:66px;right:10px;top:30px;border-top:1px solid var(--fio)}
-.trilho li:last-child::before{display:none}
-.trilho svg{width:60px;height:60px;padding:4px 8px 4px 0;fill:none;stroke:var(--tinta);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.trilho b{display:block;margin-top:14px;font-size:23px;font-weight:700;font-stretch:84%;letter-spacing:-.01em;line-height:1.1}
-.trilho span{display:block;margin-top:6px;color:var(--apoio);line-height:1.4;font-size:16px}
+/* três passos, empilhados */
+.passos li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px 14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--fio)}
+.passos ol{margin-top:10px;border-top:1px solid var(--fio)}
+.passos svg{grid-row:1 / span 2;width:40px;height:40px;fill:none;stroke:var(--marca);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.passos b{font-size:18px;font-weight:700;font-stretch:88%;line-height:1.2;align-self:end}
+.passos span{color:var(--apoio);font-size:15.5px;line-height:1.35;align-self:start}
 
-/* convênios: os nomes são o desenho */
-.conv{background:var(--nevoa)}
-.conv h2{font-size:clamp(26px,7vw,34px);font-stretch:84%;letter-spacing:-.012em}
-.marcas{margin-top:18px}
-.marcas li{padding:12px 0 10px;border-top:1px solid var(--fio);font-size:clamp(46px,14vw,104px);font-weight:700;font-stretch:72%;letter-spacing:-.02em;line-height:1}
-.marcas .part{margin-top:8px;padding:20px 20px 22px;border:0;border-radius:22px;background:var(--marca);color:#fff}
-.marcas .part span{display:block;margin-top:8px;font-size:16px;font-weight:500;font-stretch:100%;letter-spacing:0;line-height:1.3;color:rgba(255,255,255,.86)}
-.nota{margin-top:18px;max-width:32em;color:var(--apoio);font-size:16px}
-
-/* mapa de borda a borda, com o cartão do endereço por cima */
-.onde{padding:0;background:var(--papel)}
-.mapa{position:relative;height:66vh;height:66svh;min-height:400px;max-height:640px;background:var(--nevoa);overflow:hidden}
-.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .5s ease}
-.mapa iframe.ok{opacity:1}
-.mapa-fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-.mapa-fb svg{position:absolute;inset:0;width:100%;height:100%;max-width:none;fill:none;stroke:rgba(15,33,41,.13);stroke-width:1.2}
-.mapa-fb svg .av{stroke-width:7;stroke:rgba(15,33,41,.08)}
+/* endereço: fachada leve (desenho de ruas). O mapa do Google só carrega no toque em "Ver mapa". */
+.onde{background:var(--nevoa)}
+.mapa{position:relative;height:190px;margin-top:16px;border-radius:18px;background:#DCE5E6;overflow:hidden}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mapa-fb{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px}
+.mapa-fb svg{position:absolute;inset:0;width:100%;height:100%;max-width:none;fill:none;stroke:rgba(15,33,41,.16);stroke-width:1.2}
+.mapa-fb svg .av{stroke-width:7;stroke:rgba(15,33,41,.1)}
 .mapa-fb svg .pin{fill:var(--marca);stroke:none}
-.mapa-fb a{position:relative;margin-top:104px;padding:9px 14px;border-radius:10px;background:var(--papel);font-size:15px;font-weight:600}
-.cartao{position:relative;margin-top:-76px;padding:22px 22px 24px;border:1px solid var(--fio);border-radius:24px;background:var(--papel)}
-.cartao h2{font-size:clamp(30px,8vw,40px)}
-.cartao address{margin-top:12px;font-weight:600;line-height:1.35}
-.cartao address span{display:block;font-weight:400;color:var(--apoio)}
-.cartao .tb{margin-top:10px;font-size:15px;color:var(--apoio)}
-.cartao .acoes{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:18px}
-.cartao .tel{font-weight:650}
+.mapa-fb .btn2{position:relative;background:var(--papel);border-color:var(--papel);font-size:15.5px}
+.onde address{margin-top:16px;font-weight:600;line-height:1.35}
+.onde address span{display:block;font-weight:400;color:var(--apoio)}
+.onde .tb{margin-top:6px;font-size:15px;color:var(--apoio)}
+.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:14px}
+.acoes .tel{display:inline-flex;align-items:center;min-height:48px;font-weight:600}
 
-/* quem atende: compacto */
-.quem{padding:56px 0 64px}
-.qm{display:flex;align-items:center;gap:16px}
-.qm img{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--nevoa)}
-.qm h2{font-size:25px;font-stretch:84%;letter-spacing:-.012em;line-height:1.1}
-.qm p{margin-top:4px;font-size:14px;color:var(--apoio);line-height:1.35}
-.bio{margin-top:16px;max-width:34em}
-.linha{display:grid;grid-template-columns:1fr 1fr;gap:22px 14px;margin-top:28px}
-.linha li{position:relative;padding-top:16px;border-top:1px solid var(--fio);font-size:14.5px;line-height:1.3;color:var(--apoio)}
-.linha li::before{content:"";position:absolute;left:0;top:-4px;width:7px;height:7px;border-radius:50%;background:var(--marca)}
-.linha b{display:block;color:var(--tinta);font-size:26px;font-weight:700;font-stretch:78%;line-height:1;margin-bottom:5px;font-variant-numeric:tabular-nums}
+/* quem atende: bio resumida */
+.qm{display:flex;align-items:center;gap:14px}
+.qm img{width:64px;height:64px;border-radius:50%;object-fit:cover;background:var(--nevoa)}
+.qm h2{font-size:21px;font-stretch:88%;letter-spacing:-.005em;line-height:1.15}
+.qm p{margin-top:3px;font-size:14px;color:var(--apoio);line-height:1.35}
+.bio{margin-top:12px;max-width:34em}
 
-/* dúvidas: fios, fechadas */
 .duv{padding-top:8px}
-.duv h2{margin-bottom:22px}
+.duv h2{margin-bottom:14px}
 details{border-top:1px solid var(--fio)}
 details:last-of-type{border-bottom:1px solid var(--fio)}
-summary{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:62px;padding:10px 0;font-weight:650;line-height:1.3;cursor:pointer;list-style:none}
+summary{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:56px;padding:10px 0;font-weight:600;line-height:1.3;cursor:pointer;list-style:none}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"";flex:none;width:13px;height:13px;border-right:2px solid var(--marca);border-bottom:2px solid var(--marca);transform:translateY(-3px) rotate(45deg);transition:transform .2s ease}
+summary::after{content:"";flex:none;width:11px;height:11px;margin-right:4px;border-right:2px solid var(--marca);border-bottom:2px solid var(--marca);transform:translateY(-3px) rotate(45deg)}
 details[open] summary::after{transform:translateY(3px) rotate(-135deg)}
-details p{max-width:36em;padding-bottom:20px;color:var(--apoio)}
+details p{max-width:36em;padding-bottom:18px;color:var(--apoio)}
 
-.fim{background:var(--nevoa);padding:64px 0}
-.fim .btn{margin-top:24px}
-.fim .lig{margin-top:14px;text-align:center;color:var(--apoio)}
-.fim .lig a{font-weight:650;color:var(--tinta)}
-.tbm{margin-top:40px;padding-top:6px;border-top:1px solid var(--fio)}
-.tbm a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;border-bottom:1px solid var(--fio);font-weight:650;text-decoration:none}
-
-footer{padding:28px 0 calc(96px + env(safe-area-inset-bottom,0px));font-size:13.5px;line-height:1.5;color:var(--apoio)}
+.fim{background:var(--nevoa);padding:40px 0}
+.fim .btn{margin-top:16px}
+.fim .lig{margin-top:6px;text-align:center;color:var(--apoio)}
+.fim .lig a{display:inline-flex;align-items:center;min-height:48px;font-weight:600;color:var(--tinta)}
+.tbm{padding:8px 0 0}
+.tbm a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;border-bottom:1px solid var(--fio);font-weight:600;text-decoration:none}
+footer{padding:20px 0 calc(92px + env(safe-area-inset-bottom,0px));font-size:13.5px;line-height:1.5;color:var(--apoio)}
 footer p+p{margin-top:8px}
 
-/* barra fixa: aparece quando o botão da primeira dobra sai da tela */
+/* barra fixa: só entra depois que o botão da primeira dobra sai da tela */
 .fixa{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:0 14px calc(12px + env(safe-area-inset-bottom,0px));transform:translateY(130%);transition:transform .28s ease;pointer-events:none}
 .fixa.on{transform:none}
-.fixa .btn{min-height:56px;pointer-events:auto;box-shadow:0 10px 28px -8px rgba(4,48,27,.5)}
+.fixa .btn{pointer-events:auto;box-shadow:0 10px 28px -8px rgba(4,48,27,.5)}
 .embutida .fixa{display:none}
 
 @media (min-width:760px){
-  section{padding:112px 0}
-  .wrap,.palco .pin{padding-left:40px;padding-right:40px}
-  .id{padding-top:22px;font-size:14px}
+  section{padding:80px 0}
+  .wrap{padding:0 40px}
+  .id{padding-top:20px;font-size:14px}
   .id b{font-size:16.5px}
-  .id .lig{display:block;font-weight:650;color:var(--tinta);font-size:16px}
-  .hero{padding-bottom:64px}
+  .id .lig{display:block;font-weight:600;color:var(--tinta);font-size:16px}
+  .hero{padding-bottom:56px}
+  .hero h1{margin-top:48px}
   .hero h1 .l{display:inline}
   .hero h1 .l.q{display:block}
-  .info{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:26px 64px;margin-top:40px;align-items:start}
-  .info .lead{font-size:20px}
-  .info .btn{grid-column:1;max-width:400px}
-  .info .fatos{grid-column:2;grid-row:1 / span 2}
-  .fatos li{padding-top:18px}
-  .fatos li+li{padding-left:22px}
-  .fatos svg{width:30px;height:30px}
-  .fatos b{font-size:21px;margin-top:12px}
-  .fatos span{font-size:16px}
-  .palco.anim .pin{grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:auto minmax(0,1fr);column-gap:40px;padding:64px 40px 64px}
-  .palco.anim h2{grid-column:1;grid-row:1}
-  .palco.anim .ilus{grid-column:2;grid-row:1 / span 2;padding:0}
-  .palco.anim .base{grid-column:1;grid-row:2;align-self:end;height:190px}
-  .palco.anim .rot li,.palco.anim .dica{top:34px}
-  .rot span{font-size:20px;max-width:20em}
-  .depois{padding-top:56px}
-  .depois p{font-size:19px}
-  .passos h2{margin-bottom:48px}
-  .trilho{overflow:visible;margin:0;padding:0}
-  .trilho li{flex:1 1 0;max-width:none;padding-right:40px}
-  .trilho li::before{left:84px;right:14px;top:36px}
-  .trilho svg{width:72px;height:72px}
-  .trilho b{font-size:28px;margin-top:20px}
-  .trilho span{font-size:18px}
-  .marcas{display:grid;grid-template-columns:1fr 1fr;column-gap:40px;margin-top:28px}
-  .marcas li{padding:22px 0 18px;font-size:clamp(56px,6.6vw,92px);white-space:nowrap}
-  .marcas .part{margin-top:0;padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
-  .mapa{height:640px;max-height:none}
-  .onde .wrap{position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none;display:flex;align-items:center}
-  .onde{position:relative}
-  .cartao{margin:0;width:420px;padding:32px;pointer-events:auto}
-  .quem .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:64px;align-items:start}
-  .quem{padding:96px 0}
-  .bio{grid-column:1;font-size:19px}
-  .linha{grid-column:2;grid-row:1 / span 2;margin-top:0;gap:34px 28px}
-  .linha li{font-size:16px}
-  .linha b{font-size:34px}
-  .duv .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:64px}
-  summary{font-size:19px;min-height:72px}
-  .fim{padding:112px 0;text-align:center}
-  .fim .btn{max-width:400px;margin-left:auto;margin-right:auto}
-  .tbm{display:flex;justify-content:center;gap:40px;border:0;margin-top:56px}
-  .tbm a{border:0;min-height:0;gap:8px}
-  footer{padding-bottom:110px}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);column-gap:56px}
+  .hero .id,.hero h1{grid-column:1 / -1}
+  .lead{margin-top:28px;font-size:19px}
+  .fatos{grid-column:2;grid-row:3 / span 2;margin-top:28px;align-self:start}
+  .fatos li{grid-template-columns:24px 110px minmax(0,1fr);min-height:52px;font-size:16.5px}
+  .hero .btn{grid-column:1;justify-self:start;padding:0 28px;margin-top:22px}
+  .conv{padding:36px 0}
+  .conv .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px}
+  .planos,.nota{margin-top:0}
+  .nota{flex-basis:100%}
+  .palco .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:56px;align-items:center}
+  .palco .ilus{grid-column:2;grid-row:1 / span 4;height:440px;margin:0}
+  .palco h2,.palco .chips,.palco .rot,.palco .cfm{grid-column:1}
+  .palco.js .chips{margin-top:24px}
+  .rot span{font-size:19px}
+  .passos ol{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;border:0;margin-top:28px}
+  .passos li{grid-template-columns:1fr;gap:6px;padding:0;border:0;align-content:start}
+  .passos svg{grid-row:auto;width:52px;height:52px;margin-bottom:8px}
+  .passos b{font-size:22px}
+  .passos span{font-size:17px}
+  .onde .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:56px;align-items:center}
+  .onde .mapa{grid-column:2;grid-row:1 / span 5;height:380px;margin:0}
+  .quem{padding-bottom:40px}
+  .duv .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:56px}
+  .fim{padding:80px 0;text-align:center}
+  .fim .btn{display:inline-flex;padding:0 32px}
+  .tbm{padding-top:28px}
+  .tbm .wrap{display:flex;justify-content:center;gap:36px}
+  .tbm a{border:0;gap:8px}
   .fixa{left:auto;right:24px;bottom:24px;padding:0;transform:translateY(160%)}
   .fixa .btn{padding:0 24px}
 }
@@ -257,29 +228,44 @@ footer p+p{margin-top:8px}
 .ilus .f .gasto{stroke-width:5.5;stroke-dasharray:13 5 3 7 9 4}
 .ilus-ombro .umero{transition:transform .8s cubic-bezier(.3,.7,.2,1)}
 .ilus .f .ser{fill:var(--osso)}
+
+/* fita de esboço da Virtus: só aparece quando a página é aberta com ?previa=1 (vinda da jornada do médico) */
+.fita{display:none}
+.previa .fita{position:-webkit-sticky;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:48px;padding:6px 14px;background:#0C1740;color:#fff;font-size:13.5px;line-height:1.25;text-decoration:none}
+.fita img{width:20px;height:24px;flex:none}
+.fita span{flex:1;min-width:0}
+.fita b{flex:none;color:#E3A82C;font-weight:700;white-space:nowrap}
+.embutida .fita{display:none}
 </style>
-<noscript><style>.mapa iframe{opacity:1}</style></noscript>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Physician", "name": "Dr. Rogerio Ribeiro Penna", "description": "Cirurgia de ombro no Recreio dos Bandeirantes: manguito rotador, luxação e artroscopia. Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229. Unimed, AMS Petrobras, CAURJ e particular.", "telephone": "+552121689610", "url": "https://gabrielbernardeschagas-cmd.github.io/esbocos-virtus/medicos-rogerio-penna/cirurgia-de-ombro/", "address": {"@type": "PostalAddress", "streetAddress": "Av. das Américas, 19005, sala 522, bloco 2", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR", "postalCode": "22790-703"}, "identifier": "CRM-RJ 52.54756-0, RQE 10229", "paymentAccepted": "Unimed, AMS Petrobras, CAURJ, Particular"}</script>
 </head>
-<body>
-<header class="hero">
+<body data-landing="cirurgia-de-ombro">
+<a class="fita" href="https://wa.me/5521986311666?text=Oi%2C%20Gabriel!%20Sou%20o%20Dr.%20Rogerio%20Penna.%20Vi%20a%20pr%C3%A9via%20do%20meu%20site%20e%20dos%20an%C3%BAncios%20e%20quero%20conversar." target="_blank" rel="noopener"><img src="../img/virtus.webp" alt="" width="20" height="24" loading="lazy"><span>Esboço feito pela Virtus para o Dr. Rogerio Penna</span><b>Falar com o Gabriel</b></a>
+<header class="hero" data-origem="primeira-dobra">
   <div class="wrap">
     
     <div class="id"><a href="../"><b>Dr. Rogerio Ribeiro Penna</b>CRM-RJ 52.54756-0 · RQE 10229</a><a class="lig" href="tel:+552121689610">(21) 2168-9610</a></div>
     
-    <h1><span class="l">Cirurgia </span><span class="l">de ombro </span><span class="l q">no Recreio</span></h1>
-    <div class="info">
-      
-      <p class="lead">Com o Dr. Rogerio Penna, ortopedista com fellowship em cirurgia do ombro e cotovelo.</p>
-      
-      <ul class="fatos"><li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 14.5h4"/></svg><b>Convênios</b><span>Unimed, AMS Petrobras e CAURJ</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><b>Particular</b><span>Com hora marcada</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10.5" r="2.2"/></svg><b>Recreio</b><span>Av. das Américas, 19005</span></li></ul>
-      <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20cirurgia%20de%20ombro%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg class="zp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
-    </div>
+    <h1><span class="l">Cirurgia de ombro </span><span class="l q">no Recreio</span></h1>
+    
+    <p class="lead">Com o Dr. Rogerio Penna, ortopedista com mais de 30 anos de experiência.</p>
+    
+    <ul class="fatos"><li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 14.5h4"/></svg><b>Convênios</b><span>Unimed, AMS Petrobras e CAURJ</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><b>Particular</b><span>Com hora marcada</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10.5" r="2.2"/></svg><b>Recreio</b><span>Av. das Américas, 19005</span></li></ul>
+    <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20cirurgia%20de%20ombro%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg class="zp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
   </div>
 </header>
 <main>
 
-<section class="palco" data-passos="4" id="o-que-trata">
-  <div class="pin">
+<section class="conv" id="convenios">
+  <div class="wrap">
+    <h2>Convênios e particular</h2>
+    <ul class="planos"><li>Unimed</li><li>AMS Petrobras</li><li>CAURJ</li><li class="part">Particular, com hora marcada</li></ul>
+    <p class="nota">Confirme a cobertura do seu plano na marcação. Na Vila da Penha, a lista é outra.</p>
+  </div>
+</section>
+
+<section class="palco" id="o-que-trata" data-on="0">
+  <div class="wrap">
     <h2>O que o Dr. Rogerio avalia e trata no ombro</h2>
     <svg class="ilus ilus-ombro" viewBox="0 0 440 480" role="img" aria-label="Desenho esquemático do ombro: clavícula, escápula e úmero">
 <path class="p" d="M36 100C120 72 236 60 318 80c52 14 76 62 74 122-2 96-10 190-14 278M212 332c-6 50-8 100-8 148"/>
@@ -303,70 +289,54 @@ footer p+p{margin-top:8px}
 <g class="f f3"><path class="fd grosso" pathLength="1" d="M229 150c-12 24-12 72 2 96"/></g>
 <g class="f f4"><circle class="fd" pathLength="1" cx="262" cy="116" r="19"/><circle class="fo ponto" cx="262" cy="116" r="4"/></g>
 </svg>
-    <div class="base">
-      <p class="dica"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Role para ver cada parte</p>
-      <ol class="rot"><li><b>Manguito rotador</b><span>Os tendões que cobrem a cabeça do úmero.</span></li><li><b>Luxação do ombro</b><span>Quando o úmero sai do encaixe.</span></li><li><b>Lesão labral</b><span>A borda de cartilagem do encaixe.</span></li><li><b>Luxação acromioclavicular</b><span>Entre a clavícula e a escápula.</span></li></ol>
-      <div class="tic" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-    </div>
+    <div class="chips" role="group" aria-label="Escolha o que destacar no desenho"><button type="button" class="chip" aria-pressed="false">Manguito rotador</button><button type="button" class="chip" aria-pressed="false">Luxação do ombro</button><button type="button" class="chip" aria-pressed="false">Lesão labral</button><button type="button" class="chip" aria-pressed="false">Acromioclavicular</button></div>
+    <ol class="rot" aria-live="polite"><li><b>Manguito rotador</b><span>Os tendões que cobrem a cabeça do úmero.</span></li><li><b>Luxação do ombro</b><span>Quando o úmero sai do encaixe.</span></li><li><b>Lesão labral</b><span>A borda de cartilagem do encaixe.</span></li><li><b>Acromioclavicular</b><span>Luxação entre a clavícula e a escápula.</span></li></ol>
+    <p class="cfm">A indicação de cada procedimento depende de avaliação médica individual.</p>
   </div>
 </section>
-
-<div class="depois"><div class="wrap"><p>Também: tendinite calcária, bursite, fraturas e artrose. A indicação de cada procedimento depende de avaliação médica individual.</p></div></div>
 
 <section class="passos">
   <div class="wrap">
     <h2>Como agendar</h2>
-    <ol class="trilho"><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 12a5 5 0 0 1 5-5h24a5 5 0 0 1 5 5v16a5 5 0 0 1-5 5H23l-10 8v-8h-1a5 5 0 0 1-5-5z"/><path d="M16 17h16M16 24h9"/></svg><b>Chame no WhatsApp</b><span>Confirme o convênio ou o particular.</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 7v11a9 9 0 0 0 18 0V7M10 7h6M28 7h6"/><path d="M22 27v5a8.500 8.500 0 0 0 17 0v-3"/><circle cx="39" cy="25" r="4"/></svg><b>Venha à consulta</b><span>Traga os exames que já tiver.</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42V29c0-9-12-9-12-19M24 29c0-9 12-9 12-19"/><path d="M7 14l5-5 5 5M31 14l5-5 5 5"/></svg><b>Receba a indicação</b><span>Com ou sem cirurgia, caso a caso.</span></li></ol>
+    <ol><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 12a5 5 0 0 1 5-5h24a5 5 0 0 1 5 5v16a5 5 0 0 1-5 5H23l-10 8v-8h-1a5 5 0 0 1-5-5z"/><path d="M16 17h16M16 24h9"/></svg><b>Chame no WhatsApp</b><span>Confirme o convênio ou o particular.</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 7v11a9 9 0 0 0 18 0V7M10 7h6M28 7h6"/><path d="M22 27v5a8.500 8.500 0 0 0 17 0v-3"/><circle cx="39" cy="25" r="4"/></svg><b>Venha à consulta</b><span>Traga os exames que já tiver.</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42V29c0-9-12-9-12-19M24 29c0-9 12-9 12-19"/><path d="M7 14l5-5 5 5M31 14l5-5 5 5"/></svg><b>Receba a indicação</b><span>Com ou sem cirurgia, caso a caso.</span></li></ol>
   </div>
 </section>
 
-<section class="conv" id="convenios">
+<section class="onde" id="onde-atende" data-origem="endereco">
   <div class="wrap">
-    <h2>Convênios e particular</h2>
-    <ul class="marcas"><li>Unimed</li><li>AMS Petrobras</li><li>CAURJ</li><li class="part">Particular<span>Com hora marcada</span></li></ul>
-    <p class="nota">Confirme a cobertura do seu plano na marcação. Na Vila da Penha, a lista é outra.</p>
-  </div>
-</section>
-
-<section class="onde" id="onde-atende">
-  <div class="mapa">
-    <div class="mapa-fb"><svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path class="av" d="M-20 300C200 250 520 250 820 190"/><path d="M-20 120l840-70M-20 420l840-90M120-20l60 540M330-20l40 540M560-20l30 540M700-20l40 540M-20 210l380-30M440 400l380-40"/><path class="pin" d="M400 262s-22-21-22-39a22 22 0 0 1 44 0c0 18-22 39-22 39zm0-31a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;query_place_id=ChIJr0B8GLLpmwARUHREAvxVJQ0" target="_blank" rel="noopener">Abrir o mapa no Google Maps</a></div>
-    <iframe title="Mapa: Av. das Américas, 19005, sala 522, bloco 2" src="https://www.google.com/maps?q=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;z=16&amp;output=embed" onload="this.className='ok'" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-  </div>
-  <div class="wrap">
-    <div class="cartao">
-      <h2>Consultório no Recreio</h2>
-      <address>Av. das Américas, 19005, sala 522, bloco 2<span>Recreio dos Bandeirantes, Rio de Janeiro</span></address>
-      <p class="tb">Também na Clínica Meditrauma, Vila da Penha.</p>
-      <div class="acoes"><a class="btn2" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;destination_place_id=ChIJr0B8GLLpmwARUHREAvxVJQ0" target="_blank" rel="noopener">Como chegar<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="tel" href="tel:+552121689610">(21) 2168-9610</a></div>
+    <h2>Consultório no Recreio</h2>
+    <div class="mapa" data-titulo="Mapa: Av. das Américas, 19005, sala 522, bloco 2" data-src="https://www.google.com/maps?q=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;z=16&amp;output=embed">
+      <div class="mapa-fb"><svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path class="av" d="M-20 240C200 200 520 200 820 150"/><path d="M-20 90l840-60M-20 340l840-80M120-20l50 440M330-20l34 440M560-20l26 440M700-20l34 440M-20 165l380-26M440 320l380-34"/><path class="pin" d="M400 196s-22-21-22-39a22 22 0 0 1 44 0c0 18-22 39-22 39zm0-31a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg><button type="button" class="btn2" id="ver-mapa">Ver mapa</button></div>
     </div>
+    <address>Av. das Américas, 19005, sala 522, bloco 2<span>Recreio dos Bandeirantes, Rio de Janeiro</span></address>
+    <p class="tb">Também na Clínica Meditrauma, Vila da Penha.</p>
+    <div class="acoes"><a class="btn2" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;destination_place_id=ChIJr0B8GLLpmwARUHREAvxVJQ0" target="_blank" rel="noopener">Como chegar<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="tel" href="tel:+552121689610">(21) 2168-9610</a></div>
   </div>
 </section>
 
 <section class="quem" id="quem-atende">
   <div class="wrap">
-    <div class="qm"><img src="../img/medico.webp" alt="Dr. Rogerio Ribeiro Penna" width="72" height="72" loading="lazy"><div><h2>Dr. Rogerio Ribeiro Penna</h2><p>CRM-RJ 52.54756-0 · RQE 10229 (Ortopedia e Traumatologia)</p></div></div>
-    <p class="bio">Ortopedista e traumatologista, com mais de 30 anos de experiência em cirurgia de ombro, cotovelo e traumatologia esportiva.</p>
-    <ol class="linha"><li><b>1991</b>Medicina, Teresópolis</li><li><b>1995</b>Residência em ortopedia, Hospital Miguel Couto</li><li><b>1998</b>Fellowship em ombro e cotovelo, Passo Fundo</li><li><b>2007</b>Fellowship em trauma ortopédico, Salzburg</li></ol>
+    <div class="qm"><img src="../img/medico.webp" alt="" width="64" height="64" loading="lazy" decoding="async"><div><h2>Dr. Rogerio Ribeiro Penna</h2><p>CRM-RJ 52.54756-0 · RQE 10229 (Ortopedia e Traumatologia)</p></div></div>
+    <p class="bio">Ortopedista e traumatologista, com mais de 30 anos de experiência em cirurgia de ombro, cotovelo e traumatologia esportiva. Fellowship em cirurgia do ombro e cotovelo.</p>
   </div>
 </section>
 
 <section class="duv" id="duvidas">
   <div class="wrap">
-    <h2>Dúvidas</h2>
+    <h2>Dúvidas frequentes</h2>
     <div class="faq"><details><summary>O Dr. Rogerio atende por convênio?</summary><p>No consultório do Recreio, atende Unimed, AMS Petrobras e CAURJ, além de consulta particular. Confirme a cobertura do seu plano na marcação.</p></details><details><summary>Toda lesão no ombro precisa de cirurgia?</summary><p>Não. A decisão é individual, tomada em consulta, depois do exame físico e dos exames de imagem.</p></details><details><summary>O que é artroscopia do ombro?</summary><p>É uma cirurgia por vídeo, com pequenas incisões. Parte dos procedimentos do ombro é feita assim; a técnica de cada caso é definida pelo médico.</p></details><details><summary>O que levar na consulta?</summary><p>Os exames de imagem e laudos que já tiver, mesmo os antigos, e a carteirinha do convênio, se for usar.</p></details></div>
   </div>
 </section>
 </main>
-<section class="fim">
+<section class="fim" data-origem="fim">
   <div class="wrap">
     <h2>Agende a sua consulta</h2>
     <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20cirurgia%20de%20ombro%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg class="zp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
-    <p class="lig">ou ligue <a href="tel:+552121689610">(21) 2168-9610</a></p>
-    
-    <nav class="tbm" aria-label="Outras páginas"><a href="../ortopedista-recreio/">Consulta com ortopedista<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="../viscossuplementacao/">Viscossuplementação<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="../">Página do consultório<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></nav>
+    <p class="lig"><a href="tel:+552121689610">ou ligue (21) 2168-9610</a></p>
   </div>
 </section>
+
+<nav class="tbm" aria-label="Outras páginas"><div class="wrap"><a href="../ortopedista-recreio/">Consulta com ortopedista<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="../viscossuplementacao/">Viscossuplementação<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="../">Página do consultório<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></nav>
 
 <footer>
   <div class="wrap">
@@ -374,41 +344,61 @@ footer p+p{margin-top:8px}
     <p>As informações desta página têm caráter educativo e não substituem a consulta médica. Esboço feito pela <a href="https://virtusmarketing.com.br" target="_blank" rel="noopener">Virtus Marketing</a>.</p>
   </div>
 </footer>
-<div class="fixa" id="fixa"><!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20cirurgia%20de%20ombro%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg class="zp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a></div>
+<div class="fixa" id="fixa" data-origem="barra-fixa"><!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20cirurgia%20de%20ombro%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg class="zp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a></div>
 <script>
 (function () {
-  var d = document, R = d.documentElement;
+  var d = document, R = d.documentElement, PAG = d.body.getAttribute('data-landing') || location.pathname;
   if (window.self !== window.top) R.classList.add('embutida');
   var calmo = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* momento uau: --d desenha o traço enquanto a seção entra; data-on troca o destaque enquanto ela está presa */
+  /* ---------- Google Ads: eventos no dataLayer (ligar no GTM a "whatsapp_click" e "phone_click") ---------- */
+  window.dataLayer = window.dataLayer || [];
+  d.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href]'); if (!a || a.className === 'fita') return;
+    var h = a.getAttribute('href'), sec = a.closest('[data-origem]');
+    var origem = sec ? sec.getAttribute('data-origem') : '';
+    if (h.indexOf('wa.me/') > -1) window.dataLayer.push({ event: 'whatsapp_click', landing: PAG, origem: origem });
+    else if (h.indexOf('tel:') === 0) window.dataLayer.push({ event: 'phone_click', landing: PAG, origem: origem });
+  });
+  /* gclid e UTMs da chegada seguem nos links internos (para a conversão ser atribuída ao clique do anúncio) */
+  try {
+    var qs = new URLSearchParams(location.search), leva = [], chaves = /^(gclid|gbraid|wbraid|gad_source|utm_[a-z]+|previa)$/;
+    qs.forEach(function (v, k) { if (chaves.test(k)) leva.push(encodeURIComponent(k) + '=' + encodeURIComponent(v)); });
+    var guard = leva.join('&') || sessionStorage.getItem('chegada') || '';
+    if (leva.length) sessionStorage.setItem('chegada', guard);
+    if (/(^|&)previa=1/.test(guard)) R.classList.add('previa'); /* fita de esboço da Virtus: só para o médico */
+    if (guard) [].forEach.call(d.querySelectorAll('a[href]'), function (a) {
+      var h = a.getAttribute('href');
+      if (/^(https?:|tel:|mailto:|#)/.test(h)) return;
+      var p = h.split('#'); a.setAttribute('href', p[0] + (p[0].indexOf('?') > -1 ? '&' : '?') + guard + (p[1] ? '#' + p[1] : ''));
+    });
+  } catch (e) {}
+
+  /* ---------- o desenho: toque no nome troca o destaque; troca sozinho enquanto está na tela ---------- */
   var P = d.querySelector('.palco');
-  if (P && !calmo && window.CSS && CSS.supports('position', 'sticky')) {
-    var n = +P.getAttribute('data-passos') || 4, raf = 0, atual = -1;
-    var rot = P.querySelectorAll('.rot li'), tic = P.querySelectorAll('.tic i');
-    P.style.setProperty('--n', n);
-    P.classList.add('anim');
-    var upd = function () {
-      raf = 0;
-      var r = P.getBoundingClientRect(), vh = window.innerHeight;
-      var des = Math.max(0, Math.min(1, (vh * .92 - r.top) / (vh * .92)));
-      var p = Math.max(0, Math.min(1, -r.top / Math.max(1, r.height - vh)));
-      P.style.setProperty('--d', des.toFixed(3));
-      var s = p < .07 ? 0 : Math.min(n, Math.floor((p - .07) / .93 * n) + 1);
-      if (s !== atual) {
-        atual = s; P.setAttribute('data-on', s);
-        for (var i = 0; i < rot.length; i++) rot[i].className = i === s - 1 ? 'on' : '';
-        for (var k = 0; k < tic.length; k++) tic[k].className = k === s - 1 ? 'on' : '';
-      }
+  if (P) {
+    var chips = P.querySelectorAll('.chip'), rot = P.querySelectorAll('.rot li'), n = chips.length, i = 0, tm = 0, parado = calmo, visto = false;
+    var poe = function (k) {
+      i = k; P.setAttribute('data-on', k + 1);
+      for (var j = 0; j < n; j++) { chips[j].setAttribute('aria-pressed', j === k ? 'true' : 'false'); rot[j].className = j === k ? 'on' : ''; }
     };
-    var pede = function () { if (!raf) raf = requestAnimationFrame(upd); };
-    P.setAttribute('data-on', 0);
-    window.addEventListener('scroll', pede, { passive: true });
-    window.addEventListener('resize', pede);
-    upd();
+    var roda = function () { clearInterval(tm); if (!parado && visto) tm = setInterval(function () { poe((i + 1) % n); }, 3400); };
+    P.classList.add('js'); poe(0);
+    [].forEach.call(chips, function (c, k) { c.addEventListener('click', function () { parado = true; clearInterval(tm); poe(k); }); });
+    if ('IntersectionObserver' in window && !calmo) {
+      new IntersectionObserver(function (es) { visto = es[0].isIntersecting; if (visto) P.classList.add('in'); roda(); }, { threshold: .35 }).observe(P);
+    } else P.classList.add('in');
   }
 
-  /* barra fixa: entra quando o botão da primeira dobra sai e some quando o botão do fim aparece */
+  /* ---------- mapa: o Google só carrega quando a pessoa pede ---------- */
+  var vm = d.getElementById('ver-mapa');
+  if (vm) vm.addEventListener('click', function () {
+    var m = vm.closest('.mapa'), f = d.createElement('iframe');
+    f.title = m.getAttribute('data-titulo'); f.src = m.getAttribute('data-src'); f.setAttribute('allowfullscreen', ''); f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    m.appendChild(f); window.dataLayer.push({ event: 'map_open', landing: PAG });
+  });
+
+  /* ---------- barra fixa: entra quando o botão da primeira dobra sai; some quando o botão do fim aparece ---------- */
   var fixa = d.getElementById('fixa'), b1 = d.querySelector('.hero .btn'), b2 = d.querySelector('.fim .btn');
   if (fixa && b1 && 'IntersectionObserver' in window) {
     var v1 = true, v2 = false;
