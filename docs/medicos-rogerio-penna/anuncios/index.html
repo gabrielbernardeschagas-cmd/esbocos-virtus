@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!--
+  MODELO FIXO DA PRÉVIA DE ANÚNCIOS NO GOOGLE PARA MÉDICOS (Virtus Marketing, 24/11/2026)
+  Parte da prévia feita para o hospital de ortopedia (~/clientes/hpaes/relatorios/previa-google/index.html).
+  Para um kit real, troque SÓ o bloco "KIT" no <script> lá embaixo. KIT REAL: Dr. Rogerio Ribeiro Penna (26/11/2026).
+  Receita completa: ~/virtus/prospeccao-medicos/ESBOCO-PADRAO-MEDICOS.md
+
+  A página confere sozinha os limites do Google Ads (título 30, descrição 90, caminho 15, sitelink 25 + 35 + 35,
+  frase de destaque 25). Se algo passar do limite, aparece um aviso vermelho no topo: corrija antes de publicar.
+
+  Políticas de saúde do Google e CFM: sem promessa de cura ou de resultado, sem superlativo ("o melhor", "nº 1"),
+  sem preço, sem antes e depois, sem telefone dentro do texto do anúncio. Nada de número de resultado nem nome de cliente.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prévia dos anúncios no Google</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F9FA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Mesma paleta do esboço do site (trocar junto, se a do site mudar). As cores --g-* são do Google: não trocar. */
+:root {
+  --fundo: #F7F9FA; --painel: #E9EFF2; --tinta: #14212B; --apoio: #4B5A65; --escuro: #0F2734; --marca: #0F5C6E;
+  --fio: rgba(20, 33, 43, .16);
+  --g-titulo: #1a0dab; --g-url: #202124; --g-texto: #4d5156; --g-fio: #dadce0; --g-chip: #f1f3f4;
+  --google: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--fundo); color: var(--tinta);
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 17px; line-height: 1.55;
+  overflow-x: clip; -webkit-font-smoothing: antialiased; }
+h1, h2, p, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+svg { display: block; flex: none; }
+h1, h2 { font-weight: 700; letter-spacing: -.03em; line-height: 1.08; text-wrap: balance; }
+h1 { font-size: clamp(34px, 9.4vw, 60px); }
+h2 { font-size: clamp(25px, 6.6vw, 34px); }
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+:focus-visible { outline: 3px solid var(--marca); outline-offset: 3px; }
+
+.aviso { display: none; margin: 16px auto 0; max-width: 1084px; padding: 14px 18px; border-radius: 14px; background: #FDECEA; color: #8A1C12; font-size: 15px; }
+.aviso.on { display: block; }
+.aviso li { margin-top: 4px; }
+
+header { padding: 56px 0 8px; }
+header .p { margin-top: 18px; font-size: 19px; color: var(--apoio); max-width: 32em; }
+.como { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--fio); }
+.como h2 { font-size: 21px; letter-spacing: -.02em; }
+.como p { margin-top: 10px; color: var(--apoio); max-width: 36em; }
+
+.busca { padding: 56px 0 0; }
+.busca .txt p { margin-top: 12px; color: var(--apoio); max-width: 30em; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 8px 24px; margin-top: 22px;
+  background: var(--escuro); color: #fff; font-size: 17px; font-weight: 700; text-decoration: none; border-radius: 15px; transition: transform .15s ease; }
+.btn svg { width: 18px; height: 18px; }
+.btn:active { transform: scale(.98); }
+
+/* tela do Google simulada */
+.tela { margin-top: 26px; background: #fff; border: 1px solid var(--fio); border-radius: 26px; overflow: hidden; font-family: var(--google); color: var(--g-url); }
+.tela .barra { display: flex; align-items: center; gap: 12px; padding: 16px 16px 12px; }
+.tela .barra > svg { width: 28px; height: 28px; }
+.campo { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 16px; border: 1px solid var(--g-fio); border-radius: 999px;
+  font-size: 16px; line-height: 1.25; box-shadow: 0 1px 4px rgba(32, 33, 36, .12); }
+.campo svg { width: 18px; height: 18px; color: #70757a; }
+.abas { display: flex; gap: 22px; padding: 0 20px; border-bottom: 1px solid var(--g-fio); font-size: 14px; color: #5f6368; }
+.abas span { padding: 8px 0 9px; }
+.abas .on { color: var(--g-titulo); box-shadow: inset 0 -3px 0 var(--g-titulo); }
+.anuncio { padding: 16px 16px 18px; }
+.pat { font-size: 14px; font-weight: 700; }
+.site { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+.site .ini { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--marca); color: #fff; font-size: 12px; font-weight: 700; flex: none; }
+.site .nm { font-size: 14px; line-height: 1.3; }
+.site .u { font-size: 12px; line-height: 1.3; color: var(--g-texto); overflow-wrap: anywhere; }
+.ad-t { display: block; margin-top: 10px; font-size: 20px; line-height: 1.3; color: var(--g-titulo); text-decoration: none; overflow-wrap: anywhere; }
+.ad-t:hover { text-decoration: underline; }
+.ad-d { margin-top: 6px; font-size: 14px; line-height: 1.58; color: var(--g-texto); }
+.dest { margin-top: 4px; font-size: 14px; line-height: 1.58; color: var(--g-texto); }
+.atalhos { margin-top: 12px; }
+.atalhos a { display: block; padding: 10px 0; border-top: 1px solid var(--g-fio); text-decoration: none; }
+.atalhos .t { font-size: 16px; color: var(--g-titulo); }
+.atalhos .d { margin-top: 2px; font-size: 13px; line-height: 1.4; color: var(--g-texto); }
+.local { margin-top: 2px; border-top: 1px solid var(--g-fio); }
+.local li { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0 0; font-size: 14px; line-height: 1.4; color: var(--g-texto); }
+.local svg { width: 18px; height: 18px; margin-top: 1px; color: #70757a; }
+.local b { color: var(--g-titulo); font-weight: 400; }
+/* resultados comuns abaixo do anúncio, só como contexto */
+.resto { padding: 4px 16px 20px; border-top: 8px solid var(--g-chip); }
+.resto i { display: block; height: 10px; margin-top: 10px; border-radius: 5px; background: var(--g-chip); }
+.resto i.t { height: 14px; margin-top: 20px; width: 62%; background: #e3e8f4; }
+.resto i.c { width: 86%; }
+
+.fim { padding: 72px 0 0; }
+.fim p { margin-top: 12px; color: var(--apoio); max-width: 32em; }
+footer { margin-top: 64px; padding: 28px 0 44px; border-top: 1px solid var(--fio); font-size: 14.5px; color: var(--apoio); }
+footer p + p { margin-top: 8px; font-size: 13.5px; }
+footer a { color: inherit; }
+
+@media (min-width: 900px) {
+  body { font-size: 18px; }
+  .wrap { max-width: 1180px; padding: 0 48px; }
+  header { padding: 96px 0 20px; }
+  header .p { font-size: 22px; }
+  .topo-g { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 5fr); gap: 56px; align-items: end; }
+  h1 { font-size: clamp(44px, 3.7vw, 54px); }
+  .como { margin-top: 0; padding: 26px 28px; border: 1px solid var(--fio); border-radius: 22px; background: #fff; }
+  .busca { padding-top: 104px; }
+  .busca .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 72px; align-items: center; }
+  .busca:nth-of-type(even) .txt { order: 2; }
+  .busca:nth-of-type(even) .wrap { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+  h2 { font-size: clamp(34px, 3vw, 42px); }
+  .busca .txt p { font-size: 19px; }
+  .btn:hover { transform: translateY(-2px); }
+  .tela { margin-top: 0; max-width: 560px; width: 100%; justify-self: center; box-shadow: 0 24px 60px rgba(20, 33, 43, .10); }
+  .tela .barra { padding: 20px 22px 14px; }
+  .abas { padding: 0 26px; }
+  .anuncio { padding: 20px 22px 22px; }
+  .resto { padding: 4px 22px 24px; }
+  .atalhos { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+  .fim { padding-top: 120px; text-align: center; }
+  .fim p { margin-left: auto; margin-right: auto; }
+  footer { margin-top: 96px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="wrap"><div class="aviso" id="aviso" role="alert"></div></div>
+
+<header>
+  <div class="wrap topo-g">
+    <div>
+      <h1 id="titulo">Como os anúncios apareceriam no Google</h1>
+      <p class="p" id="abre"></p>
+    </div>
+    <div class="como">
+      <h2>Como funciona</h2>
+      <!-- Texto fixo do modelo: 3 frases, sem número de resultado e sem preço. Não precisa trocar. -->
+      <p>Quem pesquisa estes termos já está procurando um médico para consultar ou operar. O anúncio aparece no topo do Google, só para quem busca na sua região, e leva direto para o site. De lá, o contato cai no WhatsApp do consultório.</p>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+<noscript><div class="wrap"><p>Ative o JavaScript do navegador para ver a simulação dos anúncios.</p></div></noscript>
+
+<section class="fim">
+  <div class="wrap">
+    <h2>Todo anúncio leva para o mesmo lugar: o site.</h2>
+    <p>É a página do esboço que montamos. Vale abrir pelo celular, que é por onde a maioria dos pacientes chega.</p>
+    <a class="btn" id="btn-fim" href="#">Ver a página</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Simulação feita pela <a href="https://virtusmarketing.com.br" target="_blank" rel="noopener">Virtus Marketing</a>. Os anúncios ainda não estão no ar e os textos podem ser ajustados.</p>
+    <p id="rt"></p>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================================================
+   KIT: ÚNICO BLOCO A TROCAR. Tudo o que aparece na página sai daqui.
+   Limites do Google Ads (a página confere e avisa no topo se passar):
+     titulos     3 por busca, até 30 caracteres cada
+     descricoes  2 por busca, até 90 caracteres cada
+     caminho     2 palavras, até 15 caracteres cada, sem acento e sem espaço
+     atalhos     4 sitelinks: texto até 25, duas linhas de até 35
+     destaques   frases de até 25 caracteres
+   Regras: só procedimento que o médico realmente faz e bairro onde ele realmente atende.
+   Sem promessa de cura ou resultado, sem superlativo, sem preço, sem telefone no texto do anúncio.
+   ===================================================================================================== */
+var KIT = {
+  deQuem: "do Dr. Rogerio Ribeiro Penna",
+  nome: "Dr. Rogerio Ribeiro Penna",
+  iniciais: "RP",
+  // domínio que seria registrado (o médico ainda não tem site próprio)
+  dominio: "drrogeriopenna.com.br",
+  registro: "Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229 (Ortopedia e Traumatologia)",
+  telefone: "(21) 2168-9610",
+  endereco: "Av. das Américas, 19005, sala 522, Recreio dos Bandeirantes, Rio de Janeiro",
+  horario: "Consulta com hora marcada",
+  pagina: "../",
+  destaques: ["Consulta com hora marcada", "Consultório no Recreio", "Cirurgia de ombro", "Teleconsulta", "Adultos e crianças"],
+  atalhos: [
+    ["Procedimentos", "Ombro, cotovelo e fraturas", "Indicação definida em consulta", "#procedimentos"],
+    ["Primeira consulta", "Presencial ou por teleconsulta", "Traga os exames que já tiver", "#consulta"],
+    ["Convênios e particular", "Veja os convênios atendidos", "Confirme o seu plano", "#convenios"],
+    ["Onde atende", "Consultório no Recreio", "Av. das Américas, 19005", "#onde-atende"]
+  ],
+  buscas: [
+    {
+      busca: "cirurgia de ombro recreio",
+      chamada: "Quem já sabe que precisa operar",
+      quem: "A pessoa recebeu a indicação de cirurgia e quer um ortopedista perto de casa. O anúncio responde com o procedimento, o seu nome e o caminho para agendar.",
+      caminho: ["cirurgia", "ombro"],
+      titulos: ["Cirurgia de Ombro no Recreio", "Dr. Rogerio Ribeiro Penna", "Agende Sua Avaliação"],
+      descricoes: ["Avaliação com ortopedista e traumatologista no Recreio dos Bandeirantes. Agende a sua.",
+                   "Consulta com hora marcada. Traga seus exames e tire suas dúvidas com o médico."],
+      ancora: "#procedimentos"
+    },
+    {
+      busca: "ortopedista de ombro perto de mim",
+      chamada: "Quem quer o ortopedista mais perto",
+      quem: "O Google mostra o anúncio só para quem está na região que você escolher. Aqui entram o endereço do consultório e o telefone, para a pessoa ver que é perto.",
+      caminho: ["ortopedista", "ombro"],
+      titulos: ["Ortopedista de Ombro no Rio", "Consultório no Recreio", "Agende Sua Consulta"],
+      descricoes: ["Lesão do manguito rotador, luxação e fraturas. O tratamento é definido em consulta.",
+                   "Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0. Atendimento particular e por convênio."],
+      ancora: "#procedimentos"
+    },
+    {
+      busca: "ortopedista recreio particular",
+      chamada: "Quem quer consulta particular no bairro",
+      quem: "Busca de quem já decidiu pagar pela consulta e quer escolher o médico. O anúncio deixa claro que o atendimento é particular e onde fica o consultório.",
+      caminho: ["consulta", "recreio"],
+      titulos: ["Ortopedista no Recreio", "Atendimento Particular", "Consulta com Hora Marcada"],
+      descricoes: ["Consulta particular no Recreio dos Bandeirantes. Presencial ou por teleconsulta.",
+                   "Ortopedia e traumatologia. Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229."],
+      ancora: "#convenios"
+    },
+    {
+      busca: "dr rogerio penna ortopedista",
+      chamada: "Quem pesquisa o seu nome",
+      quem: "Paciente indicado por um colega ou por um amigo pesquisa o nome antes de ligar. Com o anúncio, ele encontra o seu site no topo, e não uma página de terceiros.",
+      caminho: ["agendar", "consulta"],
+      titulos: ["Dr. Rogerio Ribeiro Penna", "Site Oficial", "Agende Sua Consulta"],
+      descricoes: ["Ortopedista e traumatologista no Recreio dos Bandeirantes. Agende a sua consulta.",
+                   "Veja procedimentos, convênios e o endereço do consultório. Consulta com hora marcada."],
+      ancora: "#topo"
+    }
+  ]
+};
+/* ============================ nada a trocar daqui para baixo ============================ */
+(function () {
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var erros = [];
+  var lim = function (txt, max, onde) { if (String(txt).length > max) erros.push(onde + ': "' + txt + '" tem ' + String(txt).length + ' caracteres (limite ' + max + ')'); };
+  var G = '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
+  var LUPA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>';
+  var PIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.750 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg>';
+  var FONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.620 10.790a15.050 15.050 0 0 0 6.590 6.590l2.200-2.200a1 1 0 0 1 1.020-.240c1.120.370 2.330.570 3.570.570a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.610 21 3 13.390 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.250.200 2.450.570 3.570a1 1 0 0 1-.250 1.020l-2.200 2.200z"/></svg>';
+  var SETA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+  document.title = 'Prévia dos anúncios ' + KIT.deQuem + ' no Google';
+  document.getElementById('titulo').textContent = 'Como os anúncios ' + KIT.deQuem + ' apareceriam no Google';
+  document.getElementById('abre').textContent = 'Uma simulação com ' + KIT.buscas.length + ' buscas que os pacientes fazem todos os dias, o anúncio que cada um veria e a página que abre no clique.';
+  document.getElementById('rt').textContent = 'Responsável técnico: ' + KIT.registro + '.';
+  document.getElementById('btn-fim').href = KIT.pagina;
+  document.getElementById('btn-fim').insertAdjacentHTML('beforeend', SETA);
+
+  KIT.destaques.forEach(function (d) { lim(d, 25, 'Destaque'); });
+  KIT.atalhos.forEach(function (a) { lim(a[0], 25, 'Atalho (texto)'); lim(a[1], 35, 'Atalho (linha 1)'); lim(a[2], 35, 'Atalho (linha 2)'); });
+
+  var app = document.getElementById('app'), html = '';
+  KIT.buscas.forEach(function (b, i) {
+    if (b.titulos.length !== 3) erros.push('Busca ' + (i + 1) + ': são 3 títulos, vieram ' + b.titulos.length);
+    if (b.descricoes.length !== 2) erros.push('Busca ' + (i + 1) + ': são 2 descrições, vieram ' + b.descricoes.length);
+    b.titulos.forEach(function (t) { lim(t, 30, 'Busca ' + (i + 1) + ', título'); });
+    b.descricoes.forEach(function (d) { lim(d, 90, 'Busca ' + (i + 1) + ', descrição'); });
+    b.caminho.forEach(function (c) { lim(c, 15, 'Busca ' + (i + 1) + ', caminho'); });
+    var destino = KIT.pagina + (b.ancora || '');
+    html += '<section class="busca"><div class="wrap">' +
+      '<div class="txt"><h2>' + esc(b.chamada) + '</h2><p>' + esc(b.quem) + '</p>' +
+      '<a class="btn" href="' + esc(destino) + '">Ver a página' + SETA + '</a></div>' +
+      '<div class="tela" role="img" aria-label="Simulação do resultado do Google para a busca ' + esc(b.busca) + '">' +
+        '<div class="barra">' + G + '<div class="campo">' + LUPA + '<span>' + esc(b.busca) + '</span></div></div>' +
+        '<div class="abas"><span class="on">Todas</span><span>Maps</span><span>Imagens</span><span>Notícias</span></div>' +
+        '<div class="anuncio">' +
+          '<div class="pat">Patrocinado</div>' +
+          '<div class="site"><span class="ini">' + esc(KIT.iniciais) + '</span><div><div class="nm">' + esc(KIT.nome) + '</div>' +
+            '<div class="u">https://www.' + esc(KIT.dominio) + ' › ' + esc(b.caminho.join(' › ')) + '</div></div></div>' +
+          '<span class="ad-t">' + esc(b.titulos.join(' | ')) + '</span>' +
+          '<p class="ad-d">' + esc(b.descricoes.join(' ')) + '</p>' +
+          '<p class="dest">' + esc(KIT.destaques.slice(0, 4).join(' · ')) + '</p>' +
+          '<div class="atalhos">' + KIT.atalhos.map(function (a) {
+            return '<div><a tabindex="-1"><div class="t">' + esc(a[0]) + '</div><div class="d">' + esc(a[1]) + '<br>' + esc(a[2]) + '</div></a></div>';
+          }).join('') + '</div>' +
+          '<ul class="local"><li>' + PIN + '<span>' + esc(KIT.endereco) + '<br>' + esc(KIT.horario) + '</span></li>' +
+            '<li>' + FONE + '<span><b>Ligar ' + esc(KIT.telefone) + '</b></span></li></ul>' +
+        '</div>' +
+        '<div class="resto" aria-hidden="true"><i class="t"></i><i></i><i class="c"></i><i class="t"></i><i></i><i class="c"></i></div>' +
+      '</div></div></section>';
+  });
+  app.innerHTML = html;
+
+  if (erros.length) {
+    var av = document.getElementById('aviso');
+    av.innerHTML = '<b>Corrigir antes de publicar (limites do Google Ads):</b><ul>' + erros.map(function (e) { return '<li>' + esc(e) + '</li>'; }).join('') + '</ul>';
+    av.className = 'aviso on';
+    if (window.console) console.warn(erros.join('\n'));
+  }
+})();
+</script>
+</body>
+</html>
