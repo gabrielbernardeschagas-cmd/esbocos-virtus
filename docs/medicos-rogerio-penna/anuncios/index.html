@@ -1,18 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<!--
-  MODELO FIXO DA PRÉVIA DE ANÚNCIOS NO GOOGLE PARA MÉDICOS (Virtus Marketing, 24/11/2026)
-  Parte da prévia feita para o hospital de ortopedia (~/clientes/hpaes/relatorios/previa-google/index.html).
-  Para um kit real, troque SÓ o bloco "KIT" no <script> lá embaixo. KIT REAL: Dr. Rogerio Ribeiro Penna (26/11/2026).
-  Receita completa: ~/virtus/prospeccao-medicos/ESBOCO-PADRAO-MEDICOS.md
-
-  A página confere sozinha os limites do Google Ads (título 30, descrição 90, caminho 15, sitelink 25 + 35 + 35,
-  frase de destaque 25). Se algo passar do limite, aparece um aviso vermelho no topo: corrija antes de publicar.
-
-  Políticas de saúde do Google e CFM: sem promessa de cura ou de resultado, sem superlativo ("o melhor", "nº 1"),
-  sem preço, sem antes e depois, sem telefone dentro do texto do anúncio. Nada de número de resultado nem nome de cliente.
--->
+<!-- Prévia dos anúncios do Dr. Rogerio Ribeiro Penna, modelo v2 (uma landing por busca), 26/11/2026. Trocar só o bloco KIT. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Prévia dos anúncios no Google</title>
@@ -59,6 +48,13 @@ header .p { margin-top: 18px; font-size: 19px; color: var(--apoio); max-width: 3
   background: var(--escuro); color: #fff; font-size: 17px; font-weight: 700; text-decoration: none; border-radius: 15px; transition: transform .15s ease; }
 .btn svg { width: 18px; height: 18px; }
 .btn:active { transform: scale(.98); }
+.vai { margin-top: 16px; padding: 12px 14px; border: 1px solid var(--fio); border-radius: 14px; background: #fff; font-size: 15px; line-height: 1.4; color: var(--apoio); }
+.vai b { display: block; color: var(--tinta); font-size: 16.5px; overflow-wrap: anywhere; }
+.pags { margin-top: 24px; border-top: 1px solid var(--fio); text-align: left; }
+.pags a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--fio); text-decoration: none; color: inherit; }
+.pags span { display: block; font-size: 14.5px; color: var(--apoio); }
+.pags b { display: block; font-size: 17.5px; overflow-wrap: anywhere; }
+.pags svg { width: 20px; height: 20px; color: var(--marca); }
 
 /* tela do Google simulada */
 .tela { margin-top: 26px; background: #fff; border: 1px solid var(--fio); border-radius: 26px; overflow: hidden; font-family: var(--google); color: var(--g-url); }
@@ -121,8 +117,9 @@ footer a { color: inherit; }
   .anuncio { padding: 20px 22px 22px; }
   .resto { padding: 4px 22px 24px; }
   .atalhos { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
-  .fim { padding-top: 120px; text-align: center; }
-  .fim p { margin-left: auto; margin-right: auto; }
+  .fim { padding-top: 120px; }
+  .fim .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 72px; align-items: start; }
+  .pags { margin-top: 0; }
   footer { margin-top: 96px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -140,8 +137,7 @@ footer a { color: inherit; }
     </div>
     <div class="como">
       <h2>Como funciona</h2>
-      <!-- Texto fixo do modelo: 3 frases, sem número de resultado e sem preço. Não precisa trocar. -->
-      <p>Quem pesquisa estes termos já está procurando um médico para consultar ou operar. O anúncio aparece no topo do Google, só para quem busca na sua região, e leva direto para o site. De lá, o contato cai no WhatsApp do consultório.</p>
+      <p>Quem pesquisa estes termos já quer um médico para consultar ou operar. O anúncio aparece no topo do Google, só para quem busca na sua região, e leva para a página daquele assunto, não para uma página geral. De lá, o contato cai no WhatsApp do consultório.</p>
     </div>
   </div>
 </header>
@@ -151,9 +147,11 @@ footer a { color: inherit; }
 
 <section class="fim">
   <div class="wrap">
-    <h2>Todo anúncio leva para o mesmo lugar: o site.</h2>
-    <p>É a página do esboço que montamos. Vale abrir pelo celular, que é por onde a maioria dos pacientes chega.</p>
-    <a class="btn" id="btn-fim" href="#">Ver a página</a>
+    <div>
+      <h2>Cada busca abre a sua própria página.</h2>
+      <p>Quem pesquisa um procedimento cai na página daquele procedimento, com convênios, endereço e o botão do WhatsApp. Vale abrir pelo celular, que é por onde a maioria dos pacientes chega.</p>
+    </div>
+    <div class="pags" id="pags"></div>
   </div>
 </section>
 
@@ -186,44 +184,44 @@ var KIT = {
   telefone: "(21) 2168-9610",
   endereco: "Av. das Américas, 19005, sala 522, Recreio dos Bandeirantes, Rio de Janeiro",
   horario: "Consulta com hora marcada",
-  pagina: "../",
-  destaques: ["Consulta com hora marcada", "Consultório no Recreio", "Cirurgia de ombro", "Teleconsulta", "Adultos e crianças"],
+  paginaGeral: "../",
+  destaques: ["Consulta com hora marcada", "Consultório no Recreio", "Convênios e particular", "Teleconsulta", "Adultos e crianças"],
   atalhos: [
-    ["Procedimentos", "Ombro, cotovelo e fraturas", "Indicação definida em consulta", "#procedimentos"],
-    ["Primeira consulta", "Presencial ou por teleconsulta", "Traga os exames que já tiver", "#consulta"],
-    ["Convênios e particular", "Veja os convênios atendidos", "Confirme o seu plano", "#convenios"],
-    ["Onde atende", "Consultório no Recreio", "Av. das Américas, 19005", "#onde-atende"]
+    ["Cirurgia de ombro", "Manguito rotador e luxação", "Indicação definida em consulta", "../cirurgia-de-ombro/"],
+    ["Consulta de ortopedia", "Adultos e crianças", "Presencial ou por teleconsulta", "../ortopedista-recreio/"],
+    ["Convênios e particular", "Veja os convênios atendidos", "Confirme o seu plano", "../#convenios"],
+    ["Onde atende", "Consultório no Recreio", "Av. das Américas, 19005", "../#onde-atende"]
   ],
   buscas: [
     {
       busca: "cirurgia de ombro recreio",
-      chamada: "Quem já sabe que precisa operar",
-      quem: "A pessoa recebeu a indicação de cirurgia e quer um ortopedista perto de casa. O anúncio responde com o procedimento, o seu nome e o caminho para agendar.",
+      chamada: "Quem já sabe que precisa operar o ombro",
+      quem: "A pessoa recebeu a indicação de cirurgia e quer um ortopedista perto de casa. O anúncio fala de cirurgia de ombro e abre a página de cirurgia de ombro, não a página geral.",
       caminho: ["cirurgia", "ombro"],
       titulos: ["Cirurgia de Ombro no Recreio", "Dr. Rogerio Ribeiro Penna", "Agende Sua Avaliação"],
-      descricoes: ["Avaliação com ortopedista e traumatologista no Recreio dos Bandeirantes. Agende a sua.",
-                   "Consulta com hora marcada. Traga seus exames e tire suas dúvidas com o médico."],
-      ancora: "#procedimentos"
+      descricoes: ["Manguito rotador, luxação e artroscopia do ombro. A indicação é definida em consulta.",
+                   "Ortopedista no Recreio dos Bandeirantes. Atende convênios e particular. Agende a sua."],
+      destino: "../cirurgia-de-ombro/", slug: "cirurgia-de-ombro", pagina: "Página de cirurgia de ombro"
     },
     {
-      busca: "ortopedista de ombro perto de mim",
-      chamada: "Quem quer o ortopedista mais perto",
-      quem: "O Google mostra o anúncio só para quem está na região que você escolher. Aqui entram o endereço do consultório e o telefone, para a pessoa ver que é perto.",
-      caminho: ["ortopedista", "ombro"],
-      titulos: ["Ortopedista de Ombro no Rio", "Consultório no Recreio", "Agende Sua Consulta"],
-      descricoes: ["Lesão do manguito rotador, luxação e fraturas. O tratamento é definido em consulta.",
-                   "Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0. Atendimento particular e por convênio."],
-      ancora: "#procedimentos"
+      busca: "ortopedista recreio unimed",
+      chamada: "Quem quer um ortopedista no bairro, pelo plano",
+      quem: "Busca de quem quer usar o convênio e escolher o médico. O anúncio abre a página de consulta, que responde na primeira tela quais convênios são aceitos e onde fica o consultório.",
+      caminho: ["ortopedista", "recreio"],
+      titulos: ["Ortopedista no Recreio", "Convênios e Particular", "Consulta com Hora Marcada"],
+      descricoes: ["Consulta de ortopedia para adultos e crianças. Presencial ou por teleconsulta.",
+                   "Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229. Veja os convênios atendidos."],
+      destino: "../ortopedista-recreio/", slug: "ortopedista-recreio", pagina: "Página de consulta com ortopedista"
     },
     {
-      busca: "ortopedista recreio particular",
-      chamada: "Quem quer consulta particular no bairro",
-      quem: "Busca de quem já decidiu pagar pela consulta e quer escolher o médico. O anúncio deixa claro que o atendimento é particular e onde fica o consultório.",
-      caminho: ["consulta", "recreio"],
-      titulos: ["Ortopedista no Recreio", "Atendimento Particular", "Consulta com Hora Marcada"],
-      descricoes: ["Consulta particular no Recreio dos Bandeirantes. Presencial ou por teleconsulta.",
-                   "Ortopedia e traumatologia. Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229."],
-      ancora: "#convenios"
+      busca: "viscossuplementação recreio",
+      chamada: "Quem pesquisa um procedimento pelo nome",
+      quem: "A pessoa já ouviu falar do procedimento, muitas vezes por indicação de outro médico. O anúncio abre a página de viscossuplementação, com o que é e como agendar a avaliação.",
+      caminho: ["viscossuplem", "recreio"],
+      titulos: ["Viscossuplementação no Recreio", "Avaliação com Ortopedista", "Agende Sua Consulta"],
+      descricoes: ["Aplicação na articulação, avaliada em casos de artrose. Indicação definida em consulta.",
+                   "Dr. Rogerio Ribeiro Penna, ortopedista no Recreio dos Bandeirantes. CRM-RJ 52.54756-0."],
+      destino: "../viscossuplementacao/", slug: "viscossuplementacao", pagina: "Página de viscossuplementação"
     },
     {
       busca: "dr rogerio penna ortopedista",
@@ -231,9 +229,9 @@ var KIT = {
       quem: "Paciente indicado por um colega ou por um amigo pesquisa o nome antes de ligar. Com o anúncio, ele encontra o seu site no topo, e não uma página de terceiros.",
       caminho: ["agendar", "consulta"],
       titulos: ["Dr. Rogerio Ribeiro Penna", "Site Oficial", "Agende Sua Consulta"],
-      descricoes: ["Ortopedista e traumatologista no Recreio dos Bandeirantes. Agende a sua consulta.",
+      descricoes: ["Consulta e cirurgia de ortopedia no Recreio dos Bandeirantes. Agende a sua consulta.",
                    "Veja procedimentos, convênios e o endereço do consultório. Consulta com hora marcada."],
-      ancora: "#topo"
+      destino: "../", slug: "", pagina: "Página geral do consultório", geral: true
     }
   ]
 };
@@ -250,24 +248,28 @@ var KIT = {
 
   document.title = 'Prévia dos anúncios ' + KIT.deQuem + ' no Google';
   document.getElementById('titulo').textContent = 'Como os anúncios ' + KIT.deQuem + ' apareceriam no Google';
-  document.getElementById('abre').textContent = 'Uma simulação com ' + KIT.buscas.length + ' buscas que os pacientes fazem todos os dias, o anúncio que cada um veria e a página que abre no clique.';
+  document.getElementById('abre').textContent = 'Uma simulação com ' + KIT.buscas.length + ' buscas que os pacientes fazem todos os dias, o anúncio que cada um veria e a página que abre no clique: uma para cada busca.';
   document.getElementById('rt').textContent = 'Responsável técnico: ' + KIT.registro + '.';
-  document.getElementById('btn-fim').href = KIT.pagina;
-  document.getElementById('btn-fim').insertAdjacentHTML('beforeend', SETA);
 
   KIT.destaques.forEach(function (d) { lim(d, 25, 'Destaque'); });
   KIT.atalhos.forEach(function (a) { lim(a[0], 25, 'Atalho (texto)'); lim(a[1], 35, 'Atalho (linha 1)'); lim(a[2], 35, 'Atalho (linha 2)'); });
 
-  var app = document.getElementById('app'), html = '';
+  var app = document.getElementById('app'), html = '', pags = '';
   KIT.buscas.forEach(function (b, i) {
     if (b.titulos.length !== 3) erros.push('Busca ' + (i + 1) + ': são 3 títulos, vieram ' + b.titulos.length);
     if (b.descricoes.length !== 2) erros.push('Busca ' + (i + 1) + ': são 2 descrições, vieram ' + b.descricoes.length);
     b.titulos.forEach(function (t) { lim(t, 30, 'Busca ' + (i + 1) + ', título'); });
     b.descricoes.forEach(function (d) { lim(d, 90, 'Busca ' + (i + 1) + ', descrição'); });
     b.caminho.forEach(function (c) { lim(c, 15, 'Busca ' + (i + 1) + ', caminho'); });
-    var destino = KIT.pagina + (b.ancora || '');
+    var destino = b.destino || '';
+    if (!destino) erros.push('Busca ' + (i + 1) + ' ("' + b.busca + '"): falta a página de destino');
+    if (!b.geral && destino.split('#')[0] === KIT.paginaGeral && destino.indexOf('#') < 0) erros.push('Busca ' + (i + 1) + ' ("' + b.busca + '"): busca de procedimento não pode abrir a página geral. Crie a landing dela.');
+    KIT.buscas.forEach(function (o, k) { if (k < i && o.destino === destino) erros.push('Buscas ' + (k + 1) + ' e ' + (i + 1) + ' abrem a mesma página (' + destino + '). É uma landing por busca.'); });
+    var url = KIT.dominio + (b.slug ? '/' + b.slug : '');
+    pags += '<a href="' + esc(destino) + '"><div><span>' + esc(b.busca) + '</span><b>' + esc(b.pagina || url) + '</b></div>' + SETA + '</a>';
     html += '<section class="busca"><div class="wrap">' +
       '<div class="txt"><h2>' + esc(b.chamada) + '</h2><p>' + esc(b.quem) + '</p>' +
+      '<div class="vai">Este anúncio abre<b>' + esc(url) + '</b></div>' +
       '<a class="btn" href="' + esc(destino) + '">Ver a página' + SETA + '</a></div>' +
       '<div class="tela" role="img" aria-label="Simulação do resultado do Google para a busca ' + esc(b.busca) + '">' +
         '<div class="barra">' + G + '<div class="campo">' + LUPA + '<span>' + esc(b.busca) + '</span></div></div>' +
@@ -289,6 +291,7 @@ var KIT = {
       '</div></div></section>';
   });
   app.innerHTML = html;
+  document.getElementById('pags').innerHTML = pags;
 
   if (erros.length) {
     var av = document.getElementById('aviso');
