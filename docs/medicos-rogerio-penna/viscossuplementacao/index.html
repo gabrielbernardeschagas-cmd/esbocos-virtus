@@ -1,370 +1,412 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<!-- Kit do Dr. Rogerio Ribeiro Penna, modelo v2 (landing por busca), montado em 26/11/2026. Fontes em _fonte/NOTAS.md. -->
+<!-- Kit do Dr. Rogerio Ribeiro Penna, modelo v3 (26/11/2026): landing por busca com desenho esquemático movido por scroll. Fontes em _fonte/NOTAS.md. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Viscossuplementação no Recreio | Dr. Rogerio Ribeiro Penna</title>
-<meta name="description" content="Viscossuplementação no Recreio dos Bandeirantes, avaliada em casos de artrose. Dr. Rogerio Ribeiro Penna, ortopedista, CRM-RJ 52.54756-0, RQE 10229. Agende a sua consulta.">
-<meta name="theme-color" content="#0E2A38">
+<meta name="description" content="Viscossuplementação no Recreio dos Bandeirantes: aplicação na articulação, avaliada em casos de artrose. Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229. Unimed, AMS Petrobras, CAURJ e particular.">
+<meta name="theme-color" content="#EDF2F2">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Viscossuplementação no Recreio | Dr. Rogerio Ribeiro Penna">
-<meta property="og:description" content="Viscossuplementação no Recreio dos Bandeirantes, avaliada em casos de artrose. Dr. Rogerio Ribeiro Penna, ortopedista, CRM-RJ 52.54756-0, RQE 10229. Agende a sua consulta.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230E2A38%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3ERP%3C/text%3E%3C/svg%3E">
+<meta property="og:description" content="Viscossuplementação no Recreio dos Bandeirantes: aplicação na articulação, avaliada em casos de artrose. Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229. Unimed, AMS Petrobras, CAURJ e particular.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%230B2933%27%2F%3E%3Ctext%20x%3D%2732%27%20y%3D%2742%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2726%27%20font-weight%3D%27700%27%20fill%3D%27%23fff%27%20text-anchor%3D%27middle%27%3ERP%3C%2Ftext%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..800&display=swap" rel="stylesheet">
 <style>
-/* Regras da casa: primeira dobra SEM foto (o que o médico faz, em tipografia), cor chapada, uma família de fonte,
-   fio de 1 px no lugar de cartão com sombra, UM rótulo de botão de agendar na página inteira,
-   listas em bullet, tudo legível sem JS. */
-
-:root {
-  --fundo: #F6F8F9;
-  --papel: #FFFFFF;
-  --painel: #E8EEF1;
-  --tinta: #13212B;
-  --apoio: #4A5963;
-  --escuro: #0E2A38;
-  --marca: #0F5C6E;
-  --fio: rgba(19, 33, 43, .14);
-  --fio-claro: rgba(255, 255, 255, .2);
-  --zap: #25D366;
-  --zap-tinta: #06281A;
+/* v3 (26/11/2026). Regras da casa: uma família (Archivo, largura variável: título estreito de sinalização),
+   cor chapada, fio de 1 px no lugar de cartão com sombra, UM momento "uau" (o desenho que o scroll destaca),
+   UM rótulo de botão na página inteira, tudo legível sem JS e com movimento reduzido. */
+:root{
+  --papel:#FFFFFF; --nevoa:#EDF2F2; --tinta:#0F2129; --apoio:#4A5B63;
+  --escuro:#0B2933; --osso:#12343F; --marca:#0F5C6E; --foco:#F6B95C;
+  --fio:rgba(15,33,41,.16); --zap:#25D366; --zap-tinta:#04301B;
 }
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-body { margin: 0; background: var(--fundo); color: var(--tinta);
-  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 17px; line-height: 1.55;
-  overflow-x: clip; -webkit-font-smoothing: antialiased; padding-bottom: 78px; }
-h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
-ul, ol { list-style: none; }
-a { color: inherit; }
-img, svg, iframe { display: block; max-width: 100%; }
-svg { flex: none; }
-h1, h2 { font-weight: 700; letter-spacing: -.03em; line-height: 1.05; text-wrap: balance; }
-h1 { font-size: clamp(38px, 10.8vw, 60px); }
-h2 { font-size: clamp(28px, 7.4vw, 40px); }
-.wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
-:focus-visible { outline: 3px solid var(--zap); outline-offset: 3px; }
-[id] { scroll-margin-top: 24px; }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased}
+::selection{background:var(--foco);color:var(--tinta)}
+h1,h2,h3,p,ul,ol,dl,dd,figure,address{margin:0;padding:0;font-style:normal}
+ul,ol{list-style:none}
+a{color:inherit;text-underline-offset:3px}
+img,svg,iframe{display:block;max-width:100%}
+svg{flex:none}
+h1,h2{font-weight:700;font-stretch:78%;letter-spacing:-.018em;line-height:.95;text-wrap:balance}
+h1{font-size:clamp(56px,16.6vw,132px)}
+h1.longo{font-stretch:64%;font-size:clamp(42px,12.4vw,132px)}
+h1.medio{font-size:clamp(48px,14.2vw,132px)}
+h2{font-size:clamp(36px,10vw,68px)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+:focus-visible{outline:3px solid var(--marca);outline-offset:3px}
+[id]{scroll-margin-top:20px}
 
-/* ---------- primeira dobra: o que ele faz, convênio, particular e endereço. Sem foto. ---------- */
-.hero { position: relative; background: var(--escuro); color: #fff; overflow: hidden; }
-.arcos { position: absolute; right: -210px; bottom: -250px; width: 680px; height: 680px; max-width: none; color: #fff; opacity: .08; pointer-events: none; }
-.hero .wrap { position: relative; }
-.barra { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--fio-claro); font-size: 13.5px; line-height: 1.4; }
-.barra a.id { text-decoration: none; }
-.barra b { display: block; font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
-.barra .reg { color: rgba(255, 255, 255, .8); }
-.barra nav { display: none; }
-.hero-g { padding: 30px 0 36px; }
-.hero h1 { max-width: 11em; }
-.hero h1.longo { font-size: clamp(27px, 7.7vw, 44px); max-width: none; }
-.hero .sub { margin-top: 14px; font-size: 18px; line-height: 1.45; color: rgba(255, 255, 255, .88); max-width: 30em; }
-.fatos { margin-top: 22px; border-top: 1px solid var(--fio-claro); }
-.fatos div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--fio-claro); }
-.fatos dt { font-size: 14px; color: rgba(255, 255, 255, .74); padding-top: 2px; }
-.fatos dd { font-size: 16.5px; font-weight: 600; line-height: 1.35; }
-.acoes { margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
-.btn { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 62px; padding: 10px 20px; background: var(--zap); color: var(--zap-tinta);
-  font-size: 18px; font-weight: 700; line-height: 1.15; text-align: center; text-decoration: none; border-radius: 16px; transition: transform .15s ease; }
-.btn svg { width: 24px; height: 24px; }
-.btn:active { transform: scale(.98); }
-.lig { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 52px; padding: 8px 20px; border: 1px solid rgba(255, 255, 255, .42); border-radius: 16px;
-  color: #fff; font-size: 16.5px; font-weight: 600; text-decoration: none; }
-.lig svg { width: 18px; height: 18px; }
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 12px;background:var(--zap);color:var(--zap-tinta);font-size:clamp(15px,4.35vw,17px);white-space:nowrap;font-weight:700;letter-spacing:-.005em;text-decoration:none;border-radius:14px;transition:transform .15s ease}
+.btn:active{transform:scale(.98)}
+.btn .zp{width:23px;height:23px}
+.btn2{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 20px;border:1.5px solid var(--tinta);border-radius:12px;font-weight:650;text-decoration:none}
+.st{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* ---------- seções ---------- */
-section { padding: 60px 0; }
-.lead { margin-top: 14px; font-size: 18px; color: var(--apoio); max-width: 34em; }
-.texto p { margin-top: 14px; max-width: 36em; }
-.texto p:first-of-type { font-size: 19px; }
-.lista { margin-top: 20px; border-top: 1px solid var(--fio); }
-.lista li { position: relative; padding: 13px 0 13px 26px; border-bottom: 1px solid var(--fio); font-weight: 500; line-height: 1.4; }
-.lista li::before { content: ""; position: absolute; left: 2px; top: 24px; width: 12px; height: 2px; background: var(--marca); }
-.nota { margin-top: 16px; font-size: 15px; color: var(--apoio); max-width: 38em; }
-.bloco + .bloco { margin-top: 44px; }
-h3 { font-size: 21px; font-weight: 700; letter-spacing: -.02em; line-height: 1.2; }
-section .btn { margin-top: 26px; }
+/* primeira dobra: tipografia de sinalização, três fatos e o botão. Sem foto. */
+.hero{background:var(--nevoa);padding:0 0 30px}
+.id{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;font-size:13px;line-height:1.35;color:var(--apoio)}
+.id a{text-decoration:none}
+.id b{display:block;color:var(--tinta);font-size:15px;font-weight:650}
+.id .lig{display:none}
+.hero h1{margin-top:clamp(24px,6.6vw,64px)}
+.hero h1 .l{display:block}
+.info{display:grid;gap:18px;margin-top:16px}
+.lead{max-width:27em;color:var(--apoio);line-height:1.42}
+.fatos{display:grid;grid-template-columns:1.25fr .9fr 1fr;border-top:1px solid var(--fio)}
+.fatos li{padding:13px 10px 0 0;min-width:0}
+.fatos li+li{padding-left:12px;border-left:1px solid var(--fio)}
+.fatos svg{width:25px;height:25px;fill:none;stroke:var(--marca);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.fatos b{display:block;margin-top:7px;font-size:15.5px;font-weight:700;font-stretch:88%;line-height:1.2}
+.fatos span{display:block;margin-top:2px;font-size:13px;line-height:1.3;color:var(--apoio)}
 
-.passos { margin-top: 24px; counter-reset: p; }
-.passos li { counter-increment: p; display: grid; grid-template-columns: 44px minmax(0, 1fr); padding: 16px 0; border-top: 1px solid var(--fio); }
-.passos li::before { content: counter(p); grid-row: span 2; font-size: 26px; font-weight: 700; line-height: 1.1; color: var(--marca); }
-.passos b { font-size: 18px; line-height: 1.3; }
-.passos span { grid-column: 2; color: var(--apoio); }
+/* momento uau: o desenho fica parado e o scroll destaca cada parte.
+   Sem JS ou com movimento reduzido: desenho inteiro + lista, tudo empilhado. */
+.palco{--n:4;--d:1;background:var(--escuro);color:#fff}
+.palco .pin{max-width:1180px;margin:0 auto;padding:0 20px}
+.palco h2{font-size:clamp(24px,6.4vw,56px);max-width:11em;line-height:1}
+.palco .ilus{width:min(100%,400px);margin:26px auto 0}
+.palco .dica,.palco .tic{display:none}
+.rot li{margin-top:22px}
+.rot b{display:block;font-size:clamp(30px,8.4vw,48px);font-weight:700;font-stretch:78%;letter-spacing:-.015em;line-height:1}
+.rot span{display:block;margin-top:7px;color:rgba(255,255,255,.74);line-height:1.35}
+.ilus .f{opacity:0;transition:opacity .45s ease}
+.palco:not(.anim) .ilus .f{opacity:1}
+.palco:not(.anim) .ilus .f2,.palco:not(.anim) .ilus .liq.forte,.palco:not(.anim) .ilus .gasto{opacity:0}
 
-/* convênios: seção própria, em destaque */
-.conv { background: var(--painel); }
-.planos { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.planos li { display: flex; align-items: center; min-height: 86px; padding: 14px 16px; background: var(--papel); border-radius: 14px;
-  font-size: 19px; font-weight: 700; line-height: 1.2; letter-spacing: -.01em; overflow-wrap: anywhere; }
-.planos li.part { grid-column: 1 / -1; flex-direction: column; align-items: flex-start; justify-content: center; gap: 3px; background: var(--escuro); color: #fff; }
-.planos li:nth-last-child(2):nth-child(odd) { grid-column: 1 / -1; }
-.planos li.part small { font-size: 15px; font-weight: 500; letter-spacing: 0; color: rgba(255, 255, 255, .82); }
+.palco.anim{padding:0;height:calc(100vh + var(--n) * 62vh);height:calc(100svh + var(--n) * 62svh)}
+.palco.anim .pin{position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:26px 20px calc(88px + env(safe-area-inset-bottom,0px))}
+.palco.anim .ilus{width:100%;height:100%;margin:0;padding:10px 0}
+.palco.anim .base{position:relative;height:122px}
+.palco.anim .rot li,.palco.anim .dica{position:absolute;left:0;right:0;top:20px;margin:0;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+.palco.anim .dica{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.74)}
+.palco.anim .dica svg{width:22px;height:22px;fill:none;stroke:var(--foco);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;animation:desce 1.8s ease-in-out infinite}
+@keyframes desce{50%{transform:translateY(5px)}}
+.palco.anim[data-on="0"] .dica,.palco.anim .rot li.on{opacity:1;transform:none}
+.palco.anim .tic{display:flex;gap:6px}
+.tic i{width:18px;height:3px;border-radius:2px;background:rgba(255,255,255,.26);transition:background .3s ease,width .3s ease}
+.tic i.on{width:34px;background:var(--foco)}
+.palco.anim .ilus .o,.palco.anim .ilus .b,.palco.anim .ilus .c{stroke-dasharray:1;stroke-dashoffset:calc(1 - clamp(0,(var(--d) - var(--k,0)) * 2.4,1));fill-opacity:clamp(0,(var(--d) - .45) * 3,1)}
+.palco.anim .ilus .t,.palco.anim .ilus .p{opacity:clamp(0,(var(--d) - .7) * 4,1)}
+.palco.anim .ilus .fd{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s cubic-bezier(.3,.7,.2,1)}
+.palco.anim[data-on="1"] .f1,.palco.anim[data-on="2"] .f2,.palco.anim[data-on="3"] .f3,.palco.anim[data-on="4"] .f4,.palco.anim[data-on="5"] .f5{opacity:1}
+.palco.anim[data-on="1"] .f1 .fd,.palco.anim[data-on="2"] .f2 .fd,.palco.anim[data-on="3"] .f3 .fd,.palco.anim[data-on="4"] .f4 .fd,.palco.anim[data-on="5"] .f5 .fd{stroke-dashoffset:0}
+.palco.anim:not([data-on="0"]) .ilus .o,.palco.anim:not([data-on="0"]) .ilus .b{stroke-opacity:.5}
+.palco.anim[data-on="2"] .ilus-ombro .umero{transform:translate(-20px,26px)}
+.depois{padding:34px 0 0}
+.depois p{max-width:34em;color:var(--apoio)}
 
-/* procedimentos da página geral: lista única, um botão só no fim */
-.procs { margin-top: 22px; border-top: 1px solid var(--fio); }
-.procs li { border-bottom: 1px solid var(--fio); }
-.procs .it { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 0; text-decoration: none; }
-.procs b { display: block; font-size: 19px; line-height: 1.25; letter-spacing: -.01em; }
-.procs span { display: block; margin-top: 3px; font-size: 15.5px; line-height: 1.4; color: var(--apoio); }
-.procs svg, .links svg { width: 22px; height: 22px; color: var(--marca); }
+/* três passos em linha */
+.passos h2{margin-bottom:30px}
+.trilho{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;padding:0 20px;margin:0 -20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.trilho::-webkit-scrollbar{display:none}
+.trilho li{position:relative;flex:0 0 68%;max-width:300px;scroll-snap-align:start;padding:0 22px 4px 0}
+.trilho li::before{content:"";position:absolute;left:66px;right:10px;top:30px;border-top:1px solid var(--fio)}
+.trilho li:last-child::before{display:none}
+.trilho svg{width:60px;height:60px;padding:4px 8px 4px 0;fill:none;stroke:var(--tinta);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.trilho b{display:block;margin-top:14px;font-size:23px;font-weight:700;font-stretch:84%;letter-spacing:-.01em;line-height:1.1}
+.trilho span{display:block;margin-top:6px;color:var(--apoio);line-height:1.4;font-size:16px}
 
-/* avaliações do Google (opcional) */
-.gnota { display: flex; align-items: center; gap: 16px; margin-top: 22px; }
-.gnota .n { font-size: 60px; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
-.gnota .e { color: #E0A106; font-size: 22px; letter-spacing: 2px; line-height: 1; }
-.gnota small { display: block; margin-top: 6px; font-size: 15px; color: var(--apoio); }
-.deps { margin-top: 22px; border-top: 1px solid var(--fio); }
-.deps li { padding: 16px 0; border-bottom: 1px solid var(--fio); }
-.deps cite { display: block; margin-top: 6px; font-size: 15px; font-style: normal; color: var(--apoio); }
+/* convênios: os nomes são o desenho */
+.conv{background:var(--nevoa)}
+.conv h2{font-size:clamp(26px,7vw,34px);font-stretch:84%;letter-spacing:-.012em}
+.marcas{margin-top:18px}
+.marcas li{padding:12px 0 10px;border-top:1px solid var(--fio);font-size:clamp(46px,14vw,104px);font-weight:700;font-stretch:72%;letter-spacing:-.02em;line-height:1}
+.marcas .part{margin-top:8px;padding:20px 20px 22px;border:0;border-radius:22px;background:var(--marca);color:#fff}
+.marcas .part span{display:block;margin-top:8px;font-size:16px;font-weight:500;font-stretch:100%;letter-spacing:0;line-height:1.3;color:rgba(255,255,255,.86)}
+.nota{margin-top:18px;max-width:32em;color:var(--apoio);font-size:16px}
 
-/* onde atende: endereço + mapa + como chegar */
-.onde-g { display: grid; gap: 26px; margin-top: 22px; }
-.end { font-style: normal; font-size: 20px; font-weight: 700; line-height: 1.35; letter-spacing: -.01em; }
-.end span { display: block; margin-top: 4px; font-size: 17px; font-weight: 400; letter-spacing: 0; color: var(--apoio); }
-.info { margin-top: 18px; border-top: 1px solid var(--fio); }
-.info div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--fio); }
-.info dt { font-size: 15px; color: var(--apoio); }
-.info dd { font-weight: 600; line-height: 1.4; }
-.info a { text-decoration: none; }
-.btn2 { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 8px 22px; margin-top: 20px;
-  border: 1.5px solid var(--tinta); border-radius: 15px; font-size: 17px; font-weight: 700; text-decoration: none; }
-.btn2 svg { width: 19px; height: 19px; }
-.mapa { border-radius: 18px; overflow: hidden; border: 1px solid var(--fio); background: var(--painel); }
-.mapa iframe { width: 100%; height: 320px; border: 0; }
+/* mapa de borda a borda, com o cartão do endereço por cima */
+.onde{padding:0;background:var(--papel)}
+.mapa{position:relative;height:66vh;height:66svh;min-height:400px;max-height:640px;background:var(--nevoa);overflow:hidden}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .5s ease}
+.mapa iframe.ok{opacity:1}
+.mapa-fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.mapa-fb svg{position:absolute;inset:0;width:100%;height:100%;max-width:none;fill:none;stroke:rgba(15,33,41,.13);stroke-width:1.2}
+.mapa-fb svg .av{stroke-width:7;stroke:rgba(15,33,41,.08)}
+.mapa-fb svg .pin{fill:var(--marca);stroke:none}
+.mapa-fb a{position:relative;margin-top:104px;padding:9px 14px;border-radius:10px;background:var(--papel);font-size:15px;font-weight:600}
+.cartao{position:relative;margin-top:-76px;padding:22px 22px 24px;border:1px solid var(--fio);border-radius:24px;background:var(--papel)}
+.cartao h2{font-size:clamp(30px,8vw,40px)}
+.cartao address{margin-top:12px;font-weight:600;line-height:1.35}
+.cartao address span{display:block;font-weight:400;color:var(--apoio)}
+.cartao .tb{margin-top:10px;font-size:15px;color:var(--apoio)}
+.cartao .acoes{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:18px}
+.cartao .tel{font-weight:650}
 
-/* sobre: curto e secundário. Foto, se houver, só aqui e pequena */
-.quem { display: flex; align-items: center; gap: 14px; margin-top: 22px; }
-.quem img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; background: var(--painel); }
-.quem b { display: block; font-size: 18px; line-height: 1.3; }
-.quem span { display: block; font-size: 15px; color: var(--apoio); }
+/* quem atende: compacto */
+.quem{padding:56px 0 64px}
+.qm{display:flex;align-items:center;gap:16px}
+.qm img{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--nevoa)}
+.qm h2{font-size:25px;font-stretch:84%;letter-spacing:-.012em;line-height:1.1}
+.qm p{margin-top:4px;font-size:14px;color:var(--apoio);line-height:1.35}
+.bio{margin-top:16px;max-width:34em}
+.linha{display:grid;grid-template-columns:1fr 1fr;gap:22px 14px;margin-top:28px}
+.linha li{position:relative;padding-top:16px;border-top:1px solid var(--fio);font-size:14.5px;line-height:1.3;color:var(--apoio)}
+.linha li::before{content:"";position:absolute;left:0;top:-4px;width:7px;height:7px;border-radius:50%;background:var(--marca)}
+.linha b{display:block;color:var(--tinta);font-size:26px;font-weight:700;font-stretch:78%;line-height:1;margin-bottom:5px;font-variant-numeric:tabular-nums}
 
-.links { margin-top: 22px; border-top: 1px solid var(--fio); }
-.links a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 0; border-bottom: 1px solid var(--fio); text-decoration: none; }
-.links b { display: block; font-size: 19px; line-height: 1.25; letter-spacing: -.01em; }
-.links span { display: block; margin-top: 3px; font-size: 15.5px; color: var(--apoio); }
+/* dúvidas: fios, fechadas */
+.duv{padding-top:8px}
+.duv h2{margin-bottom:22px}
+details{border-top:1px solid var(--fio)}
+details:last-of-type{border-bottom:1px solid var(--fio)}
+summary{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:62px;padding:10px 0;font-weight:650;line-height:1.3;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:13px;height:13px;border-right:2px solid var(--marca);border-bottom:2px solid var(--marca);transform:translateY(-3px) rotate(45deg);transition:transform .2s ease}
+details[open] summary::after{transform:translateY(3px) rotate(-135deg)}
+details p{max-width:36em;padding-bottom:20px;color:var(--apoio)}
 
-.faq { margin-top: 22px; border-top: 1px solid var(--fio); }
-details { border-bottom: 1px solid var(--fio); }
-summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 0; font-size: 18px; font-weight: 700; line-height: 1.3; cursor: pointer; list-style: none; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; font-size: 26px; font-weight: 400; line-height: 1; color: var(--marca); }
-details[open] summary::after { content: "\2013"; }
-details p { padding: 0 0 18px; color: var(--apoio); max-width: 38em; }
+.fim{background:var(--nevoa);padding:64px 0}
+.fim .btn{margin-top:24px}
+.fim .lig{margin-top:14px;text-align:center;color:var(--apoio)}
+.fim .lig a{font-weight:650;color:var(--tinta)}
+.tbm{margin-top:40px;padding-top:6px;border-top:1px solid var(--fio)}
+.tbm a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;border-bottom:1px solid var(--fio);font-weight:650;text-decoration:none}
 
-.fim { background: var(--escuro); color: #fff; }
-.fim p { margin-top: 12px; color: rgba(255, 255, 255, .86); max-width: 30em; }
-.fim .acoes { max-width: 460px; }
-.fim .btn { margin-top: 0; }
-footer { padding: 30px 0 34px; font-size: 14.5px; line-height: 1.5; color: var(--apoio); }
-footer p + p { margin-top: 8px; }
-footer b { color: var(--tinta); }
-footer .v { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--fio); font-size: 13.5px; }
+footer{padding:28px 0 calc(96px + env(safe-area-inset-bottom,0px));font-size:13.5px;line-height:1.5;color:var(--apoio)}
+footer p+p{margin-top:8px}
 
-/* barra fixa do celular: WhatsApp + ligar. No desktop vira um botão flutuante. */
-.fixo { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-  background: rgba(246, 248, 249, .95); border-top: 1px solid var(--fio); transform: translateY(110%); visibility: hidden; transition: transform .25s ease, visibility 0s .25s; }
-.fixo.on { transform: none; visibility: visible; transition: transform .25s ease; }
-.fixo .btn { flex: 1; min-height: 56px; margin: 0; padding: 8px 12px; font-size: 16.5px; }
-.fixo .tel { flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: var(--escuro); color: #fff; }
-.fixo .tel svg { width: 22px; height: 22px; }
+/* barra fixa: aparece quando o botão da primeira dobra sai da tela */
+.fixa{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:0 14px calc(12px + env(safe-area-inset-bottom,0px));transform:translateY(130%);transition:transform .28s ease;pointer-events:none}
+.fixa.on{transform:none}
+.fixa .btn{min-height:56px;pointer-events:auto;box-shadow:0 10px 28px -8px rgba(4,48,27,.5)}
+.embutida .fixa{display:none}
 
-@media (min-width: 900px) {
-  body { font-size: 18px; padding-bottom: 0; }
-  .wrap { padding: 0 48px; }
-  .barra { padding: 22px 0; font-size: 14.5px; }
-  .barra b { font-size: 18px; }
-  .barra nav { display: flex; align-items: center; gap: 30px; font-size: 16px; }
-  .barra nav a { text-decoration: none; color: rgba(255, 255, 255, .88); }
-  .barra nav a:hover { color: #fff; text-decoration: underline; text-underline-offset: 5px; }
-  .hero-g { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 5fr); column-gap: 64px; align-items: start; padding: 88px 0 100px; }
-  h1 { font-size: clamp(56px, 5.2vw, 76px); }
-  .hero h1 { grid-column: 1; grid-row: 1; }
-  .hero h1.longo { font-size: clamp(44px, 3.7vw, 54px); }
-  .hero .sub { grid-column: 1; grid-row: 2; margin-top: 22px; font-size: 22px; }
-  .acoes { grid-column: 1; grid-row: 3; flex-direction: row; flex-wrap: wrap; margin-top: 34px; }
-  .acoes .btn, .acoes .lig { white-space: nowrap; }
-  .fatos { grid-column: 2; grid-row: 1 / span 3; margin-top: 6px; padding: 10px 28px; border: 1px solid var(--fio-claro); border-radius: 22px; background: rgba(255, 255, 255, .05); }
-  .fatos div { grid-template-columns: 1fr; gap: 2px; padding: 16px 0; }
-  .fatos div:last-child { border-bottom: 0; }
-  .fatos dd { font-size: 19px; }
-  .btn { min-height: 66px; padding: 10px 24px; font-size: 18px; }
-  .btn:hover { transform: translateY(-2px); }
-  .lig { min-height: 66px; padding: 8px 20px; font-size: 17px; }
-  section { padding: 108px 0; }
-  h2 { font-size: clamp(38px, 3.4vw, 48px); }
-  .lead { font-size: 20px; }
-  .duas { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 80px; align-items: start; }
-  .duas .lista { margin-top: 0; }
-  .bloco + .bloco { margin-top: 0; }
-  .texto p:first-of-type { font-size: 21px; }
-  section .btn { display: inline-flex; }
-  .passos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px; margin-top: 44px; }
-  .passos li { display: block; padding: 18px 0 0; border-top: 2px solid var(--tinta); }
-  .passos li::before { display: block; margin-bottom: 14px; font-size: 34px; }
-  .passos b { display: block; font-size: 20px; }
-  .passos span { display: block; margin-top: 6px; font-size: 16.5px; }
-  .planos { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 40px; }
-  .planos li { min-height: 118px; padding: 20px 24px; font-size: 23px; border-radius: 18px; }
-  .planos li.part, .planos li:nth-last-child(2):nth-child(odd) { grid-column: auto; }
-  .procs { display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; margin-top: 40px; border-top: 0; }
-  .procs li { border-top: 1px solid var(--fio); border-bottom: 0; }
-  .procs .it { padding: 22px 0; }
-  .procs b, .links b { font-size: 21px; }
-  .procs a.it:hover b, .links a:hover b { text-decoration: underline; text-underline-offset: 5px; }
-  .onde-g { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 72px; margin-top: 40px; align-items: start; }
-  .end { font-size: 24px; }
-  .mapa iframe { height: 460px; }
-  .btn2:hover { background: var(--tinta); color: #fff; }
-  .links { margin-top: 0; }
-  .faq { margin-top: 0; }
-  summary { padding: 22px 0; font-size: 20px; }
-  .fim .wrap { text-align: center; }
-  .fim p { margin-left: auto; margin-right: auto; font-size: 20px; }
-  .fim .acoes { max-width: none; justify-content: center; }
-  footer { padding: 40px 0 48px; }
-  .fixo { left: auto; right: 28px; bottom: 28px; padding: 0; background: none; border: 0; transform: translateY(160%); }
-  .fixo .tel { display: none; }
-  .fixo .btn { min-height: 58px; padding: 8px 24px; font-size: 17px; box-shadow: 0 14px 34px rgba(8, 24, 33, .28); }
+@media (min-width:760px){
+  section{padding:112px 0}
+  .wrap,.palco .pin{padding-left:40px;padding-right:40px}
+  .id{padding-top:22px;font-size:14px}
+  .id b{font-size:16.5px}
+  .id .lig{display:block;font-weight:650;color:var(--tinta);font-size:16px}
+  .hero{padding-bottom:64px}
+  .hero h1 .l{display:inline}
+  .hero h1 .l.q{display:block}
+  .info{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:26px 64px;margin-top:40px;align-items:start}
+  .info .lead{font-size:20px}
+  .info .btn{grid-column:1;max-width:400px}
+  .info .fatos{grid-column:2;grid-row:1 / span 2}
+  .fatos li{padding-top:18px}
+  .fatos li+li{padding-left:22px}
+  .fatos svg{width:30px;height:30px}
+  .fatos b{font-size:21px;margin-top:12px}
+  .fatos span{font-size:16px}
+  .palco.anim .pin{grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:auto minmax(0,1fr);column-gap:40px;padding:64px 40px 64px}
+  .palco.anim h2{grid-column:1;grid-row:1}
+  .palco.anim .ilus{grid-column:2;grid-row:1 / span 2;padding:0}
+  .palco.anim .base{grid-column:1;grid-row:2;align-self:end;height:190px}
+  .palco.anim .rot li,.palco.anim .dica{top:34px}
+  .rot span{font-size:20px;max-width:20em}
+  .depois{padding-top:56px}
+  .depois p{font-size:19px}
+  .passos h2{margin-bottom:48px}
+  .trilho{overflow:visible;margin:0;padding:0}
+  .trilho li{flex:1 1 0;max-width:none;padding-right:40px}
+  .trilho li::before{left:84px;right:14px;top:36px}
+  .trilho svg{width:72px;height:72px}
+  .trilho b{font-size:28px;margin-top:20px}
+  .trilho span{font-size:18px}
+  .marcas{display:grid;grid-template-columns:1fr 1fr;column-gap:40px;margin-top:28px}
+  .marcas li{padding:22px 0 18px;font-size:clamp(56px,6.6vw,92px);white-space:nowrap}
+  .marcas .part{margin-top:0;padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
+  .mapa{height:640px;max-height:none}
+  .onde .wrap{position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none;display:flex;align-items:center}
+  .onde{position:relative}
+  .cartao{margin:0;width:420px;padding:32px;pointer-events:auto}
+  .quem .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:64px;align-items:start}
+  .quem{padding:96px 0}
+  .bio{grid-column:1;font-size:19px}
+  .linha{grid-column:2;grid-row:1 / span 2;margin-top:0;gap:34px 28px}
+  .linha li{font-size:16px}
+  .linha b{font-size:34px}
+  .duv .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:64px}
+  summary{font-size:19px;min-height:72px}
+  .fim{padding:112px 0;text-align:center}
+  .fim .btn{max-width:400px;margin-left:auto;margin-right:auto}
+  .tbm{display:flex;justify-content:center;gap:40px;border:0;margin-top:56px}
+  .tbm a{border:0;min-height:0;gap:8px}
+  footer{padding-bottom:110px}
+  .fixa{left:auto;right:24px;bottom:24px;padding:0;transform:translateY(160%)}
+  .fixa .btn{padding:0 24px}
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+.ilus{overflow:visible;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ilus .o{stroke:rgba(255,255,255,.86);stroke-width:1.7;fill:var(--osso);transition:stroke-opacity .5s}
+.ilus .c{stroke:rgba(255,255,255,.5);stroke-width:5}
+.ilus .b{stroke:rgba(255,255,255,.34);stroke-width:4.5;transition:stroke-opacity .5s}
+.ilus .t{stroke:rgba(255,255,255,.3);stroke-width:1.1}
+.ilus .p{stroke:rgba(255,255,255,.2);stroke-width:1.2;stroke-dasharray:1.5 6}
+.ilus .f{stroke:var(--foco);stroke-width:2.2}
+.ilus .f .grosso{stroke-width:9}
+.ilus .f .fino{stroke-width:1.3;stroke-opacity:.8}
+.ilus .f .osso{stroke-width:5}
+.ilus .f .traco{stroke-dasharray:3 6;stroke-width:1.6}
+.ilus .f .ponto{fill:var(--foco);stroke:none}
+.ilus .f .liq{fill:var(--foco);fill-opacity:.16;stroke:none}
+.ilus .f .liq.forte{fill-opacity:.5}
+.ilus .f .gasto{stroke-width:5.5;stroke-dasharray:13 5 3 7 9 4}
+.ilus-ombro .umero{transition:transform .8s cubic-bezier(.3,.7,.2,1)}
+.ilus .f .ser{fill:var(--osso)}
 </style>
+<noscript><style>.mapa iframe{opacity:1}</style></noscript>
 </head>
 <body>
-
-<header class="hero" id="topo">
-  <svg class="arcos" viewBox="0 0 680 680" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="340" cy="340" r="60"/><circle cx="340" cy="340" r="100"/><circle cx="340" cy="340" r="140"/><circle cx="340" cy="340" r="180"/><circle cx="340" cy="340" r="220"/><circle cx="340" cy="340" r="260"/><circle cx="340" cy="340" r="300"/><circle cx="340" cy="340" r="340"/></g></svg>
+<header class="hero">
   <div class="wrap">
-    <div class="barra">
-      <a class="id" href="../"><b>Dr. Rogerio Ribeiro Penna</b><span class="reg">CRM-RJ 52.54756-0 · RQE 10229</span></a>
-      <nav aria-label="Seções"><a href="#convenios">Convênios</a><a href="#onde-atende">Onde atende</a><a href="#duvidas">Dúvidas</a></nav>
-    </div>
-    <div class="hero-g">
-      <h1 class="longo">Viscossuplementação no Recreio</h1>
-      <p class="sub">Aplicação feita dentro da articulação, avaliada em casos de artrose, com o Dr. Rogerio Penna, ortopedista.</p>
-      <dl class="fatos"><div><dt>Convênios</dt><dd>Unimed, AMS Petrobras e CAURJ</dd></div><div><dt>Particular</dt><dd>Sim, com hora marcada</dd></div><div><dt>Onde</dt><dd>Av. das Américas, 19005, Recreio dos Bandeirantes</dd></div></dl>
-      <div class="acoes" id="acoes">
-        <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20viscossuplementa%C3%A7%C3%A3o%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
-        <a class="lig" href="tel:+552121689610"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>Ligar (21) 2168-9610</a>
-      </div>
+    
+    <div class="id"><a href="../"><b>Dr. Rogerio Ribeiro Penna</b>CRM-RJ 52.54756-0 · RQE 10229</a><a class="lig" href="tel:+552121689610">(21) 2168-9610</a></div>
+    
+    <h1 class="longo"><span class="l">Viscossuplementação </span><span class="l q">no Recreio</span></h1>
+    <div class="info">
+      
+      <p class="lead">Aplicação dentro da articulação, avaliada na artrose, com o Dr. Rogerio Penna, ortopedista.</p>
+      
+      <ul class="fatos"><li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 14.5h4"/></svg><b>Convênios</b><span>Unimed, AMS Petrobras e CAURJ</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><b>Particular</b><span>Com hora marcada</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10.5" r="2.2"/></svg><b>Recreio</b><span>Av. das Américas, 19005</span></li></ul>
+      <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20viscossuplementa%C3%A7%C3%A3o%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg class="zp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
     </div>
   </div>
 </header>
+<main>
 
-<section id="o-que-e">
-  <div class="wrap duas">
-    <div class="bloco texto">
-      <h2>O que é a viscossuplementação</h2>
-      <p>É a aplicação de ácido hialurônico dentro da articulação, feita pelo médico. Costuma ser avaliada no tratamento da artrose.</p><p>A aplicação é decidida em consulta, depois do exame físico e dos exames de imagem. O médico avalia se ela se aplica ao seu caso e quais são as alternativas.</p>
-    </div>
-    <div class="bloco">
-      <h3>Quando costuma ser avaliada</h3>
-      <ul class="lista"><li>Artrose, conforme o grau e a articulação</li><li>Dor na articulação que continua depois de outros tratamentos</li><li>Indicação definida depois de exame físico e de exames de imagem</li></ul>
-      <p class="nota">A indicação de cada procedimento depende de avaliação médica individual, feita em consulta.</p>
-      <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20viscossuplementa%C3%A7%C3%A3o%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
+<section class="palco" data-passos="3" id="o-que-trata">
+  <div class="pin">
+    <h2>O que é a viscossuplementação</h2>
+    <svg class="ilus ilus-artic" viewBox="0 0 440 480" role="img" aria-label="Desenho esquemático de uma articulação: dois ossos, cartilagem e cápsula">
+<g class="f f1"><ellipse class="fo liq" cx="220" cy="260" rx="86" ry="66"/></g><g class="f f3"><ellipse class="fo liq forte" cx="220" cy="260" rx="86" ry="66"/></g>
+<path class="o" style="--k:0" pathLength="1" d="M176 0v118c0 30-26 44-28 76-2 40 36 62 72 62s74-22 72-62c-2-32-28-46-28-76V0"/>
+<path class="o" style="--k:.2" pathLength="1" d="M176 480V378c0-28-32-36-36-66-2-18 10-26 24-22 36 12 76 12 112 0 14-4 26 4 24 22-4 30-36 38-36 66v102"/>
+<path class="c" style="--k:.35" pathLength="1" d="M150 216c10 36 46 52 70 52s60-16 70-52"/>
+<path class="c" style="--k:.4" pathLength="1" d="M160 279c40 12 80 12 120 0"/>
+<path class="t" style="--k:.45" d="M150 176c-38 34-38 108-8 140M290 176c38 34 38 108 8 140"/>
+<g class="f f1"><path class="fd" pathLength="1" d="M150 176c-38 34-38 108-8 140"/><path class="fd" pathLength="1" d="M290 176c38 34 38 108 8 140"/></g>
+<g class="f f2"><path class="fo gasto" d="M150 216c10 36 46 52 70 52s60-16 70-52"/><path class="fo gasto" d="M160 279c40 12 80 12 120 0"/></g>
+<g class="f f3"><path class="fd" pathLength="1" d="M408 196l-98 62"/><path class="fo ser" d="M420 174l-22 14 10 16 22-14zM432 160l-10 6 14 22 10-6z"/></g>
+</svg>
+    <div class="base">
+      <p class="dica"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Role para ver cada parte</p>
+      <ol class="rot"><li><b>A articulação</b><span>Dois ossos, cartilagem e o líquido entre eles.</span></li><li><b>A artrose</b><span>É o desgaste da cartilagem.</span></li><li><b>A aplicação</b><span>Ácido hialurônico dentro da articulação, feita pelo médico.</span></li></ol>
+      <div class="tic" aria-hidden="true"><i></i><i></i><i></i></div>
     </div>
   </div>
 </section>
 
-<section id="como-funciona" style="padding-top:0">
+<div class="depois"><div class="wrap"><p>Desenho genérico: a articulação é avaliada em consulta, com exame físico e de imagem. A indicação de cada procedimento depende de avaliação médica individual.</p></div></div>
+
+<section class="passos">
   <div class="wrap">
-    <h2>Por onde começar</h2>
-    <ol class="passos"><li><b>Marcação</b><span>Pelo WhatsApp ou por telefone. Confirme o seu convênio ou a consulta particular.</span></li><li><b>Consulta</b><span>Conversa sobre a queixa e exame físico, com hora marcada.</span></li><li><b>Exames</b><span>Traga os exames e laudos que já tiver, mesmo os antigos.</span></li><li><b>Indicação</b><span>O tratamento, com ou sem cirurgia, é definido caso a caso.</span></li></ol>
+    <h2>Como agendar</h2>
+    <ol class="trilho"><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 12a5 5 0 0 1 5-5h24a5 5 0 0 1 5 5v16a5 5 0 0 1-5 5H23l-10 8v-8h-1a5 5 0 0 1-5-5z"/><path d="M16 17h16M16 24h9"/></svg><b>Chame no WhatsApp</b><span>Confirme o convênio ou o particular.</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 7v11a9 9 0 0 0 18 0V7M10 7h6M28 7h6"/><path d="M22 27v5a8.500 8.500 0 0 0 17 0v-3"/><circle cx="39" cy="25" r="4"/></svg><b>Venha à consulta</b><span>Traga os exames que já tiver.</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42V29c0-9-12-9-12-19M24 29c0-9 12-9 12-19"/><path d="M7 14l5-5 5 5M31 14l5-5 5 5"/></svg><b>Receba a indicação</b><span>O médico avalia se é o seu caso.</span></li></ol>
   </div>
 </section>
 
 <section class="conv" id="convenios">
   <div class="wrap">
     <h2>Convênios e particular</h2>
-    <p class="lead">No consultório do Recreio, o atendimento é pelos convênios abaixo ou particular. Confirme a cobertura do seu plano na marcação.</p>
-    <ul class="planos"><li>Unimed</li><li>AMS Petrobras</li><li>CAURJ</li><li class="part">Atendimento particular<small>Consulta sem convênio, com hora marcada</small></li></ul>
-    <p class="nota">Na Clínica Meditrauma, na Vila da Penha, a lista de convênios é outra. Pergunte na marcação.</p>
-    <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20viscossuplementa%C3%A7%C3%A3o%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
+    <ul class="marcas"><li>Unimed</li><li>AMS Petrobras</li><li>CAURJ</li><li class="part">Particular<span>Com hora marcada</span></li></ul>
+    <p class="nota">Confirme a cobertura do seu plano na marcação. Na Vila da Penha, a lista é outra.</p>
   </div>
 </section>
 
-<section id="onde-atende">
+<section class="onde" id="onde-atende">
+  <div class="mapa">
+    <div class="mapa-fb"><svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path class="av" d="M-20 300C200 250 520 250 820 190"/><path d="M-20 120l840-70M-20 420l840-90M120-20l60 540M330-20l40 540M560-20l30 540M700-20l40 540M-20 210l380-30M440 400l380-40"/><path class="pin" d="M400 262s-22-21-22-39a22 22 0 0 1 44 0c0 18-22 39-22 39zm0-31a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;query_place_id=ChIJr0B8GLLpmwARUHREAvxVJQ0" target="_blank" rel="noopener">Abrir o mapa no Google Maps</a></div>
+    <iframe title="Mapa: Av. das Américas, 19005, sala 522, bloco 2" src="https://www.google.com/maps?q=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;z=16&amp;output=embed" onload="this.className='ok'" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
   <div class="wrap">
-    <h2>Consultório no Recreio</h2>
-    <div class="onde-g">
-      <div>
-        <address class="end">Av. das Américas, 19005, sala 522, bloco 2<span>Recreio dos Bandeirantes, Rio de Janeiro, RJ, 22790-703</span></address>
-        <dl class="info"><div><dt>Telefone</dt><dd><a href="tel:+552121689610">(21) 2168-9610</a></dd></div><div><dt>Também em</dt><dd>Clínica Meditrauma, Av. Meriti, 2056, Vila da Penha</dd></div></dl>
-        <a class="btn2" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;destination_place_id=ChIJr0B8GLLpmwARUHREAvxVJQ0" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Como chegar</a>
-      </div>
-      <div class="mapa"><iframe title="Mapa: Av. das Américas, 19005, sala 522, bloco 2" src="https://www.google.com/maps?q=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    <div class="cartao">
+      <h2>Consultório no Recreio</h2>
+      <address>Av. das Américas, 19005, sala 522, bloco 2<span>Recreio dos Bandeirantes, Rio de Janeiro</span></address>
+      <p class="tb">Também na Clínica Meditrauma, Vila da Penha.</p>
+      <div class="acoes"><a class="btn2" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+das+Am%C3%A9ricas%2C+19005+-+sala+522+bl+02+-+Recreio+dos+Bandeirantes%2C+Rio+de+Janeiro+-+RJ%2C+22790-703&amp;destination_place_id=ChIJr0B8GLLpmwARUHREAvxVJQ0" target="_blank" rel="noopener">Como chegar<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="tel" href="tel:+552121689610">(21) 2168-9610</a></div>
     </div>
   </div>
 </section>
 
-<section id="sobre" style="padding-top:0">
-  <div class="wrap duas">
-    <div class="bloco texto">
-      <h2>Quem atende</h2>
-      <div class="quem"><img src="../img/medico.webp" alt="Dr. Rogerio Ribeiro Penna" width="72" height="72" loading="lazy"><div><b>Dr. Rogerio Ribeiro Penna</b><span>CRM-RJ 52.54756-0 · RQE 10229 (Ortopedia e Traumatologia)</span></div></div>
-      <p>Ortopedista e traumatologista, com mais de 30 anos de experiência em cirurgia de ombro, cotovelo e traumatologia esportiva.</p>
-    </div>
-    <div class="bloco">
-      <h3>Formação</h3>
-      <ul class="lista"><li>Medicina pela Faculdade de Medicina de Teresópolis (1991)</li><li>Residência em Ortopedia e Traumatologia no Hospital Municipal Miguel Couto (1995)</li><li>Fellowship em Cirurgia do Ombro e Cotovelo no IOT Passo Fundo (1998)</li><li>Fellowship em Trauma Ortopédico e Traumatologia Desportiva em Salzburg, Áustria (2007)</li></ul>
-    </div>
-  </div>
-</section>
-
-<section id="tambem" style="padding-top:0">
-  <div class="wrap duas">
-    <div class="bloco">
-      <h2>Conheça também</h2>
-    </div>
-    <div class="links"><a href="../ortopedista-recreio/"><div><b>Consulta com ortopedista no Recreio</b><span>Ortopedia e traumatologia, adultos e crianças</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="../cirurgia-de-ombro/"><div><b>Cirurgia de ombro no Recreio</b><span>Manguito rotador, luxação e artroscopia do ombro</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="../"><div><b>Dr. Rogerio Ribeiro Penna</b><span>Página do consultório, com todos os atendimentos</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-  </div>
-</section>
-
-<section id="duvidas" style="padding-top:0">
-  <div class="wrap duas">
-    <div class="bloco">
-      <h2>Dúvidas frequentes</h2>
-    </div>
-    <div class="faq"><details><summary>A viscossuplementação é feita pelo convênio?</summary><p>A cobertura do procedimento varia conforme o plano. No consultório do Recreio, o Dr. Rogerio atende Unimed, AMS Petrobras e CAURJ, além de particular. Confirme na marcação.</p></details><details><summary>Preciso de consulta antes da aplicação?</summary><p>Sim. A indicação depende de avaliação médica individual, com exame físico e exames de imagem.</p></details><details><summary>Em quais articulações é feita?</summary><p>Depende do caso. O médico avalia a articulação afetada e o grau da artrose na consulta.</p></details><details><summary>O que levar na consulta?</summary><p>Os exames de imagem e laudos que já tiver, mesmo os antigos, e a carteirinha do convênio, se for usar.</p></details><details><summary>Onde fica o consultório?</summary><p>Na Av. das Américas, 19005, sala 522, bloco 2, no Recreio dos Bandeirantes. O Dr. Rogerio também atende na Clínica Meditrauma, na Vila da Penha.</p></details></div>
-  </div>
-</section>
-
-<section class="fim" id="agendar">
+<section class="quem" id="quem-atende">
   <div class="wrap">
-    <h2>Agende a sua consulta sobre viscossuplementação</h2>
-    <p>Consulta com hora marcada, no Recreio dos Bandeirantes. Unimed, AMS Petrobras, CAURJ e particular.</p>
-    <div class="acoes" style="margin-top:26px">
-      <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20viscossuplementa%C3%A7%C3%A3o%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
-      <a class="lig" href="tel:+552121689610"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>Ligar (21) 2168-9610</a>
-    </div>
+    <div class="qm"><img src="../img/medico.webp" alt="Dr. Rogerio Ribeiro Penna" width="72" height="72" loading="lazy"><div><h2>Dr. Rogerio Ribeiro Penna</h2><p>CRM-RJ 52.54756-0 · RQE 10229 (Ortopedia e Traumatologia)</p></div></div>
+    <p class="bio">Ortopedista e traumatologista, com mais de 30 anos de experiência em cirurgia de ombro, cotovelo e traumatologia esportiva.</p>
+    <ol class="linha"><li><b>1991</b>Medicina, Teresópolis</li><li><b>1995</b>Residência em ortopedia, Hospital Miguel Couto</li><li><b>1998</b>Fellowship em ombro e cotovelo, Passo Fundo</li><li><b>2007</b>Fellowship em trauma ortopédico, Salzburg</li></ol>
+  </div>
+</section>
+
+<section class="duv" id="duvidas">
+  <div class="wrap">
+    <h2>Dúvidas</h2>
+    <div class="faq"><details><summary>A viscossuplementação é feita pelo convênio?</summary><p>A cobertura do procedimento varia conforme o plano. No consultório do Recreio, o Dr. Rogerio atende Unimed, AMS Petrobras e CAURJ, além de particular. Confirme na marcação.</p></details><details><summary>Preciso de consulta antes da aplicação?</summary><p>Sim. A indicação depende de avaliação médica individual, com exame físico e exames de imagem.</p></details><details><summary>Em quais articulações é feita?</summary><p>Depende do caso. O médico avalia a articulação afetada e o grau da artrose na consulta.</p></details><details><summary>O que levar na consulta?</summary><p>Os exames de imagem e laudos que já tiver, mesmo os antigos, e a carteirinha do convênio, se for usar.</p></details></div>
+  </div>
+</section>
+</main>
+<section class="fim">
+  <div class="wrap">
+    <h2>Agende a sua consulta</h2>
+    <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20viscossuplementa%C3%A7%C3%A3o%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg class="zp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
+    <p class="lig">ou ligue <a href="tel:+552121689610">(21) 2168-9610</a></p>
+    
+    <nav class="tbm" aria-label="Outras páginas"><a href="../cirurgia-de-ombro/">Cirurgia de ombro<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="../ortopedista-recreio/">Consulta com ortopedista<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="../">Página do consultório<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></nav>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p><b>Responsável técnico:</b> Dr. Rogerio Ribeiro Penna, <span style="white-space:nowrap">CRM-RJ 52.54756-0</span>, <span style="white-space:nowrap">RQE 10229</span> (Ortopedia e Traumatologia).</p>
-    <p>Av. das Américas, 19005, sala 522, bloco 2, Recreio dos Bandeirantes, Rio de Janeiro, RJ, 22790-703. Telefone (21) 2168-9610.</p>
-    <p>As informações desta página têm caráter educativo e não substituem a consulta médica.</p>
-    <p class="v">Esboço feito pela <a href="https://virtusmarketing.com.br" target="_blank" rel="noopener">Virtus Marketing</a>.</p>
+    <p>Responsável técnico: Dr. Rogerio Ribeiro Penna, CRM-RJ 52.54756-0, RQE 10229 (Ortopedia e Traumatologia). Av. das Américas, 19005, sala 522, bloco 2, Recreio dos Bandeirantes, Rio de Janeiro, RJ, 22790-703. Telefone (21) 2168-9610.</p>
+    <p>As informações desta página têm caráter educativo e não substituem a consulta médica. Esboço feito pela <a href="https://virtusmarketing.com.br" target="_blank" rel="noopener">Virtus Marketing</a>.</p>
   </div>
 </footer>
-
-<div class="fixo" id="fixo">
-  <!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20viscossuplementa%C3%A7%C3%A3o%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a>
-  <a class="tel" href="tel:+552121689610" aria-label="Ligar (21) 2168-9610"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg></a>
-</div>
+<div class="fixa" id="fixa"><!-- WHATSAPP-PROVISORIO --><a class="btn" href="https://wa.me/552121689610?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20de%20viscossuplementa%C3%A7%C3%A3o%20e%20quero%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rogerio%20Penna." target="_blank" rel="noopener"><svg class="zp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>Agendar consulta pelo WhatsApp</a></div>
 <script>
-/* A barra fixa aparece quando os botões da primeira dobra saem da tela e some no bloco final de agendamento. Sem JS a página funciona igual, só sem a barra. */
 (function () {
-  var f = document.getElementById('fixo'), a = document.getElementById('acoes'), z = document.getElementById('agendar');
-  if (!f || !a || !z || !('IntersectionObserver' in window)) return;
-  var topo = true, fim = false, pinta = function () { f.classList.toggle('on', !topo && !fim); };
-  new IntersectionObserver(function (e) { topo = e[0].isIntersecting; pinta(); }).observe(a);
-  new IntersectionObserver(function (e) { fim = e[0].isIntersecting; pinta(); }).observe(z);
+  var d = document, R = d.documentElement;
+  if (window.self !== window.top) R.classList.add('embutida');
+  var calmo = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* momento uau: --d desenha o traço enquanto a seção entra; data-on troca o destaque enquanto ela está presa */
+  var P = d.querySelector('.palco');
+  if (P && !calmo && window.CSS && CSS.supports('position', 'sticky')) {
+    var n = +P.getAttribute('data-passos') || 4, raf = 0, atual = -1;
+    var rot = P.querySelectorAll('.rot li'), tic = P.querySelectorAll('.tic i');
+    P.style.setProperty('--n', n);
+    P.classList.add('anim');
+    var upd = function () {
+      raf = 0;
+      var r = P.getBoundingClientRect(), vh = window.innerHeight;
+      var des = Math.max(0, Math.min(1, (vh * .92 - r.top) / (vh * .92)));
+      var p = Math.max(0, Math.min(1, -r.top / Math.max(1, r.height - vh)));
+      P.style.setProperty('--d', des.toFixed(3));
+      var s = p < .07 ? 0 : Math.min(n, Math.floor((p - .07) / .93 * n) + 1);
+      if (s !== atual) {
+        atual = s; P.setAttribute('data-on', s);
+        for (var i = 0; i < rot.length; i++) rot[i].className = i === s - 1 ? 'on' : '';
+        for (var k = 0; k < tic.length; k++) tic[k].className = k === s - 1 ? 'on' : '';
+      }
+    };
+    var pede = function () { if (!raf) raf = requestAnimationFrame(upd); };
+    P.setAttribute('data-on', 0);
+    window.addEventListener('scroll', pede, { passive: true });
+    window.addEventListener('resize', pede);
+    upd();
+  }
+
+  /* barra fixa: entra quando o botão da primeira dobra sai e some quando o botão do fim aparece */
+  var fixa = d.getElementById('fixa'), b1 = d.querySelector('.hero .btn'), b2 = d.querySelector('.fim .btn');
+  if (fixa && b1 && 'IntersectionObserver' in window) {
+    var v1 = true, v2 = false;
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.target === b1) v1 = e.isIntersecting; else v2 = e.isIntersecting; });
+      fixa.className = 'fixa' + (!v1 && !v2 ? ' on' : '');
+    });
+    io.observe(b1); if (b2) io.observe(b2);
+  }
 })();
 </script>
 </body>

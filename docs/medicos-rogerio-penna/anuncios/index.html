@@ -1,159 +1,230 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<!-- Prévia dos anúncios do Dr. Rogerio Ribeiro Penna, modelo v2 (uma landing por busca), 26/11/2026. Trocar só o bloco KIT. -->
+<!-- Kit do Dr. Rogerio Ribeiro Penna, prévia v3 (26/11/2026): jornada Google -> anúncio -> landing -> WhatsApp. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Prévia dos anúncios no Google</title>
+<title>Do Google ao WhatsApp do consultório</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#F7F9FA">
+<link rel="icon" href="data:,">
+<meta name="theme-color" content="#0B2933">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..800&display=swap" rel="stylesheet">
 <style>
-/* Mesma paleta do esboço do site (trocar junto, se a do site mudar). As cores --g-* são do Google: não trocar. */
-:root {
-  --fundo: #F7F9FA; --painel: #E9EFF2; --tinta: #14212B; --apoio: #4B5A65; --escuro: #0F2734; --marca: #0F5C6E;
-  --fio: rgba(20, 33, 43, .16);
-  --g-titulo: #1a0dab; --g-url: #202124; --g-texto: #4d5156; --g-fio: #dadce0; --g-chip: #f1f3f4;
-  --google: Arial, Helvetica, sans-serif;
+:root{--papel:#FFFFFF;--nevoa:#EDF2F2;--tinta:#0F2129;--apoio:#4A5B63;--escuro:#0B2933;--osso:#12343F;--marca:#0F5C6E;--foco:#F6B95C;--fio:rgba(15,33,41,.16);--zap:#25D366;--zap-tinta:#04301B;--azul:#1A0DAB}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--escuro);color:var(--tinta);font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased}
+::selection{background:var(--foco);color:var(--tinta)}
+h1,h2,h3,p,ul,ol{margin:0;padding:0}
+ul,ol{list-style:none}
+a{color:inherit;text-underline-offset:3px}
+svg,iframe{display:block}
+h1,h2{font-weight:700;font-stretch:78%;letter-spacing:-.018em;line-height:.96;text-wrap:balance}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--foco);outline-offset:3px}
+.st{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.aviso{display:none;margin:0;padding:16px 20px;background:#B3261E;color:#fff;font-size:15px}
+.aviso.on{display:block}
+.aviso ul{margin-top:6px;padding-left:18px;list-style:disc}
+
+/* jornada: a tela gruda e o scroll conduz as 4 etapas dentro do celular */
+.jor{color:#fff;padding:40px 0 56px;overflow:clip}
+.pin{max-width:1280px;margin:0 auto;padding:0 20px}
+.jor h1{font-size:clamp(34px,9.6vw,76px)}
+.sub{margin-top:12px;color:rgba(255,255,255,.72);font-size:15.5px;line-height:1.4}
+.etapas{margin-top:18px}
+.etapas li{padding:10px 0}
+.etapas b{display:block;font-size:22px;font-weight:700;font-stretch:84%;line-height:1.15}
+.etapas span{display:block;color:rgba(255,255,255,.72);font-size:15.5px;line-height:1.35}
+.dir{display:none}
+.fone{position:relative;width:min(78vw,300px);aspect-ratio:300/630;margin:26px auto 0;padding:9px;border-radius:44px;background:#05090B;box-shadow:0 0 0 1.5px rgba(255,255,255,.22),0 40px 80px -30px rgba(0,0,0,.7)}
+.tela{position:relative;width:100%;height:100%;border-radius:36px;overflow:hidden;background:#fff;color:#202124;container-type:inline-size;font-family:Arial,Helvetica,sans-serif;line-height:1.35}
+.tela::before{content:"";position:absolute;z-index:9;left:50%;top:2.6cqw;width:27cqw;height:7.4cqw;margin-left:-13.5cqw;border-radius:5cqw;background:#05090B}
+.scr{position:absolute;inset:0;padding-top:13cqw;background:#fff}
+/* 1 e 2: Google */
+.g-barra{display:flex;align-items:center;gap:2.6cqw;padding:1cqw 4cqw 3cqw}
+#gl{flex:none}
+#gl svg{width:7.4cqw;height:7.4cqw}
+#lu{display:flex}
+.g-campo{flex:1;min-width:0;display:flex;align-items:center;gap:2cqw;height:12cqw;padding:0 3.6cqw;border:1px solid #DFE1E5;border-radius:6cqw;font-size:4.6cqw;white-space:nowrap;overflow:hidden}
+.g-campo svg{width:5cqw;height:5cqw;color:#9AA0A6;flex:none}
+.g-campo i{width:1px;height:5.6cqw;background:#1A73E8;animation:pisca 1s steps(1) infinite}
+@keyframes pisca{50%{opacity:0}}
+.g-abas{display:flex;gap:5.4cqw;padding:0 4.6cqw;border-bottom:1px solid #EBEBEB;font-size:3.9cqw;color:#5F6368}
+.g-abas span{padding:1.6cqw 0 2.4cqw}
+.g-abas .on{color:#202124;border-bottom:.9cqw solid #202124;font-weight:700}
+.g-res{opacity:0;transform:translateY(4cqw);transition:opacity .4s ease,transform .4s ease}
+.jor[data-r="1"] .g-res,.jor:not(.anim) .g-res{opacity:1;transform:none}
+.an{padding:4cqw 4.6cqw 4.4cqw;border-bottom:1px solid #EBEBEB}
+.an .pat{font-size:3.9cqw;font-weight:700}
+.an .site{display:flex;align-items:center;gap:2.6cqw;margin-top:2.4cqw}
+.an .ini{width:8.6cqw;height:8.6cqw;border-radius:50%;background:var(--escuro);color:#fff;font-size:3.4cqw;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.an .nm{font-size:4.1cqw}
+.an .u{font-size:3.5cqw;color:#4D5156;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.an .site>div{min-width:0}
+.an .tt{display:block;margin-top:2.6cqw;font-size:5.9cqw;line-height:1.25;color:var(--azul)}
+.an .ds{margin-top:1.8cqw;font-size:4.1cqw;color:#4D5156}
+.an .sl{display:flex;gap:2cqw;margin-top:3cqw;overflow:hidden}
+.an .sl span{flex:none;padding:1.8cqw 3.4cqw;border:1px solid #DADCE0;border-radius:5cqw;font-size:3.8cqw;color:var(--azul);white-space:nowrap}
+.osso-r{padding:4.4cqw 4.6cqw}
+.osso-r i{display:block;height:3cqw;border-radius:2cqw;background:#ECEEF0;margin-top:2.6cqw}
+.osso-r i.t{height:4.4cqw;width:72%;background:#DDE3F3;margin-top:5cqw}
+.osso-r i.c{width:58%}
+/* 3: a landing de verdade */
+.lp,.wa{transform:translateY(102%);transition:transform .6s cubic-bezier(.3,.75,.2,1)}
+.lp{padding-top:0}
+.lp iframe{position:absolute;left:0;top:21cqw;width:390px;height:calc((100% - 21cqw) / var(--z,.72));border:0;transform:scale(var(--z,.72));transform-origin:0 0;pointer-events:none;background:#EDF2F2}
+.lp-url{position:absolute;left:0;right:0;top:0;height:21cqw;padding:12.4cqw 4cqw 0;background:#F1F3F4}
+.lp-url span{display:block;height:6.6cqw;border-radius:3.3cqw;background:#fff;font-size:3.4cqw;line-height:6.6cqw;text-align:center;color:#3C4043;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 3cqw}
+.g-sug{position:absolute;left:0;right:0;top:27cqw;padding:2cqw 5cqw;background:#fff;transition:opacity .3s ease}
+.g-sug div{display:flex;align-items:center;gap:3cqw;padding:2.8cqw 0}
+.g-sug svg{width:4.6cqw;height:4.6cqw;color:#9AA0A6;flex:none}
+.g-sug i{height:3cqw;border-radius:2cqw;background:#ECEEF0;flex:0 0 var(--w)}
+.jor[data-r="1"] .g-sug,.jor:not(.anim) .g-sug{opacity:0}
+.jor[data-s="3"] .lp,.jor[data-s="4"] .lp,.jor[data-s="4"] .wa{transform:none}
+/* 4: WhatsApp do consultório */
+.wa{background:#EFE7DD;padding-top:0;display:flex;flex-direction:column}
+.wa-topo{display:flex;align-items:center;gap:2.6cqw;padding:13cqw 4cqw 3cqw;background:#075E54;color:#fff}
+.wa-topo svg{width:5.6cqw;height:5.6cqw;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wa-topo .av{width:9.6cqw;height:9.6cqw;border-radius:50%;background:#CFD8DC;display:flex;align-items:center;justify-content:center;flex:none}
+.wa-topo .av svg{stroke:#78909C;width:6cqw;height:6cqw}
+.wa-topo b{display:block;font-size:4.5cqw;line-height:1.2}
+.wa-topo span{display:block;font-size:3.4cqw;opacity:.85}
+.wa-corpo{flex:1;padding:4cqw 3.4cqw;display:flex;flex-direction:column;gap:2.4cqw}
+.wa-dia{align-self:center;padding:1.2cqw 3cqw;border-radius:2.4cqw;background:#E1F2FA;font-size:3.3cqw;color:#54656F}
+.bal{max-width:84%;padding:2.4cqw 3cqw 1.8cqw;border-radius:2.6cqw;font-size:4.2cqw;line-height:1.36;color:#111B21;opacity:0;transform:translateY(3cqw) scale(.96);transition:opacity .35s ease,transform .35s ease}
+.bal small{display:block;text-align:right;font-size:3cqw;color:#667781;margin-top:.6cqw}
+.bal.e{align-self:flex-start;background:#fff;border-top-left-radius:0;transform-origin:0 0}
+.bal.d{align-self:flex-end;background:#D9FDD3;border-top-right-radius:0;transform-origin:100% 0}
+.jor[data-m="1"] .bal.e,.jor[data-m="2"] .bal,.jor:not(.anim) .bal{opacity:1;transform:none}
+.wa-campo{display:flex;align-items:center;gap:2cqw;padding:2.6cqw 3cqw 5cqw}
+.wa-campo div{flex:1;height:10.6cqw;border-radius:6cqw;background:#fff}
+.wa-campo i{width:10.6cqw;height:10.6cqw;border-radius:50%;background:#00A884;flex:none}
+/* toque */
+.toque{position:absolute;z-index:8;left:50%;top:50%;width:15cqw;height:15cqw;margin:-7.5cqw 0 0 -7.5cqw;border-radius:50%;background:rgba(246,185,92,.38);box-shadow:0 0 0 .8cqw var(--foco);opacity:0;transform:scale(.4);transition:opacity .25s ease,transform .45s ease;pointer-events:none}
+.jor[data-t="1"] .toque,.jor[data-t="2"] .toque{opacity:1;transform:scale(1)}
+
+/* com JS: seção alta, tela presa */
+.jor.anim{padding:0;height:520vh;height:520svh}
+.jor.anim .pin{position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-rows:auto auto minmax(0,1fr);padding:22px 20px 22px}
+.jor.anim h1{font-size:clamp(28px,7.8vw,76px)}
+.jor.anim .sub{display:none}
+.jor.anim .etapas{position:relative;height:78px;margin-top:14px}
+.jor.anim .etapas li{position:absolute;inset:0;padding:0 0 0 46px;opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease}
+.jor.anim .etapas li::before{content:attr(data-n);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--foco);color:var(--foco);font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center}
+.jor.anim .etapas li.on{opacity:1;transform:none}
+.jor.anim .fone{width:auto;height:100%;max-height:660px;margin:0 auto;align-self:center}
+.jor.anim .esq{display:contents}
+
+/* as outras buscas */
+.outras{background:var(--nevoa);padding:72px 0}
+.outras h2{font-size:clamp(34px,9.4vw,64px)}
+.outras .p{margin-top:12px;max-width:30em;color:var(--apoio)}
+.cards{display:grid;gap:14px;margin-top:30px}
+.card{display:flex;flex-direction:column;padding:16px 16px 6px;border-radius:22px;background:var(--papel);font-family:Arial,Helvetica,sans-serif;color:#202124}
+.card .bq{display:flex;align-items:center;gap:8px;height:42px;padding:0 14px;border:1px solid #DFE1E5;border-radius:21px;font-size:15px}
+.card .bq svg{width:17px;height:17px;color:#9AA0A6;flex:none}
+.card .pat{margin-top:16px;font-size:13px;font-weight:700}
+.card .u{margin-top:6px;font-size:12.5px;color:#4D5156;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card .tt{margin-top:6px;font-size:19px;line-height:1.28;color:var(--azul)}
+.card .ds{margin:6px 0 14px;font-size:14px;line-height:1.45;color:#4D5156}
+.card a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;margin-top:auto;border-top:1px solid var(--fio);font-family:'Archivo',sans-serif;font-weight:650;font-size:16.5px;color:var(--tinta);text-decoration:none}
+.card a span{display:block;font-weight:400;font-size:13.5px;color:var(--apoio)}
+footer{background:var(--nevoa);padding:0 0 48px;font-size:13.5px;line-height:1.5;color:var(--apoio)}
+footer .wrap{padding-top:20px}
+footer p{border-top:1px solid var(--fio);padding-top:16px}
+footer p+p{border:0;padding-top:6px}
+
+@media (min-width:900px){
+  .pin{padding:0 40px}
+  .jor.anim .pin{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);grid-template-rows:minmax(0,1fr);column-gap:64px;padding:48px 40px;align-items:center}
+  .jor.anim .esq{display:block}
+  .jor.anim h1{font-size:clamp(40px,4.1vw,60px)}
+  .jor.anim .sub{display:block;font-size:17px;max-width:24em}
+  .jor.anim .etapas{height:auto;margin-top:40px}
+  .jor.anim .etapas li{position:relative;inset:auto;padding:14px 0 14px 54px;opacity:.38;transform:none}
+  .jor.anim .etapas li::before{top:13px;border-color:rgba(255,255,255,.5);color:#fff}
+  .jor.anim .etapas li.on{opacity:1}
+  .jor.anim .etapas li.on::before{background:var(--foco);border-color:var(--foco);color:var(--tinta)}
+  .etapas b{font-size:25px}
+  .etapas span{font-size:16.5px}
+  .jor.anim .fone{height:min(100%,740px);max-height:none}
+  .jor.anim .dir{display:block;position:relative;height:300px}
+  .dir>div{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(10px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+  .dir>div.on{opacity:1;transform:none;pointer-events:auto}
+  .dir .k{color:rgba(255,255,255,.72);font-size:16.5px}
+  .dir .gde{margin-top:10px;overflow-wrap:normal;font-size:clamp(28px,2.6vw,40px);font-weight:700;font-stretch:78%;line-height:1.05;letter-spacing:-.015em;overflow-wrap:anywhere}
+  .dir .lim{margin-top:14px}
+  .dir .lim li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:baseline;padding:9px 0;border-top:1px solid rgba(255,255,255,.18);font-size:16px}
+  .dir .lim li span{color:rgba(255,255,255,.72);font-variant-numeric:tabular-nums;font-size:14.5px}
+  .dir .lim li i{grid-column:1 / -1;height:3px;border-radius:2px;background:rgba(255,255,255,.16);overflow:hidden}
+  .dir .lim li i::after{content:"";display:block;height:100%;width:calc(var(--u) * 100%);background:var(--foco)}
+  .dir a.ver{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin-top:20px;min-height:50px;padding:0 20px;border:1.5px solid #fff;border-radius:12px;font-weight:650;text-decoration:none}
+  .dir .msg{margin-top:14px;padding:16px 18px;border-radius:4px 18px 18px 18px;background:#fff;color:#111B21;font-size:17px;line-height:1.4;max-width:22em}
+  .outras{padding:112px 0}
+  .outras .wrap,footer .wrap{padding-left:40px;padding-right:40px}
+  .cards{grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+  .card{padding:20px 20px 8px}
 }
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--fundo); color: var(--tinta);
-  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 17px; line-height: 1.55;
-  overflow-x: clip; -webkit-font-smoothing: antialiased; }
-h1, h2, p, ul { margin: 0; padding: 0; }
-ul { list-style: none; }
-svg { display: block; flex: none; }
-h1, h2 { font-weight: 700; letter-spacing: -.03em; line-height: 1.08; text-wrap: balance; }
-h1 { font-size: clamp(34px, 9.4vw, 60px); }
-h2 { font-size: clamp(25px, 6.6vw, 34px); }
-.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
-:focus-visible { outline: 3px solid var(--marca); outline-offset: 3px; }
-
-.aviso { display: none; margin: 16px auto 0; max-width: 1084px; padding: 14px 18px; border-radius: 14px; background: #FDECEA; color: #8A1C12; font-size: 15px; }
-.aviso.on { display: block; }
-.aviso li { margin-top: 4px; }
-
-header { padding: 56px 0 8px; }
-header .p { margin-top: 18px; font-size: 19px; color: var(--apoio); max-width: 32em; }
-.como { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--fio); }
-.como h2 { font-size: 21px; letter-spacing: -.02em; }
-.como p { margin-top: 10px; color: var(--apoio); max-width: 36em; }
-
-.busca { padding: 56px 0 0; }
-.busca .txt p { margin-top: 12px; color: var(--apoio); max-width: 30em; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 8px 24px; margin-top: 22px;
-  background: var(--escuro); color: #fff; font-size: 17px; font-weight: 700; text-decoration: none; border-radius: 15px; transition: transform .15s ease; }
-.btn svg { width: 18px; height: 18px; }
-.btn:active { transform: scale(.98); }
-.vai { margin-top: 16px; padding: 12px 14px; border: 1px solid var(--fio); border-radius: 14px; background: #fff; font-size: 15px; line-height: 1.4; color: var(--apoio); }
-.vai b { display: block; color: var(--tinta); font-size: 16.5px; overflow-wrap: anywhere; }
-.pags { margin-top: 24px; border-top: 1px solid var(--fio); text-align: left; }
-.pags a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--fio); text-decoration: none; color: inherit; }
-.pags span { display: block; font-size: 14.5px; color: var(--apoio); }
-.pags b { display: block; font-size: 17.5px; overflow-wrap: anywhere; }
-.pags svg { width: 20px; height: 20px; color: var(--marca); }
-
-/* tela do Google simulada */
-.tela { margin-top: 26px; background: #fff; border: 1px solid var(--fio); border-radius: 26px; overflow: hidden; font-family: var(--google); color: var(--g-url); }
-.tela .barra { display: flex; align-items: center; gap: 12px; padding: 16px 16px 12px; }
-.tela .barra > svg { width: 28px; height: 28px; }
-.campo { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 16px; border: 1px solid var(--g-fio); border-radius: 999px;
-  font-size: 16px; line-height: 1.25; box-shadow: 0 1px 4px rgba(32, 33, 36, .12); }
-.campo svg { width: 18px; height: 18px; color: #70757a; }
-.abas { display: flex; gap: 22px; padding: 0 20px; border-bottom: 1px solid var(--g-fio); font-size: 14px; color: #5f6368; }
-.abas span { padding: 8px 0 9px; }
-.abas .on { color: var(--g-titulo); box-shadow: inset 0 -3px 0 var(--g-titulo); }
-.anuncio { padding: 16px 16px 18px; }
-.pat { font-size: 14px; font-weight: 700; }
-.site { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
-.site .ini { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--marca); color: #fff; font-size: 12px; font-weight: 700; flex: none; }
-.site .nm { font-size: 14px; line-height: 1.3; }
-.site .u { font-size: 12px; line-height: 1.3; color: var(--g-texto); overflow-wrap: anywhere; }
-.ad-t { display: block; margin-top: 10px; font-size: 20px; line-height: 1.3; color: var(--g-titulo); text-decoration: none; overflow-wrap: anywhere; }
-.ad-t:hover { text-decoration: underline; }
-.ad-d { margin-top: 6px; font-size: 14px; line-height: 1.58; color: var(--g-texto); }
-.dest { margin-top: 4px; font-size: 14px; line-height: 1.58; color: var(--g-texto); }
-.atalhos { margin-top: 12px; }
-.atalhos a { display: block; padding: 10px 0; border-top: 1px solid var(--g-fio); text-decoration: none; }
-.atalhos .t { font-size: 16px; color: var(--g-titulo); }
-.atalhos .d { margin-top: 2px; font-size: 13px; line-height: 1.4; color: var(--g-texto); }
-.local { margin-top: 2px; border-top: 1px solid var(--g-fio); }
-.local li { display: flex; align-items: flex-start; gap: 10px; padding: 11px 0 0; font-size: 14px; line-height: 1.4; color: var(--g-texto); }
-.local svg { width: 18px; height: 18px; margin-top: 1px; color: #70757a; }
-.local b { color: var(--g-titulo); font-weight: 400; }
-/* resultados comuns abaixo do anúncio, só como contexto */
-.resto { padding: 4px 16px 20px; border-top: 8px solid var(--g-chip); }
-.resto i { display: block; height: 10px; margin-top: 10px; border-radius: 5px; background: var(--g-chip); }
-.resto i.t { height: 14px; margin-top: 20px; width: 62%; background: #e3e8f4; }
-.resto i.c { width: 86%; }
-
-.fim { padding: 72px 0 0; }
-.fim p { margin-top: 12px; color: var(--apoio); max-width: 32em; }
-footer { margin-top: 64px; padding: 28px 0 44px; border-top: 1px solid var(--fio); font-size: 14.5px; color: var(--apoio); }
-footer p + p { margin-top: 8px; font-size: 13.5px; }
-footer a { color: inherit; }
-
-@media (min-width: 900px) {
-  body { font-size: 18px; }
-  .wrap { max-width: 1180px; padding: 0 48px; }
-  header { padding: 96px 0 20px; }
-  header .p { font-size: 22px; }
-  .topo-g { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 5fr); gap: 56px; align-items: end; }
-  h1 { font-size: clamp(44px, 3.7vw, 54px); }
-  .como { margin-top: 0; padding: 26px 28px; border: 1px solid var(--fio); border-radius: 22px; background: #fff; }
-  .busca { padding-top: 104px; }
-  .busca .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 72px; align-items: center; }
-  .busca:nth-of-type(even) .txt { order: 2; }
-  .busca:nth-of-type(even) .wrap { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
-  h2 { font-size: clamp(34px, 3vw, 42px); }
-  .busca .txt p { font-size: 19px; }
-  .btn:hover { transform: translateY(-2px); }
-  .tela { margin-top: 0; max-width: 560px; width: 100%; justify-self: center; box-shadow: 0 24px 60px rgba(20, 33, 43, .10); }
-  .tela .barra { padding: 20px 22px 14px; }
-  .abas { padding: 0 26px; }
-  .anuncio { padding: 20px 22px 22px; }
-  .resto { padding: 4px 22px 24px; }
-  .atalhos { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
-  .fim { padding-top: 120px; }
-  .fim .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 72px; align-items: start; }
-  .pags { margin-top: 0; }
-  footer { margin-top: 96px; }
-}
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
+<div class="aviso" id="aviso" role="alert"></div>
 
-<div class="wrap"><div class="aviso" id="aviso" role="alert"></div></div>
-
-<header>
-  <div class="wrap topo-g">
-    <div>
-      <h1 id="titulo">Como os anúncios apareceriam no Google</h1>
-      <p class="p" id="abre"></p>
+<main>
+<section class="jor" id="jor" data-s="1" data-t="0" data-m="0" data-r="0">
+  <div class="pin">
+    <div class="esq">
+      <h1>Do Google ao WhatsApp do consultório</h1>
+      <p class="sub" id="sub"></p>
+      <ol class="etapas">
+        <li class="on" data-n="1"><b>O paciente pesquisa</b><span>No Google, pelo celular, perto do consultório.</span></li>
+        <li data-n="2"><b>O seu anúncio aparece no topo</b><span>Só para quem busca aquele assunto na sua região.</span></li>
+        <li data-n="3"><b>Abre a página daquela busca</b><span>Convênios, endereço e um botão. Nada de página geral.</span></li>
+        <li data-n="4"><b>A mensagem chega no WhatsApp</b><span>Pronta, dizendo de qual página o paciente veio.</span></li>
+      </ol>
     </div>
-    <div class="como">
-      <h2>Como funciona</h2>
-      <p>Quem pesquisa estes termos já quer um médico para consultar ou operar. O anúncio aparece no topo do Google, só para quem busca na sua região, e leva para a página daquele assunto, não para uma página geral. De lá, o contato cai no WhatsApp do consultório.</p>
+    <div class="fone" role="img" aria-label="Simulação em um celular: a busca no Google, o anúncio, a página e a conversa no WhatsApp">
+      <div class="tela" id="tela">
+        <div class="scr g">
+          <div class="g-barra"><span id="gl"></span><div class="g-campo"><span id="lu"></span><span id="q"></span><i></i></div></div>
+          <div class="g-abas"><span class="on">Todas</span><span>Maps</span><span>Imagens</span><span>Vídeos</span></div>
+          <div class="g-sug" id="sug" aria-hidden="true"></div>
+          <div class="g-res"><div class="an" id="an"></div><div class="osso-r"><i class="t"></i><i></i><i class="c"></i><i class="t"></i><i></i><i class="c"></i><i class="t"></i><i></i></div></div>
+        </div>
+        <div class="scr lp"><div class="lp-url"><span id="lpu"></span></div><iframe id="lp" title="A página que abre no clique do anúncio" tabindex="-1"></iframe></div>
+        <div class="scr wa">
+          <div class="wa-topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span class="av"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg></span><div><b>Paciente novo</b><span>online</span></div></div>
+          <div class="wa-corpo"><span class="wa-dia">Hoje</span>
+            <p class="bal e" id="m1">.<small>09:41</small></p>
+            <p class="bal d">Olá! Vamos agendar. Qual é o seu convênio?<small>09:42</small></p>
+          </div>
+          <div class="wa-campo"><div></div><i></i></div>
+        </div>
+        <i class="toque" id="toque"></i>
+      </div>
     </div>
-  </div>
-</header>
-
-<main id="app"></main>
-<noscript><div class="wrap"><p>Ative o JavaScript do navegador para ver a simulação dos anúncios.</p></div></noscript>
-
-<section class="fim">
-  <div class="wrap">
-    <div>
-      <h2>Cada busca abre a sua própria página.</h2>
-      <p>Quem pesquisa um procedimento cai na página daquele procedimento, com convênios, endereço e o botão do WhatsApp. Vale abrir pelo celular, que é por onde a maioria dos pacientes chega.</p>
+    <div class="dir" aria-hidden="true">
+      <div class="on"><p class="k">O que o paciente digita</p><p class="gde" id="d1"></p></div>
+      <div><p class="k">O anúncio, dentro dos limites do Google Ads</p><ul class="lim" id="d2"></ul></div>
+      <div><p class="k">O clique abre</p><p class="gde" id="d3"></p><a class="ver" id="d3a" href="#">Ver a página<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div><p class="k">O consultório recebe</p><p class="msg" id="d4"></p></div>
     </div>
-    <div class="pags" id="pags"></div>
   </div>
 </section>
+<noscript><div class="wrap" style="color:#fff;padding-bottom:40px"><p>Ative o JavaScript do navegador para ver a simulação dos anúncios.</p></div></noscript>
+
+<section class="outras">
+  <div class="wrap">
+    <h2>Cada busca abre a sua página</h2>
+    <p class="p">As outras buscas do kit, cada uma com o seu anúncio e o seu destino.</p>
+    <ul class="cards" id="cards"></ul>
+  </div>
+</section>
+</main>
 
 <footer>
   <div class="wrap">
@@ -165,6 +236,7 @@ footer a { color: inherit; }
 <script>
 /* =====================================================================================================
    KIT: ÚNICO BLOCO A TROCAR. Tudo o que aparece na página sai daqui.
+   A PRIMEIRA busca é a da jornada no celular: tem de ser a do carro-chefe, com landing própria.
    Limites do Google Ads (a página confere e avisa no topo se passar):
      titulos     3 por busca, até 30 caracteres cada
      descricoes  2 por busca, até 90 caracteres cada
@@ -185,6 +257,8 @@ var KIT = {
   endereco: "Av. das Américas, 19005, sala 522, Recreio dos Bandeirantes, Rio de Janeiro",
   horario: "Consulta com hora marcada",
   paginaGeral: "../",
+  // mensagem pronta que o botão da landing do carro-chefe envia (a mesma do link wa.me daquela página)
+  mensagem: "Olá! Vi a página de cirurgia de ombro e quero agendar uma consulta com o Dr. Rogerio Penna.",
   destaques: ["Consulta com hora marcada", "Consultório no Recreio", "Convênios e particular", "Teleconsulta", "Adultos e crianças"],
   atalhos: [
     ["Cirurgia de ombro", "Manguito rotador e luxação", "Indicação definida em consulta", "../cirurgia-de-ombro/"],
@@ -235,26 +309,21 @@ var KIT = {
     }
   ]
 };
+
 /* ============================ nada a trocar daqui para baixo ============================ */
 (function () {
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var $ = function (id) { return document.getElementById(id); };
   var erros = [];
   var lim = function (txt, max, onde) { if (String(txt).length > max) erros.push(onde + ': "' + txt + '" tem ' + String(txt).length + ' caracteres (limite ' + max + ')'); };
   var G = '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
   var LUPA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>';
-  var PIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.750 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg>';
-  var FONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.620 10.790a15.050 15.050 0 0 0 6.590 6.590l2.200-2.200a1 1 0 0 1 1.020-.240c1.120.370 2.330.570 3.570.570a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.610 21 3 13.390 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.250.200 2.450.570 3.570a1 1 0 0 1-.250 1.020l-2.200 2.200z"/></svg>';
-  var SETA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var SETA = '<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
-  document.title = 'Prévia dos anúncios ' + KIT.deQuem + ' no Google';
-  document.getElementById('titulo').textContent = 'Como os anúncios ' + KIT.deQuem + ' apareceriam no Google';
-  document.getElementById('abre').textContent = 'Uma simulação com ' + KIT.buscas.length + ' buscas que os pacientes fazem todos os dias, o anúncio que cada um veria e a página que abre no clique: uma para cada busca.';
-  document.getElementById('rt').textContent = 'Responsável técnico: ' + KIT.registro + '.';
-
+  /* checagem dos limites do Google Ads e da regra "uma landing por busca" */
   KIT.destaques.forEach(function (d) { lim(d, 25, 'Destaque'); });
   KIT.atalhos.forEach(function (a) { lim(a[0], 25, 'Atalho (texto)'); lim(a[1], 35, 'Atalho (linha 1)'); lim(a[2], 35, 'Atalho (linha 2)'); });
-
-  var app = document.getElementById('app'), html = '', pags = '';
+  if (!KIT.mensagem) erros.push('Falta a mensagem pronta do WhatsApp (KIT.mensagem)');
   KIT.buscas.forEach(function (b, i) {
     if (b.titulos.length !== 3) erros.push('Busca ' + (i + 1) + ': são 3 títulos, vieram ' + b.titulos.length);
     if (b.descricoes.length !== 2) erros.push('Busca ' + (i + 1) + ': são 2 descrições, vieram ' + b.descricoes.length);
@@ -265,40 +334,77 @@ var KIT = {
     if (!destino) erros.push('Busca ' + (i + 1) + ' ("' + b.busca + '"): falta a página de destino');
     if (!b.geral && destino.split('#')[0] === KIT.paginaGeral && destino.indexOf('#') < 0) erros.push('Busca ' + (i + 1) + ' ("' + b.busca + '"): busca de procedimento não pode abrir a página geral. Crie a landing dela.');
     KIT.buscas.forEach(function (o, k) { if (k < i && o.destino === destino) erros.push('Buscas ' + (k + 1) + ' e ' + (i + 1) + ' abrem a mesma página (' + destino + '). É uma landing por busca.'); });
-    var url = KIT.dominio + (b.slug ? '/' + b.slug : '');
-    pags += '<a href="' + esc(destino) + '"><div><span>' + esc(b.busca) + '</span><b>' + esc(b.pagina || url) + '</b></div>' + SETA + '</a>';
-    html += '<section class="busca"><div class="wrap">' +
-      '<div class="txt"><h2>' + esc(b.chamada) + '</h2><p>' + esc(b.quem) + '</p>' +
-      '<div class="vai">Este anúncio abre<b>' + esc(url) + '</b></div>' +
-      '<a class="btn" href="' + esc(destino) + '">Ver a página' + SETA + '</a></div>' +
-      '<div class="tela" role="img" aria-label="Simulação do resultado do Google para a busca ' + esc(b.busca) + '">' +
-        '<div class="barra">' + G + '<div class="campo">' + LUPA + '<span>' + esc(b.busca) + '</span></div></div>' +
-        '<div class="abas"><span class="on">Todas</span><span>Maps</span><span>Imagens</span><span>Notícias</span></div>' +
-        '<div class="anuncio">' +
-          '<div class="pat">Patrocinado</div>' +
-          '<div class="site"><span class="ini">' + esc(KIT.iniciais) + '</span><div><div class="nm">' + esc(KIT.nome) + '</div>' +
-            '<div class="u">https://www.' + esc(KIT.dominio) + ' › ' + esc(b.caminho.join(' › ')) + '</div></div></div>' +
-          '<span class="ad-t">' + esc(b.titulos.join(' | ')) + '</span>' +
-          '<p class="ad-d">' + esc(b.descricoes.join(' ')) + '</p>' +
-          '<p class="dest">' + esc(KIT.destaques.slice(0, 4).join(' · ')) + '</p>' +
-          '<div class="atalhos">' + KIT.atalhos.map(function (a) {
-            return '<div><a tabindex="-1"><div class="t">' + esc(a[0]) + '</div><div class="d">' + esc(a[1]) + '<br>' + esc(a[2]) + '</div></a></div>';
-          }).join('') + '</div>' +
-          '<ul class="local"><li>' + PIN + '<span>' + esc(KIT.endereco) + '<br>' + esc(KIT.horario) + '</span></li>' +
-            '<li>' + FONE + '<span><b>Ligar ' + esc(KIT.telefone) + '</b></span></li></ul>' +
-        '</div>' +
-        '<div class="resto" aria-hidden="true"><i class="t"></i><i></i><i class="c"></i><i class="t"></i><i></i><i class="c"></i></div>' +
-      '</div></div></section>';
   });
-  app.innerHTML = html;
-  document.getElementById('pags').innerHTML = pags;
-
+  if (KIT.buscas[0] && KIT.buscas[0].geral) erros.push('A primeira busca é a da jornada: tem de ser a do carro-chefe, com landing própria.');
   if (erros.length) {
-    var av = document.getElementById('aviso');
-    av.innerHTML = '<b>Corrigir antes de publicar (limites do Google Ads):</b><ul>' + erros.map(function (e) { return '<li>' + esc(e) + '</li>'; }).join('') + '</ul>';
+    var av = $('aviso');
+    av.innerHTML = '<b>Corrigir antes de publicar:</b><ul>' + erros.map(function (e) { return '<li>' + esc(e) + '</li>'; }).join('') + '</ul>';
     av.className = 'aviso on';
     if (window.console) console.warn(erros.join('\n'));
   }
+
+  var B = KIT.buscas[0], url = function (b) { return KIT.dominio + (b.slug ? '/' + b.slug : ''); };
+  document.title = 'Do Google ao WhatsApp do consultório | Prévia dos anúncios ' + KIT.deQuem;
+  $('sub').textContent = 'Prévia dos anúncios ' + KIT.deQuem + '. Role a página e acompanhe no celular.';
+  $('rt').textContent = 'Responsável técnico: ' + KIT.registro + '.';
+
+  /* telas do celular */
+  $('an').innerHTML = '<div class="pat">Patrocinado</div><div class="site"><span class="ini">' + esc(KIT.iniciais) + '</span><div><div class="nm">' + esc(KIT.nome) + '</div><div class="u">' + esc(KIT.dominio) + ' › ' + esc(B.caminho.join(' › ')) + '</div></div></div>' +
+    '<span class="tt">' + esc(B.titulos.slice(0, 2).join(' | ')) + '</span><p class="ds">' + esc(B.descricoes[0]) + '</p>' +
+    '<div class="sl">' + KIT.atalhos.slice(0, 3).map(function (a) { return '<span>' + esc(a[0]) + '</span>'; }).join('') + '</div>';
+  $('lp').src = B.destino;
+  $('m1').firstChild.nodeValue = KIT.mensagem;
+  /* painel da direita (só no computador) */
+  $('d1').textContent = B.busca;
+  $('d2').innerHTML = B.titulos.map(function (t) { return '<li>' + esc(t) + '<span>' + t.length + ' de 30</span><i style="--u:' + (t.length / 30).toFixed(2) + '"></i></li>'; }).join('') +
+    B.descricoes.map(function (t, i) { return '<li>Descrição ' + (i + 1) + '<span>' + t.length + ' de 90</span><i style="--u:' + (t.length / 90).toFixed(2) + '"></i></li>'; }).join('');
+  $('d3').innerHTML = esc(url(B)).replace('/', '/<wbr>');
+  $('lpu').textContent = url(B);
+  $('sug').innerHTML = [62, 48, 70, 40].map(function (w) { return '<div>' + LUPA + '<i style="--w:' + w + '%"></i></div>'; }).join('');
+  $('d3a').href = B.destino;
+  $('d4').textContent = KIT.mensagem;
+
+  /* as outras buscas: um cartão por busca, cada um com a sua página */
+  $('cards').innerHTML = KIT.buscas.slice(1).map(function (b) {
+    return '<li class="card"><div class="bq">' + LUPA + '<span>' + esc(b.busca) + '</span></div><div class="pat">Patrocinado</div><div class="u">' + esc(KIT.dominio) + ' › ' + esc(b.caminho.join(' › ')) + '</div>' +
+      '<div class="tt">' + esc(b.titulos.join(' | ')) + '</div><p class="ds">' + esc(b.descricoes.join(' ')) + '</p>' +
+      '<a href="' + esc(b.destino) + '"><div>Ver a página<span>' + esc(url(b)) + '</span></div>' + SETA + '</a></li>';
+  }).join('');
+  $('gl').innerHTML = G; $('lu').innerHTML = LUPA;
+
+  /* jornada movida por scroll */
+  var J = $('jor'), tela = $('tela'), q = $('q'), toque = $('toque');
+  var calmo = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var escala = function () { tela.style.setProperty('--z', (tela.clientWidth / 390).toFixed(4)); };
+  escala(); window.addEventListener('resize', escala);
+  if (calmo || !(window.CSS && CSS.supports('position', 'sticky'))) { q.textContent = B.busca; J.setAttribute('data-s', 2); return; }
+  J.classList.add('anim'); escala();
+  var et = J.querySelectorAll('.etapas li'), dr = J.querySelectorAll('.dir>div'), raf = 0, est = '';
+  var poe = function (x, y) { toque.style.left = x + '%'; toque.style.top = y + '%'; };
+  var upd = function () {
+    raf = 0;
+    var r = J.getBoundingClientRect(), p = Math.max(0, Math.min(1, -r.top / Math.max(1, r.height - window.innerHeight)));
+    var n = Math.round(Math.max(0, Math.min(1, (p - .015) / .15)) * B.busca.length);
+    if (q.textContent.length !== n) q.textContent = B.busca.slice(0, n);
+    var s = p < .2 ? 1 : p < .46 ? 2 : p < .74 ? 3 : 4;
+    var t = p > .39 && p < .46 ? 1 : p > .66 && p < .74 ? 2 : 0;
+    var m = p > .9 ? 2 : p > .8 ? 1 : 0;
+    var novo = [s, t, m, p >= .2 ? 1 : 0].join();
+    if (novo === est) return; est = novo;
+    J.setAttribute('data-s', s); J.setAttribute('data-t', t); J.setAttribute('data-m', m); J.setAttribute('data-r', p >= .2 ? 1 : 0);
+    if (t === 1) poe(40, 37);
+    if (t === 2) {
+      var y = 80;
+      try { var bt = $('lp').contentDocument.querySelector('.hero .btn').getBoundingClientRect(); y = Math.min(92, ((bt.top + bt.height / 2) * (tela.clientWidth / 390) + tela.clientWidth * .21) / tela.clientHeight * 100); } catch (e) {}
+      poe(50, y);
+    }
+    for (var i = 0; i < et.length; i++) et[i].className = i === s - 1 ? 'on' : '';
+    for (var k = 0; k < dr.length; k++) dr[k].className = k === s - 1 ? 'on' : '';
+  };
+  var pede = function () { if (!raf) raf = requestAnimationFrame(upd); };
+  window.addEventListener('scroll', pede, { passive: true });
+  window.addEventListener('resize', pede);
+  upd();
 })();
 </script>
 </body>
