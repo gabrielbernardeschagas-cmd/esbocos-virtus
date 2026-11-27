@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Kit da Dra. Rossana Ribeiro de Melo Ramos, jornada (27/11/2026): Google -> anúncio -> landing -> WhatsApp. Só o objeto KIT muda. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Do Google ao WhatsApp do consultório | Virtus Marketing</title>
+<meta name="description" content="Prévia feita pela Virtus Marketing: a busca no Google, o anúncio, a página e a mensagem no WhatsApp do consultório.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../img/virtus.webp">
+<meta name="theme-color" content="#0C1740">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&amp;display=swap"></noscript>
+<style>
+/* Jornada do médico = a "experiência Virtus": azul-marinho #0C1740 (royal #243B8F) e dourado #E3A82C só como acento sobre o navy.
+   Celular primeiro. As medidas de dentro do aparelho usam --u (1% da largura da tela do aparelho, posta por JS; 2.4px de reserva). */
+@font-face{font-family:'IS sub';src:local('Arial');size-adjust:100%;ascent-override:97%;descent-override:25%;line-gap-override:0%}
+:root{--navy:#0C1740;--royal:#243B8F;--ouro:#E3A82C;--papel:#FFFFFF;--gelo:#F3F5FA;--tinta:#0C1740;--apoio:#4A5470;--fio:rgba(12,23,64,.16);--azul:#1A0DAB;--zap:#25D366;--zap-tinta:#04301B}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--navy);color:var(--tinta);font-family:'Instrument Sans','IS sub',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ouro);color:var(--navy)}
+h1,h2,h3,p,ul,ol{margin:0;padding:0}
+ul,ol{list-style:none}
+a{color:inherit;text-underline-offset:3px}
+svg,iframe,img{display:block}
+button{font:inherit;color:inherit}
+h1,h2{font-weight:700;letter-spacing:-.03em;line-height:1.04}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.st{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.aviso{display:none;margin:0;padding:16px 20px;background:#B3261E;color:#fff;font-size:15px}
+.aviso.on{display:block}
+.aviso ul{margin-top:6px;padding-left:18px;list-style:disc}
+
+/* abertura: a Virtus se apresenta e manda rolar */
+.abre{color:#fff;padding:18px 0 26px}
+.marca{display:flex;align-items:center;gap:11px;font-size:13.5px;line-height:1.3;color:rgba(255,255,255,.76)}
+.marca img{width:27px;height:32px;flex:none}
+.marca b{display:block;color:#fff;font-size:16px;font-weight:700;letter-spacing:-.01em}
+.abre h1{margin-top:30px;font-size:clamp(34px,9.6vw,64px);max-width:11em}
+.abre h1::after{content:"";display:block;width:56px;height:4px;margin-top:18px;border-radius:2px;background:var(--ouro)}
+.abre .sub{margin-top:16px;max-width:26em;color:rgba(255,255,255,.76);font-size:16.5px;line-height:1.4}
+.role{display:flex;align-items:center;gap:12px;margin-top:26px;color:var(--ouro);font-weight:700;font-size:16px}
+.role i{position:relative;width:26px;height:42px;border:2px solid var(--ouro);border-radius:14px;flex:none}
+.role i::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:9px;margin-left:-2px;border-radius:2px;background:var(--ouro);animation:rola 1.6s ease-in-out infinite}
+@keyframes rola{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{transform:translateY(0);opacity:0}}
+
+/* as 4 etapas */
+.jor{color:#fff;padding:8px 0 44px}
+.pin{max-width:1180px;margin:0 auto;padding:0 20px}
+.prog{display:flex;gap:6px}
+.prog i{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.22)}
+.etapas li{padding:12px 0 0}
+.etapas b{display:block;font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.etapas span{display:block;margin-top:2px;color:rgba(255,255,255,.76);font-size:15px;line-height:1.35}
+.dir,.prox{display:none}
+.fone{position:relative;width:min(72vw,280px);aspect-ratio:300/620;margin:22px auto 0;padding:8px;border-radius:40px;background:#04081A;box-shadow:0 0 0 1.5px rgba(255,255,255,.26)}
+.tela{--u:2.4px;position:relative;width:100%;height:100%;border-radius:33px;overflow:hidden;background:#fff;color:#202124;font-family:Arial,Helvetica,sans-serif;line-height:1.35}
+.tela::before{content:"";position:absolute;z-index:9;left:50%;top:calc(2.6 * var(--u));width:calc(27 * var(--u));height:calc(7.4 * var(--u));margin-left:calc(-13.5 * var(--u));border-radius:calc(5 * var(--u));background:#04081A}
+.scr{position:absolute;inset:0;padding-top:calc(13 * var(--u));background:#fff}
+.g-barra{display:flex;align-items:center;gap:calc(2.6 * var(--u));padding:calc(1 * var(--u)) calc(4 * var(--u)) calc(3 * var(--u))}
+#gl{flex:none}
+#gl svg{width:calc(7.4 * var(--u));height:calc(7.4 * var(--u))}
+#lu{display:flex}
+.g-campo{flex:1;min-width:0;display:flex;align-items:center;gap:calc(2 * var(--u));height:calc(12 * var(--u));padding:0 calc(3.6 * var(--u));border:1px solid #DFE1E5;border-radius:calc(6 * var(--u));font-size:calc(4.6 * var(--u));white-space:nowrap;overflow:hidden}
+.g-campo svg{width:calc(5 * var(--u));height:calc(5 * var(--u));color:#9AA0A6;flex:none}
+.g-campo i{width:1px;height:calc(5.6 * var(--u));background:#1A73E8;animation:pisca 1s steps(1) infinite}
+@keyframes pisca{50%{opacity:0}}
+.g-abas{display:flex;gap:calc(5.4 * var(--u));padding:0 calc(4.6 * var(--u));border-bottom:1px solid #EBEBEB;font-size:calc(3.9 * var(--u));color:#5F6368}
+.g-abas span{padding:calc(1.6 * var(--u)) 0 calc(2.4 * var(--u))}
+.g-abas .on{color:#202124;border-bottom:calc(.9 * var(--u)) solid #202124;font-weight:700}
+.g-sug{position:absolute;left:0;right:0;top:calc(27 * var(--u));bottom:0;padding:calc(2 * var(--u)) calc(5 * var(--u));background:#fff;transition:opacity .3s ease}
+.g-sug div{display:flex;align-items:center;gap:calc(3 * var(--u));padding:calc(2.8 * var(--u)) 0}
+.g-sug svg{width:calc(4.6 * var(--u));height:calc(4.6 * var(--u));color:#9AA0A6;flex:none}
+.g-sug i{height:calc(3 * var(--u));border-radius:calc(2 * var(--u));background:#ECEEF0;flex:0 0 var(--w)}
+.g-res{opacity:0;transform:translateY(calc(4 * var(--u)));transition:opacity .4s ease,transform .4s ease}
+.jor:not([data-s="1"]) .g-res,.jor:not(.anim) .g-res{opacity:1;transform:none}
+.jor:not([data-s="1"]) .g-sug,.jor:not(.anim) .g-sug{opacity:0}
+.an{padding:calc(4 * var(--u)) calc(4.6 * var(--u)) calc(4.4 * var(--u));border-bottom:1px solid #EBEBEB}
+.an .pat{font-size:calc(3.9 * var(--u));font-weight:700}
+.an .site{display:flex;align-items:center;gap:calc(2.6 * var(--u));margin-top:calc(2.4 * var(--u))}
+.an .ini{width:calc(8.6 * var(--u));height:calc(8.6 * var(--u));border-radius:50%;background:#0B2933;color:#fff;font-size:calc(3.4 * var(--u));font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.an .nm{font-size:calc(4.1 * var(--u))}
+.an .u{font-size:calc(3.5 * var(--u));color:#4D5156;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.an .site>div{min-width:0}
+.an .tt{display:block;margin-top:calc(2.6 * var(--u));font-size:calc(5.9 * var(--u));line-height:1.25;color:var(--azul)}
+.an .ds{margin-top:calc(1.8 * var(--u));font-size:calc(4.1 * var(--u));color:#4D5156}
+.an .sl{display:flex;gap:calc(2 * var(--u));margin-top:calc(3 * var(--u));overflow:hidden}
+.an .sl span{flex:none;padding:calc(1.8 * var(--u)) calc(3.4 * var(--u));border:1px solid #DADCE0;border-radius:calc(5 * var(--u));font-size:calc(3.8 * var(--u));color:var(--azul);white-space:nowrap}
+.osso-r{padding:calc(4.4 * var(--u)) calc(4.6 * var(--u))}
+.osso-r i{display:block;height:calc(3 * var(--u));border-radius:calc(2 * var(--u));background:#ECEEF0;margin-top:calc(2.6 * var(--u))}
+.osso-r i.t{height:calc(4.4 * var(--u));width:72%;background:#DDE3F3;margin-top:calc(5 * var(--u))}
+.osso-r i.c{width:58%}
+/* 3: PRÉVIA da landing (só para olhar: sem link e sem toque) */
+.lp,.wa{transform:translateY(102%);transition:transform .6s cubic-bezier(.3,.75,.2,1)}
+.lp{padding-top:0;background:#EDF2F2;transition-delay:.45s}
+.lp iframe{position:absolute;left:0;top:calc(21 * var(--u));width:390px;height:calc((100% - calc(21 * var(--u))) / var(--z,.6));border:0;transform:scale(var(--z,.6));transform-origin:0 0;pointer-events:none}
+.lp-url{position:absolute;z-index:2;left:0;right:0;top:0;height:calc(21 * var(--u));padding:calc(12.4 * var(--u)) calc(4 * var(--u)) 0;background:#F1F3F4}
+.lp-url span{display:block;height:calc(6.6 * var(--u));border-radius:calc(3.3 * var(--u));background:#fff;font-size:calc(3.4 * var(--u));line-height:calc(6.6 * var(--u));text-align:center;color:#3C4043;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 calc(3 * var(--u))}
+.lp-esp{position:absolute;left:0;right:0;top:calc(21 * var(--u));padding:calc(8 * var(--u)) calc(6 * var(--u))}
+.lp-esp i{display:block;height:calc(9 * var(--u));width:80%;border-radius:calc(2 * var(--u));background:#D5DEDF;margin-bottom:calc(3 * var(--u))}
+.lp-esp i+i{width:55%}
+.lp-esp i+i+i{height:calc(3 * var(--u));width:90%;margin-top:calc(7 * var(--u));background:#DDE5E6}
+.jor[data-s="3"] .lp,.jor[data-s="4"] .lp{transform:none}
+.jor[data-s="4"] .lp{transition-delay:0s}
+.jor[data-s="4"] .wa{transform:none}
+/* 4: WhatsApp do consultório */
+.wa{z-index:3;background:#EFE7DD;padding-top:0;display:flex;flex-direction:column}
+.wa-topo{display:flex;align-items:center;gap:calc(2.6 * var(--u));padding:calc(13 * var(--u)) calc(4 * var(--u)) calc(3 * var(--u));background:#075E54;color:#fff}
+.wa-topo svg{width:calc(5.6 * var(--u));height:calc(5.6 * var(--u));fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wa-topo .av{width:calc(9.6 * var(--u));height:calc(9.6 * var(--u));border-radius:50%;background:#CFD8DC;display:flex;align-items:center;justify-content:center;flex:none}
+.wa-topo .av svg{stroke:#78909C;width:calc(6 * var(--u));height:calc(6 * var(--u))}
+.wa-topo b{display:block;font-size:calc(4.5 * var(--u));line-height:1.2}
+.wa-topo span{display:block;font-size:calc(3.4 * var(--u));opacity:.85}
+.wa-corpo{flex:1;padding:calc(4 * var(--u)) calc(3.4 * var(--u));display:flex;flex-direction:column;gap:calc(2.4 * var(--u))}
+.wa-dia{align-self:center;padding:calc(1.2 * var(--u)) calc(3 * var(--u));border-radius:calc(2.4 * var(--u));background:#E1F2FA;font-size:calc(3.3 * var(--u));color:#54656F}
+.bal{max-width:86%;padding:calc(2.4 * var(--u)) calc(3 * var(--u)) calc(1.8 * var(--u));border-radius:calc(2.6 * var(--u));font-size:calc(4.3 * var(--u));line-height:1.36;color:#111B21;opacity:0;transform:translateY(calc(3 * var(--u)));transition:opacity .35s ease,transform .35s ease}
+.bal small{display:block;text-align:right;font-size:calc(3 * var(--u));color:#667781;margin-top:calc(.6 * var(--u))}
+.bal.e{align-self:flex-start;background:#fff;border-top-left-radius:0}
+.bal.d{align-self:flex-end;background:#D9FDD3;border-top-right-radius:0}
+.jor[data-s="4"] .bal,.jor:not(.anim) .bal{opacity:1;transform:none}
+.jor[data-s="4"] .bal.e{transition-delay:.7s}
+.jor[data-s="4"] .bal.d{transition-delay:2s}
+.wa-campo{display:flex;align-items:center;gap:calc(2 * var(--u));padding:calc(2.6 * var(--u)) calc(3 * var(--u)) calc(5 * var(--u))}
+.wa-campo div{flex:1;height:calc(10.6 * var(--u));border-radius:calc(6 * var(--u));background:#fff}
+.wa-campo i{width:calc(10.6 * var(--u));height:calc(10.6 * var(--u));border-radius:50%;background:#00A884;flex:none}
+.toque{position:absolute;z-index:8;left:40%;top:37%;width:calc(15 * var(--u));height:calc(15 * var(--u));margin:calc(-7.5 * var(--u)) 0 0 calc(-7.5 * var(--u));border-radius:50%;background:rgba(227,168,44,.4);box-shadow:0 0 0 calc(.8 * var(--u)) var(--ouro);opacity:0;pointer-events:none}
+.jor.anim[data-s="3"] .toque{animation:toca .7s ease-out}
+@keyframes toca{0%{opacity:0;transform:scale(.4)}35%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.25)}}
+
+/* com JS: a tela gruda; rolar OU tocar em "Próximo" avança */
+.jor.anim{padding:0;height:325vh;height:325svh}
+.jor.anim .pin{position:-webkit-sticky;position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;gap:10px;padding:14px 20px calc(12px + env(safe-area-inset-bottom,0px))}
+.jor.anim .prog i{position:relative;overflow:hidden}
+.jor.anim .prog i::after{content:"";position:absolute;inset:0;background:var(--ouro);transform:translateX(-101%);transition:transform .4s ease}
+.jor.anim .prog i.on::after{transform:none}
+.jor.anim .etapas{display:grid}
+.jor.anim .etapas li{grid-area:1/1;padding:0;opacity:0;visibility:hidden;transition:opacity .3s ease}
+.jor.anim .etapas li.on{opacity:1;visibility:visible}
+.jor.anim .etapas b::before{content:attr(data-n) " de 4 · ";color:var(--ouro)}
+.jor.anim .fone{width:auto;height:100%;max-height:640px;margin:0 auto;cursor:pointer}
+.jor.anim .esq{display:contents}
+.jor.anim .prox{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:50px;border:1.5px solid rgba(255,255,255,.5);border-radius:14px;background:none;color:#fff;font-weight:700;font-size:16.5px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.prox svg{animation:desce 1.6s ease-in-out infinite}
+@keyframes desce{50%{transform:translateY(4px)}}
+
+/* depois da etapa 4: a página dele, os outros anúncios e o Gabriel */
+.depois{background:var(--papel);padding:48px 0}
+.depois h2{font-size:clamp(28px,7.8vw,48px)}
+.depois .p{margin-top:10px;max-width:30em;color:var(--apoio)}
+.bt{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border-radius:14px;background:var(--navy);color:#fff;font-weight:700;font-size:17px;text-decoration:none;white-space:nowrap}
+.depois .bt{margin-top:20px}
+.depois h3{margin-top:44px;font-size:21px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.cards{display:grid;gap:12px;margin-top:14px}
+.card{display:flex;flex-direction:column;padding:14px 16px 4px;border:1px solid var(--fio);border-radius:18px;font-family:Arial,Helvetica,sans-serif;color:#202124}
+.card .bq{display:flex;align-items:center;gap:8px;font-size:14.5px;color:#4D5156}
+.card .bq svg{width:16px;height:16px;color:#9AA0A6;flex:none}
+.card .tt{margin-top:8px;font-size:18px;line-height:1.28;color:var(--azul)}
+.card .ds{margin:5px 0 10px;font-size:14px;line-height:1.45;color:#4D5156}
+.card a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:50px;margin-top:auto;border-top:1px solid var(--fio);font-family:'Instrument Sans','IS sub',Arial,sans-serif;font-weight:700;font-size:16px;color:var(--tinta);text-decoration:none}
+.gabriel{color:#fff;padding:52px 0 44px}
+.gabriel h2{font-size:clamp(30px,8.6vw,52px)}
+.gabriel h2::after{content:"";display:block;width:56px;height:4px;margin-top:16px;border-radius:2px;background:var(--ouro)}
+.gabriel .p{margin-top:16px;max-width:28em;color:rgba(255,255,255,.8)}
+.gabriel .bt{margin-top:22px;background:var(--ouro);color:var(--navy)}
+.gabriel .bt svg{width:22px;height:22px}
+.agenda{display:flex;align-items:center;justify-content:center;min-height:48px;margin-top:6px;font-weight:600;color:#fff}
+footer{padding:0 0 40px;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.7)}
+footer p{border-top:1px solid rgba(255,255,255,.18);padding-top:16px}
+footer p+p{border:0;padding-top:6px}
+
+@media (min-width:900px){
+  .wrap{padding:0 40px}
+  .abre{padding:32px 0 20px}
+  .abre .wrap,.pin{max-width:1180px}
+  .abre h1{margin-top:44px}
+  .pin{padding:0 40px}
+  .jor.anim .pin{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);grid-template-rows:minmax(0,1fr);column-gap:56px;padding:40px;align-items:center}
+  .jor.anim .esq{display:block}
+  .jor.anim .etapas{display:block;margin-top:22px}
+  .jor.anim .etapas li{position:relative;padding:12px 0;opacity:.4;visibility:visible}
+  .jor.anim .etapas li.on{opacity:1}
+  .etapas b{font-size:23px}
+  .etapas span{font-size:16px}
+  .jor.anim .prox{position:absolute;left:40px;bottom:40px;width:auto;padding:0 22px}
+  .jor.anim .fone{height:min(100%,700px);max-height:none}
+  .jor.anim .dir{display:grid;align-items:center}
+  .dir>div{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .35s ease}
+  .dir>div.on{opacity:1;visibility:visible}
+  .dir .k{color:rgba(255,255,255,.76);font-size:16px}
+  .dir .gde{margin-top:8px;font-size:clamp(26px,2.5vw,38px);font-weight:700;line-height:1.08;letter-spacing:-.03em}
+  .dir .lim{margin-top:12px}
+  .dir .lim li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:baseline;padding:8px 0;border-top:1px solid rgba(255,255,255,.18);font-size:15.5px}
+  .dir .lim li span{color:rgba(255,255,255,.76);font-variant-numeric:tabular-nums;font-size:14px}
+  .dir .lim li i{grid-column:1 / -1;height:3px;border-radius:2px;background:rgba(255,255,255,.16);overflow:hidden}
+  .dir .lim li i::after{content:"";display:block;height:100%;width:calc(var(--q) * 100%);background:var(--ouro)}
+  .dir .msg{margin-top:12px;padding:14px 16px;border-radius:4px 16px 16px 16px;background:#fff;color:#111B21;font-size:16.5px;line-height:1.4;max-width:22em}
+  .depois{padding:88px 0}
+  .depois .bt,.gabriel .bt{display:inline-flex;padding:0 30px}
+  .cards{grid-template-columns:repeat(3,1fr);gap:18px}
+  .gabriel{padding:88px 0 64px}
+  .agenda{display:inline-flex;margin:0 0 0 24px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="aviso" id="aviso" role="alert"></div>
+
+<header class="abre">
+  <div class="wrap">
+    <div class="marca"><img src="../img/virtus.webp" alt="" width="27" height="32"><div><b>Virtus Marketing</b><span id="para">Prévia feita para você</span></div></div>
+    <h1>Do Google ao WhatsApp do consultório</h1>
+    <p class="sub">Veja, em 4 etapas, o caminho que o seu paciente faria.</p>
+    <p class="role" aria-hidden="true"><i></i>Role para baixo</p>
+  </div>
+</header>
+
+<main>
+<section class="jor" id="jor" data-s="1" aria-label="As 4 etapas, do Google ao WhatsApp">
+  <div class="pin">
+    <div class="esq">
+      <div class="prog" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      <ol class="etapas">
+        <li class="on"><b data-n="1">O paciente pesquisa</b><span>No Google, pelo celular, perto do consultório.</span></li>
+        <li><b data-n="2">O seu anúncio aparece no topo</b><span>Só para quem busca aquele assunto na sua região.</span></li>
+        <li><b data-n="3">Abre a página daquela busca</b><span>Convênios, endereço e um botão de agendar.</span></li>
+        <li><b data-n="4">A mensagem chega no WhatsApp</b><span>Pronta, dizendo de qual página o paciente veio.</span></li>
+      </ol>
+    </div>
+    <div class="fone" id="fone" role="img" aria-label="Simulação em um celular: a busca no Google, o anúncio, a página e a conversa no WhatsApp">
+      <div class="tela" id="tela">
+        <div class="scr g">
+          <div class="g-barra"><span id="gl"></span><div class="g-campo"><span id="lu"></span><span id="q"></span><i></i></div></div>
+          <div class="g-abas"><span class="on">Todas</span><span>Maps</span><span>Imagens</span><span>Vídeos</span></div>
+          <div class="g-sug" id="sug" aria-hidden="true"></div>
+          <div class="g-res"><div class="an" id="an"></div><div class="osso-r"><i class="t"></i><i></i><i class="c"></i><i class="t"></i><i></i><i class="c"></i><i class="t"></i><i></i></div></div>
+        </div>
+        <div class="scr lp"><div class="lp-url"><span id="lpu"></span></div><div class="lp-esp" aria-hidden="true"><i></i><i></i><i></i><i></i></div><iframe id="lp" title="Prévia da página que abre no clique do anúncio" tabindex="-1" aria-hidden="true"></iframe></div>
+        <div class="scr wa">
+          <div class="wa-topo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span class="av"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg></span><div><b>Paciente novo</b><span>online</span></div></div>
+          <div class="wa-corpo"><span class="wa-dia">Hoje</span>
+            <p class="bal e" id="m1">.<small>09:41</small></p>
+            <p class="bal d">Olá! Vamos agendar. Qual é o seu convênio?<small>09:42</small></p>
+          </div>
+          <div class="wa-campo"><div></div><i></i></div>
+        </div>
+        <i class="toque"></i>
+      </div>
+    </div>
+    <div class="dir" aria-hidden="true">
+      <div class="on"><p class="k">O que o paciente digita</p><p class="gde" id="d1"></p></div>
+      <div><p class="k">O anúncio, dentro dos limites do Google Ads</p><ul class="lim" id="d2"></ul></div>
+      <div><p class="k">O clique abre</p><p class="gde" id="d3"></p></div>
+      <div><p class="k">O consultório recebe</p><p class="msg" id="d4"></p></div>
+    </div>
+    <button type="button" class="prox" id="prox">Role ou toque para avançar<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+  </div>
+</section>
+<noscript><div class="wrap" style="color:#fff;padding-bottom:40px"><p>Ative o JavaScript do navegador para ver a simulação dos anúncios.</p></div></noscript>
+
+<section class="depois" id="depois">
+  <div class="wrap">
+    <h2>Agora veja como fica a sua página</h2>
+    <p class="p">A mesma que apareceu no celular, inteira, como o paciente veria.</p>
+    <a class="bt" id="sua" href="#">Ver como fica a sua página<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <h3>Cada busca abre a sua página</h3>
+    <ul class="cards" id="cards"></ul>
+  </div>
+</section>
+</main>
+
+<section class="gabriel">
+  <div class="wrap">
+    <h2>Gostou? Fale com o Gabriel</h2>
+    <p class="p">O próximo passo é uma conversa de 15 minutos para ajustar os textos e as páginas com você.</p>
+    <a class="bt" id="gz" href="https://wa.me/5521986311666" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg> Falar com o Gabriel no WhatsApp</a>
+    <a class="agenda" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3SSgUmIP1XVBCVnLjJyQy7IRxAibBmfShRCosqu3IMO7xST3vz8iPFQrve5sVaXU_MpReBqwG1" target="_blank" rel="noopener">ou escolha um horário na agenda</a>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <p>Simulação feita pela <a href="https://virtusmarketing.com.br" target="_blank" rel="noopener">Virtus Marketing</a>. Os anúncios ainda não estão no ar e os textos podem ser ajustados.</p>
+    <p id="rt"></p>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================================================
+   KIT: ÚNICO BLOCO A TROCAR. Tudo o que aparece na página sai daqui.
+   A PRIMEIRA busca é a da jornada no celular: tem de ser a do carro-chefe, com landing própria.
+   Limites do Google Ads (a página confere e avisa no topo se passar):
+     titulos     3 por busca, até 30 caracteres cada
+     descricoes  2 por busca, até 90 caracteres cada
+     caminho     2 palavras, até 15 caracteres cada, sem acento e sem espaço
+     atalhos     4 sitelinks: texto até 25, duas linhas de até 35
+     destaques   frases de até 25 caracteres
+   Regras: só procedimento que o médico realmente faz e bairro onde ele realmente atende.
+   Sem promessa de cura ou resultado, sem superlativo, sem preço, sem telefone no texto do anúncio.
+   ===================================================================================================== */
+var KIT = {
+  "deQuem": "da Dra. Rossana Ribeiro de Melo Ramos",
+  "paraQuem": "a Dra. Rossana Ramos",
+  "nome": "Dra. Rossana Ribeiro de Melo Ramos",
+  "iniciais": "RR",
+  "dominio": "drarossanaramos.com.br",
+  "registro": "Dra. Rossana Ribeiro de Melo Ramos, CRM-RJ 52.62303-2, RQE 23299 (Ortopedia e Traumatologia) e RQE 47018 (Dor)",
+  "telefone": "(21) 2487-1615",
+  "endereco": "Av. das Américas, 16.661, sala 301, Recreio dos Bandeirantes, Rio de Janeiro",
+  "horario": "Segunda a sexta, das 8h às 17h",
+  "paginaGeral": "../",
+  "mensagem": "Olá! Vi a página de tratamento da dor e quero agendar uma consulta com a Dra. Rossana Ramos.",
+  "destaques": [
+    "Consulta com hora marcada",
+    "Consultório no Recreio",
+    "Convênios e particular",
+    "Seg. a sex., 8h às 17h"
+  ],
+  "atalhos": [
+    [
+      "Tratamento da dor",
+      "Coluna, ciática e fibromialgia",
+      "Indicação definida em consulta",
+      "../tratamento-da-dor/"
+    ],
+    [
+      "Consulta de ortopedia",
+      "Para adultos, com hora marcada",
+      "Consultório no Recreio",
+      "../ortopedista-recreio/"
+    ],
+    [
+      "Convênios e particular",
+      "Veja os convênios atendidos",
+      "Confirme o seu plano",
+      "../#convenios"
+    ],
+    [
+      "Onde atende",
+      "Consultório no Recreio",
+      "Av. das Américas, 16.661",
+      "../#onde-atende"
+    ]
+  ],
+  "buscas": [
+    {
+      "busca": "tratamento dor crônica recreio",
+      "chamada": "Quem convive com dor e quer uma avaliação",
+      "quem": "A pessoa já tentou de tudo para a dor nas costas ou no corpo e pesquisa um médico que trate dor, perto de casa. O anúncio fala de tratamento da dor e abre a página de tratamento da dor, não a página geral.",
+      "caminho": [
+        "tratamento",
+        "dor"
+      ],
+      "titulos": [
+        "Tratamento da Dor no Recreio",
+        "Dra. Rossana Ramos",
+        "Agende Sua Consulta"
+      ],
+      "descricoes": [
+        "Dor nas costas, hérnia de disco, ciática e fibromialgia. Indicação definida em consulta.",
+        "Ortopedista com área de atuação em Dor. Convênios e particular. Agende a sua consulta."
+      ],
+      "destino": "../tratamento-da-dor/",
+      "slug": "tratamento-da-dor",
+      "pagina": "Página de tratamento da dor"
+    },
+    {
+      "busca": "ortopedista na barra",
+      "chamada": "Quem quer um ortopedista perto de casa",
+      "quem": "É a busca de quem quer marcar consulta com ortopedista na região da Barra e do Recreio. O anúncio abre a página de consulta, que responde na primeira tela quais convênios são aceitos e onde fica o consultório.",
+      "caminho": [
+        "ortopedista",
+        "recreio"
+      ],
+      "titulos": [
+        "Ortopedista na Barra e Recreio",
+        "Convênios e Particular",
+        "Consulta com Hora Marcada"
+      ],
+      "descricoes": [
+        "Consulta de ortopedia para adultos, na Av. das Américas. Segunda a sexta, das 8h às 17h.",
+        "Dra. Rossana Ramos, CRM-RJ 52.62303-2, RQE 23299. Veja os convênios atendidos."
+      ],
+      "destino": "../ortopedista-recreio/",
+      "slug": "ortopedista-recreio",
+      "pagina": "Página de consulta com ortopedista"
+    },
+    {
+      "busca": "túnel do carpo tratamento recreio",
+      "chamada": "Quem pesquisa um problema pelo nome",
+      "quem": "A pessoa já recebeu o diagnóstico, ou desconfia dele pelo formigamento na mão, e pesquisa o nome. O anúncio abre a página de túnel do carpo, com o que é e como agendar a avaliação.",
+      "caminho": [
+        "tunel-do-carpo",
+        "recreio"
+      ],
+      "titulos": [
+        "Túnel do Carpo no Recreio",
+        "Avaliação com Ortopedista",
+        "Agende Sua Consulta"
+      ],
+      "descricoes": [
+        "Formigamento e dormência na mão? Avaliação de mão e punho. Indicação definida em consulta.",
+        "Dra. Rossana Ramos, ortopedista no Recreio dos Bandeirantes. CRM-RJ 52.62303-2."
+      ],
+      "destino": "../tunel-do-carpo/",
+      "slug": "tunel-do-carpo",
+      "pagina": "Página de túnel do carpo"
+    },
+    {
+      "busca": "dra rossana ramos ortopedista",
+      "chamada": "Quem pesquisa o seu nome",
+      "quem": "Paciente indicado por um colega ou por um amigo pesquisa o nome antes de ligar. Com o anúncio, ele encontra o seu site no topo, e não uma página de terceiros.",
+      "caminho": [
+        "agendar",
+        "consulta"
+      ],
+      "titulos": [
+        "Dra. Rossana Ramos",
+        "Site Oficial",
+        "Agende Sua Consulta"
+      ],
+      "descricoes": [
+        "Ortopedia e tratamento da dor no Recreio dos Bandeirantes. Agende a sua consulta.",
+        "Veja o que a médica trata, os convênios e o endereço. Consulta com hora marcada."
+      ],
+      "destino": "../",
+      "slug": "",
+      "pagina": "Página geral do consultório",
+      "geral": true
+    }
+  ]
+};
+
+/* ============================ nada a trocar daqui para baixo ============================ */
+(function () {
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var $ = function (id) { return document.getElementById(id); };
+  var erros = [];
+  var lim = function (txt, max, onde) { if (String(txt).length > max) erros.push(onde + ': "' + txt + '" tem ' + String(txt).length + ' caracteres (limite ' + max + ')'); };
+  var G = '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
+  var LUPA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>';
+  var SETA = '<svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+  /* checagem dos limites do Google Ads e da regra "uma landing por busca" */
+  KIT.destaques.forEach(function (d) { lim(d, 25, 'Destaque'); });
+  KIT.atalhos.forEach(function (a) { lim(a[0], 25, 'Atalho (texto)'); lim(a[1], 35, 'Atalho (linha 1)'); lim(a[2], 35, 'Atalho (linha 2)'); });
+  if (!KIT.mensagem) erros.push('Falta a mensagem pronta do WhatsApp (KIT.mensagem)');
+  if (!KIT.paraQuem) erros.push('Falta KIT.paraQuem ("o Dr. Fulano" / "a Dra. Fulana")');
+  KIT.buscas.forEach(function (b, i) {
+    if (b.titulos.length !== 3) erros.push('Busca ' + (i + 1) + ': são 3 títulos, vieram ' + b.titulos.length);
+    if (b.descricoes.length !== 2) erros.push('Busca ' + (i + 1) + ': são 2 descrições, vieram ' + b.descricoes.length);
+    b.titulos.forEach(function (t) { lim(t, 30, 'Busca ' + (i + 1) + ', título'); });
+    b.descricoes.forEach(function (d) { lim(d, 90, 'Busca ' + (i + 1) + ', descrição'); });
+    b.caminho.forEach(function (c) { lim(c, 15, 'Busca ' + (i + 1) + ', caminho'); });
+    var destino = b.destino || '';
+    if (!destino) erros.push('Busca ' + (i + 1) + ' ("' + b.busca + '"): falta a página de destino');
+    if (!b.geral && destino.split('#')[0] === KIT.paginaGeral && destino.indexOf('#') < 0) erros.push('Busca ' + (i + 1) + ' ("' + b.busca + '"): busca de procedimento não pode abrir a página geral. Crie a landing dela.');
+    KIT.buscas.forEach(function (o, k) { if (k < i && o.destino === destino) erros.push('Buscas ' + (k + 1) + ' e ' + (i + 1) + ' abrem a mesma página (' + destino + '). É uma landing por busca.'); });
+  });
+  if (KIT.buscas[0] && KIT.buscas[0].geral) erros.push('A primeira busca é a da jornada: tem de ser a do carro-chefe, com landing própria.');
+  if (erros.length) {
+    var av = $('aviso');
+    av.innerHTML = '<b>Corrigir antes de publicar:</b><ul>' + erros.map(function (e) { return '<li>' + esc(e) + '</li>'; }).join('') + '</ul>';
+    av.className = 'aviso on';
+    if (window.console) console.warn(erros.join('\n'));
+  }
+
+  var B = KIT.buscas[0], url = function (b) { return KIT.dominio + (b.slug ? '/' + b.slug : ''); };
+  /* ?previa=1: a landing aberta a partir daqui mostra a fita de esboço da Virtus (o paciente nunca vê) */
+  var pv = function (h) { var p = h.split('#'); return p[0] + (p[0].indexOf('?') > -1 ? '&' : '?') + 'previa=1' + (p[1] ? '#' + p[1] : ''); };
+  document.title = 'Do Google ao WhatsApp do consultório | Prévia da Virtus para ' + KIT.paraQuem;
+  $('para').textContent = 'Prévia feita para ' + KIT.paraQuem;
+  $('rt').textContent = 'Responsável técnico das páginas: ' + KIT.registro + '.';
+
+  $('an').innerHTML = '<div class="pat">Patrocinado</div><div class="site"><span class="ini">' + esc(KIT.iniciais) + '</span><div><div class="nm">' + esc(KIT.nome) + '</div><div class="u">' + esc(KIT.dominio) + ' › ' + esc(B.caminho.join(' › ')) + '</div></div></div>' +
+    '<span class="tt">' + esc(B.titulos.slice(0, 2).join(' | ')) + '</span><p class="ds">' + esc(B.descricoes[0]) + '</p>' +
+    '<div class="sl">' + KIT.atalhos.slice(0, 3).map(function (a) { return '<span>' + esc(a[0]) + '</span>'; }).join('') + '</div>';
+  $('m1').firstChild.nodeValue = KIT.mensagem;
+  $('lpu').textContent = url(B);
+  $('sug').innerHTML = [62, 48, 70, 40].map(function (w) { return '<div>' + LUPA + '<i style="--w:' + w + '%"></i></div>'; }).join('');
+  $('gl').innerHTML = G; $('lu').innerHTML = LUPA;
+  $('d1').textContent = B.busca;
+  $('d2').innerHTML = B.titulos.map(function (t) { return '<li>' + esc(t) + '<span>' + t.length + ' de 30</span><i style="--q:' + (t.length / 30).toFixed(2) + '"></i></li>'; }).join('') +
+    B.descricoes.map(function (t, i) { return '<li>Descrição ' + (i + 1) + '<span>' + t.length + ' de 90</span><i style="--q:' + (t.length / 90).toFixed(2) + '"></i></li>'; }).join('');
+  $('d3').innerHTML = esc(url(B)).replace('/', '/<wbr>');
+  $('d4').textContent = KIT.mensagem;
+
+  /* depois da etapa 4 */
+  $('sua').href = pv(B.destino);
+  $('cards').innerHTML = KIT.buscas.slice(1).map(function (b) {
+    return '<li class="card"><div class="bq">' + LUPA + '<span>' + esc(b.busca) + '</span></div>' +
+      '<div class="tt">' + esc(b.titulos.slice(0, 2).join(' | ')) + '</div><p class="ds">' + esc(b.descricoes[0]) + '</p>' +
+      '<a href="' + esc(pv(b.destino)) + '">Ver a página' + SETA + '</a></li>';
+  }).join('');
+  $('gz').href = 'https://wa.me/5521986311666?text=' + encodeURIComponent('Oi, Gabriel! Sou ' + KIT.paraQuem + '. Vi a prévia do meu site e dos anúncios e quero conversar.');
+
+  /* jornada: a etapa vem do scroll; "Próximo" e o toque no aparelho rolam até a etapa seguinte */
+  var J = $('jor'), tela = $('tela'), q = $('q'), lp = $('lp'), prox = $('prox');
+  var calmo = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mede = function () { var w = tela.clientWidth; tela.style.setProperty('--u', (w / 100).toFixed(3) + 'px'); tela.style.setProperty('--z', (w / 390).toFixed(4)); };
+  var carrega = function () { if (!lp.getAttribute('src')) lp.src = B.destino; };
+  mede(); window.addEventListener('resize', mede);
+  if (calmo || !(window.CSS && (CSS.supports('position', 'sticky') || CSS.supports('position', '-webkit-sticky')))) { q.textContent = B.busca; J.setAttribute('data-s', 2); return; }
+  J.classList.add('anim'); mede();
+  var et = J.querySelectorAll('.etapas li'), pg = J.querySelectorAll('.prog i'), dr = J.querySelectorAll('.dir>div'), raf = 0, atual = 0, td = 0, tr = 0;
+  var digita = function () {
+    clearInterval(td); var n = 0; q.textContent = '';
+    td = setInterval(function () { n++; q.textContent = B.busca.slice(0, n); if (n >= B.busca.length) clearInterval(td); }, 70);
+  };
+  var poe = function (s) {
+    if (s === atual) return; atual = s;
+    J.setAttribute('data-s', s);
+    if (s === 1) digita(); else { clearInterval(td); q.textContent = B.busca; }
+    if (s >= 2) carrega();
+    clearTimeout(tr);
+    try { lp.contentWindow.scrollTo(0, 0); } catch (e) {}
+    if (s === 3) tr = setTimeout(function () { try { lp.contentWindow.scrollTo({ top: 230, behavior: 'smooth' }); } catch (e) {} }, 2200);
+    for (var i = 0; i < 4; i++) { et[i].className = i === s - 1 ? 'on' : ''; pg[i].className = i < s ? 'on' : ''; if (dr[i]) dr[i].className = i === s - 1 ? 'on' : ''; }
+    prox.firstChild.nodeValue = s < 4 ? (s === 1 ? 'Role ou toque para avançar' : 'Próximo') : 'Continuar';
+  };
+  var upd = function () {
+    raf = 0;
+    var r = J.getBoundingClientRect(), p = Math.max(0, Math.min(.999, -r.top / Math.max(1, r.height - window.innerHeight)));
+    poe(Math.floor(p * 4) + 1);
+  };
+  var avanca = function () {
+    var r = J.getBoundingClientRect(), topo = r.top + window.pageYOffset, H = r.height - window.innerHeight;
+    var y = atual < 4 ? topo + H * (atual / 4 + .02) : topo + r.height;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+  prox.addEventListener('click', avanca);
+  $('fone').addEventListener('click', avanca);
+  window.addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(upd); }, { passive: true });
+  window.addEventListener('resize', upd);
+  upd();
+})();
+</script>
+</body>
+</html>
